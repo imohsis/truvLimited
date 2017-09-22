@@ -16,7 +16,7 @@
                         <div class="col-md-6">
                             <nav class="secondary-menu">
                                 <ul class="pull-right">
-                                    <li><a href="{{ url('/signup') }}">Sign Up</a></li>
+                                    <li><a href="{{ url('/signup') }}">Registration</a></li>
                                     <li><a href="">Login</a></li>
                                     <li><a href="">Locations</a></li>
                                     <li><a href="">FAQS</a></li>
@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h1 class="logo"> <a href="index.html"> <img src="images/logo.png" alt="Site Logo"> </a> </h1>
+                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="images/vision.png" alt="Site Logo"> </a> </h1>
                         </div>
                         <div class="col-md-9">
                             <button class="mmenu-toggle"><i class="fa fa-bars fa-lg"></i></button>

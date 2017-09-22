@@ -60,13 +60,13 @@
                                 
                                 <hr>
                                 <div class="col-md-4">
-                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span></a>
+                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span></a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x centralize-e  bg-gradient-gray">Motorcycle Ownership Scheme </a>
+                                    <a href="{{ url('/bikeownershipsignup') }}" class="btn btn-warning font-2x centralize-e  bg-gradient-gray">Motorcycle Ownership Scheme </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x bg-gradient-gold">House Ownership Scheme</a>
+                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-warning font-2x bg-gradient-gold">House Ownership Scheme</a>
                                 </div>
                             </div>
                             <!-- Start Sidebar -->

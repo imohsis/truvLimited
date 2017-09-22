@@ -41,12 +41,12 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content full">
-                    <header class="page-header high parallax margin-0" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
+                    <header class="page-header high parallax margin-0" style="background-image:url({{ url('/images/img4.jpg') }})">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-7">
                                     <section>
-                                        <h1>We're creatively awesome</h1>
+                                        <h1>Who We Are</h1>
                                     </section>
                                 </div>
                                 <div class="col-md-5">
@@ -59,11 +59,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
-                                    <h4>We are Tentered</h4>
+                                    <h4>We are Vision Integrated</h4>
                                     <hr class="thick">
                                     <div class="clearfix"></div>
                                     <p class="col-md-10 col-md-offset-1 big">Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula.</p>
-                                    <button class="btn btn-primary btn-lg moveto-sec4 margin-60">View some of our work</button>
+                                    <button class="btn btn-primary btn-lg moveto-sec4 margin-60">View our gallery</button>
                                 </div>
                             </div>
                         </div>
@@ -72,40 +72,50 @@
                         <div class="container">
                             <div class="row">
                                 <section class="col-md-4 col-md-offset-1">
-                                    <h3>A little Bit About Us</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie. Curabitur pellentesque massa eu nulla consequat sed porttitor arcu porttitor. Quisque volutpat pharetra felis, eu cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies dui, ut rhoncus libero augue at libero. Morbi ut arcu dolor. Maecenas id nulla nec nibh viverra vehicula. Cras feugiat, magna eu lacinia ullamcorper, augue est sodales nibh, ut vulputate augue est sed nunc. Suspendisse sagittist.</p>
+                                    <h3><strong>Empowering Every Individual</strong></h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Integer lorem quam, adipiscing condimentum tristique vel, 
+                                        eleifend sed turpis. Pellentesque cursus arcu id magna euismod 
+                                        in elementum purus molestie. Curabitur pellentesque massa eu 
+                                        nulla consequat sed porttitor arcu porttitor. Quisque volutpat 
+                                        pharetra felis, eu cursus lorem molestie vitae.</p><p> Nulla vehicula, 
+                                        lacus ut suscipit fermentum, turpis felis ultricies dui, 
+                                        ut rhoncus libero augue at libero. Morbi ut arcu dolor. 
+                                        Maecenas id nulla nec nibh viverra vehicula. Cras feugiat,
+                                        magna eu lacinia ullamcorper, augue est sodales nibh, 
+                                        ut vulputate augue est sed nunc. Suspendisse sagittist.</p>
                                 </section>
                                 <section class="col-md-7 text-align-center">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="circular-bar">
-                                                <input class="knob" data-linecap="round" data-fgColor="#f0ad4e" data-thickness=".2" value="95" data-readOnly="true" data-displayInput="false">
-                                                <div class="circular-bar-content"> <strong>UI/UX</strong>
-                                                    <label>95%</label>
+                                                <input class="knob" data-linecap="round" data-fgColor="#f0ad4e" data-thickness=".2" value="100" data-readOnly="true" data-displayInput="false">
+                                                <div class="circular-bar-content"> <strong>People</strong>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <div class="circular-bar">
-                                                <input class="knob" data-linecap="round" data-fgColor="#5bc0de" data-thickness=".2" value="75" data-readOnly="true" data-displayInput="false">
-                                                <div class="circular-bar-content"> <strong>iPhone Apps</strong>
-                                                    <label>75%</label>
+                                                <input class="knob" data-linecap="round" data-fgColor="#5bc0de" data-thickness=".2" value="100" data-readOnly="true" data-displayInput="false">
+                                                <div class="circular-bar-content"> <strong>Sustainability</strong>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <div class="circular-bar">
-                                                <input class="knob" data-linecap="round" data-fgColor="#d9534f" data-thickness=".2" value="90" data-readOnly="true" data-displayInput="false">
-                                                <div class="circular-bar-content"> <strong>WordPress</strong>
-                                                    <label>90%</label>
+                                                <input class="knob" data-linecap="round" data-fgColor="#d9534f" data-thickness=".2" value="100" data-readOnly="true" data-displayInput="false">
+                                                <div class="circular-bar-content"> <strong>Asset</strong>
+                                                 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <div class="circular-bar">
-                                                <input class="knob" data-linecap="round" data-fgColor="#3498db" data-thickness=".2" value="55" data-readOnly="true" data-displayInput="false">
-                                                <div class="circular-bar-content"> <strong>PHP</strong>
-                                                    <label>55%</label>
+                                                <input class="knob" data-linecap="round" data-fgColor="#3498db" data-thickness=".2" value="100" data-readOnly="true" data-displayInput="false">
+                                                <div class="circular-bar-content"> <strong>Future</strong>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

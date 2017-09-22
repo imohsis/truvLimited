@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Sign Up </title>
+        <title>Registration </title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -46,7 +46,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Sign up</h1>
+                                        <h1>Registration</h1>
                                     </div>
                                 </div>
                             </div>
@@ -55,10 +55,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-7">
-                                <h2><strong>Sign up</strong></h2>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <h2><strong>Registration</strong></h2>
+                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">House Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
-                                <div class="alert alert-warning fade in"> <a class="close" data-dismiss="alert" href="#">&times;</a> <strong>All fields</strong> are mandatory to complete the registration process.</div>
                                 <form method="post">
                                     <div class="row">
                                         <div class="form-group">
@@ -81,6 +80,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Select Your Starting Level</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select name="level" class="form-control input-lg">
+                                                <option>Bronze | Fee = ₦2,000</option>
+                                                <option>Silver | Fee = ₦4,000</option>
+                                                <option>Gold | Fee = ₦6,000</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div><br/>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
@@ -180,7 +194,7 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="location"  class="form-control input-lg" placeholder="location">
+                                                <input type="text" name="location"  class="form-control input-lg" placeholder="Location">
                                             </div>
                                         </div>
                                     </div>
@@ -190,7 +204,7 @@
                                                 <label>Teller</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="file" name="teller"  class="form-control input-lg" placeholder="attach teller">
+                                                <input type="file" name="teller"  class="form-control input-lg padding-zero"  placeholder="attach teller">
                                             </div>
                                         </div>
                                     </div>
@@ -198,7 +212,7 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <input type="submit" name="submit" class="btn btn-primary btn-lg padding-zero" value="Sign up now!">
+                                                <input type="submit" name="submit" class="btn btn-primary btn-lg " value="Complete Registration">
                                             </div>
                                         </div>
                                     </div>

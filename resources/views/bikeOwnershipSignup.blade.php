@@ -41,7 +41,7 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content page-content full">
-                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url({{ url('/images/img4.jpg')}}}})">
+                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
                         <section>
                             <div class="container">
                                 <div class="row">
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <h2><strong>Registration</strong></h2>
-                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">keke Napep Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">Motorcycle Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
                                 <form method="post">
                                     <div class="row">
