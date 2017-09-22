@@ -26,3 +26,11 @@ Route::get('/signup', function(){
 Route::get('/about', function(){
     return view('about');
 });
+
+Route::get('/houseownershipsignup', function(){
+    return view('chouseOwnershipSignup');
+});
+
+Route::get('/kekeownershipsignup', function(){
+   return view('kekeOwnershipSignup'); 
+});

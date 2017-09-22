@@ -60,10 +60,10 @@
                                 
                                 <hr>
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary float-righter font-2x">House Ownership</button>
+                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-primary float-righter font-2x width-50 bg-gradient-blue"><span>House Ownership</span></a>
                                 </div>
                                 <div class="col-md-6">
-                                    <button class="btn btn-warning">Keke Napep / Bike Ownership</button>
+                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x width-70 bg-gradient-gold">Keke Napep / Bike Ownership</a>
                                 </div>
                             </div>
                             <!-- Start Sidebar -->

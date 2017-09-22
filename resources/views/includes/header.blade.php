@@ -16,10 +16,10 @@
                         <div class="col-md-6">
                             <nav class="secondary-menu">
                                 <ul class="pull-right">
-                                    <li><a href="page-signup.html">Sign Up</a></li>
-                                    <li><a href="page-login.html">Login</a></li>
-                                    <li><a href="page-terms.html">Locations</a></li>
-                                    <li><a href="page-faqs.html">FAQS</a></li>
+                                    <li><a href="{{ url('/signup') }}">Sign Up</a></li>
+                                    <li><a href="">Login</a></li>
+                                    <li><a href="">Locations</a></li>
+                                    <li><a href="">FAQS</a></li>
                                     <li class="dropdown pull-right"><a data-toggle="dropdown"><img src="images/flag-icon-us.png" alt="us"> English US <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown"><a href="#"><img src="images/flag-icon-us.png" alt="us"> English US</a></li>

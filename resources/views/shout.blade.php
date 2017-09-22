@@ -87,7 +87,7 @@
                                             <li><a href="index4.html">Homepage version 5</a></li>
                                             <li><a href="index5.html">Homepage version 6</a></li>
                                             <li><a href="landing.html">Landing Page</a></li>
-                                            <li><a href="one-pager.html">One page Website</a></li>
+                                            <li><a href="one-pager.html">One page Life</a></li>
                                             <li><a href="one-pager-alt.html">One page Alt</a></li>
                                             <li><a href="coming-soon.html">Coming Soon</a></li>
                                         </ul>
