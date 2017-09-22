@@ -54,6 +54,9 @@
                                     <li><a href="{{ url('/gallery') }}">Our People <i class=""></i></a>
                                         
                                     </li>
+                                    <li><a href="{{ url('/process') }}">How It Works <i class=""></i></a>
+                                        
+                                    </li>
                                     <li><a href="{{ url('/contact') }}">Contact Us <i class=""></i></a>
                                         
                                     </li>
