@@ -168,7 +168,7 @@ i, em, .italic{
 .btn{
     padding:10px 12px!important;
     border:0!important;
-   
+
 }
 .btn-lg {
     padding: 15px 16px!important;
@@ -259,7 +259,7 @@ blockquote p{
     font-weight:300;
 }
 blockquote cite{
-    color:#cccccc;
+    color:#000000;
     font-size:12px;
 }
 p{
@@ -3962,24 +3962,22 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
     float: right;
 }
 
-.width-50{
-    width: 50%; 
-}
 
-.width-70{
-    width: 70%;
-}
 
 .font-2x{
-    font-size: 1.4em;
+    font-size: 1.2em;
     height: 50px;
     font-weight: normal;
     padding-top: 3%;
 }
 
+.centralize-e{
+    margin-left: 2%;
+}
+
 .bg-gradient-blue{
     background: linear-gradient(270deg, rgba(106, 198, 223, 0.8), rgba(107, 183, 219, 0.8), 
-    rgba(52, 93, 146, 0.8), rgba(49, 105, 135, 0.8));
+        rgba(52, 93, 146, 0.8), rgba(49, 105, 135, 0.8));
 
 }
 
@@ -3987,4 +3985,21 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
     background: linear-gradient(270deg, rgba(223,190,106,0.8), 
         rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(146,111,52,0.8));
 
+}
+
+.bg-gradient-gray{
+    background: linear-gradient(270deg, rgba(87, 159, 50, 0.8), rgba(180, 206, 96, 0.8), rgba(64, 146, 52, 0.8), rgba(65, 116, 43, 0.8));
+}
+
+.inverse-margin{
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+.heading-hr span.accent-color-text::before, .heading-hr span.accent-color-text::after{
+    border: 0px solid transparent;
+}
+
+.padding-zero{
+    padding: 0;
 }

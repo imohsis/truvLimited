@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Sign Up | Tentered - Responsive HTML5 template</title>
+        <title>Registration | Vision Integrated</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -41,12 +41,12 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content page-content full">
-                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
+                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url({{ asset('/images/img4.jpg')}}}})">
                         <section>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Sign up</h1>
+                                        <h1>Registration</h1>
                                     </div>
                                 </div>
                             </div>
@@ -55,15 +55,18 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2><strong>Sign up</strong></h2>
+                                <h2><strong>Registration</strong></h2>
                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 
                                 <hr>
-                                <div class="col-md-6">
-                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-primary float-righter font-2x width-50 bg-gradient-blue"><span>House Ownership</span></a>
+                                <div class="col-md-4">
+                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span></a>
                                 </div>
-                                <div class="col-md-6">
-                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x width-70 bg-gradient-gold">Keke Napep / Bike Ownership</a>
+                                <div class="col-md-4">
+                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x centralize-e  bg-gradient-gray">Motorcycle Ownership Scheme </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-warning font-2x bg-gradient-gold">House Ownership Scheme</a>
                                 </div>
                             </div>
                             <!-- Start Sidebar -->

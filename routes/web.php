@@ -28,7 +28,7 @@ Route::get('/about', function(){
 });
 
 Route::get('/houseownershipsignup', function(){
-    return view('chouseOwnershipSignup');
+    return view('houseOwnershipSignup');
 });
 
 Route::get('/kekeownershipsignup', function(){

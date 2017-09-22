@@ -54,7 +54,7 @@
                     </header>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-7">
                                 <h2><strong>Sign up</strong></h2>
                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
@@ -62,22 +62,22 @@
                                 <form method="post">
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="col-md-6">
-                                                <input type="text" name="user"  class="form-control input-lg" placeholder="Username">
+                                            <div class="col-md-9">
+                                                <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="col-md-6">
-                                                <input type="password" name="password"  class="form-control input-lg" placeholder="Password">
+                                            <div class="col-md-9">
+                                                <input type="text" name="phone"  class="form-control input-lg" placeholder="Phone Number">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="col-md-6">
-                                                <input type="password" name="re-password"  class="form-control input-lg" placeholder="Retype Password">
+                                            <div class="col-md-9">
+                                                <input type="text" name="email"  class="form-control input-lg" placeholder="Email Address">
                                             </div>
                                         </div>
                                     </div>
@@ -163,28 +163,54 @@
                                             </div>
                                         </div>
                                     </div>
+                                   <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Gender</label>
+                                            </div>
+                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                                <input type="radio" name="gender" value="male"/> &nbsp;Male
+                                            </div>
+                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                                <input type="radio" name="gender" value="female"/> &nbsp;Female
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-9">
+                                                <input type="text" name="location"  class="form-control input-lg" placeholder="location">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Sign up now!">
+                                                <label>Teller</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="file" name="teller"  class="form-control input-lg" placeholder="attach teller">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <input type="submit" name="submit" class="btn btn-primary btn-lg padding-zero" value="Sign up now!">
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <!-- Start Sidebar -->
-                            <aside class="col-md-3 sidebar right-sidebar">
+                            <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
-                                    <h4>Latest Flickr Images</h4>
-                                    <ul class="flickr-widget clearfix" data-flickr-userid="52617155@N08" data-images-count="6">
-                                    </ul>
+                                    <h4>Pyramid</h4>
+                                    <img src="{{ asset('/images/pyramid.jpg') }}" alt=""/>
                                 </div>
-                                <section class="widget sidebar-widget" id="text-widget1">
-                                    <h4>About Tentered</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod nisi.</p>
-                                    <p>Cras at ultrices erat, sed vulputate eros. Nunc at augue gravida est fermentum vulputate.</p>
-                                    </ul>
-                                </section>
+                                
                             </aside>
                         </div>
                     </div>
