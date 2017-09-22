@@ -51,64 +51,7 @@
                                         <img src="{{ asset('/images/visionintegrated.jpg') }}" alt=""> 
 
                                         <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
-                                             data-x="65"
-                                             data-y="61" 
-                                             data-speed="1000"
-                                             data-start="300"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 5">Versatile Responsive Theme </div>
-
-                                        <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="63"
-                                             data-y="118" 
-                                             data-speed="1000"
-                                             data-start="600"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 6">50+ Unique Pages </div>
-
-                                        <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
-                                             data-x="63"
-                                             data-y="176" 
-                                             data-speed="1000"
-                                             data-start="900"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 7">Wide &amp; Boxed Layouts </div>
-
-                                        <!-- LAYER NR. 4 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="64"
-                                             data-y="233" 
-                                             data-speed="1000"
-                                             data-start="1200"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 8">Unlimited Color Possibilities </div>
-
-                                        <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
-                                             data-x="63"
-                                             data-y="290" 
-                                             data-speed="1000"
-                                             data-start="1500"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 9">6 Type of Headers </div>
-
-                                        <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="65"
-                                             data-y="348" 
-                                             data-speed="1000"
-                                             data-start="1800"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 10">and much more... </div>
+                                        
                                     </li>
                                     <!-- SLIDE  -->
                                     <li data-delay="4000" data-masterspeed="600" data-slotamount="7" data-transition="fade"> 
@@ -210,7 +153,7 @@
 
                     <div class="pages" id="features">
 
-                        <div class="padding-tb45">
+                        <div class="padding-tb75">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
