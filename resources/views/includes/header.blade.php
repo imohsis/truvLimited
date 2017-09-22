@@ -60,6 +60,8 @@
                                     <li><a href="{{ url('/contact') }}">Contact Us <i class=""></i></a>
                                         
                                     </li>
+                                    <li class="visible-xs"><a href="{{ url('/signup') }}">Registration</a></li>
+                                    <li class="visible-xs"><a href="">Login</a></li>
                                    
                                 </ul>
                             </nav>

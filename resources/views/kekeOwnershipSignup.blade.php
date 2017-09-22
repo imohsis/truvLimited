@@ -46,7 +46,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Registration</h1>
+                                        <h1>Complete Registration</h1>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                             <!-- Start Sidebar -->
                             <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
-                                    <h4>Pyramid</h4>
+                                    <h4>Stages Involved</h4>
                                     <img src="{{ asset('/images/pyramid.jpg') }}" alt=""/>
                                 </div>
                                 

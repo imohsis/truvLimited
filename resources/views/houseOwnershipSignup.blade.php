@@ -41,17 +41,18 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content page-content full">
-                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
+                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url({{ url('/images/img4.jpg')}}}})">
                         <section>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Registration</h1>
+                                        <h1>Complete Registration</h1>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     </header>
+
                     <div class="container">
                         <div class="row">
                             <div class="col-md-7">
