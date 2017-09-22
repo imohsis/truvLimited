@@ -46,7 +46,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Registration</h1>
+                                        <h1>Complete Registration</h1>
                                     </div>
                                 </div>
                             </div>
@@ -55,11 +55,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2><strong>Complete Registration</strong></h2>
+                                <h2><strong>Registration</strong></h2>
                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 
                                 <hr>
-                                <div class="col-md-4 col-xs-12">
+                                <div class="col-md-4 col-xs-12 ">
                                     <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span></a>
                                 </div>
                                 <div class="col-md-4 col-xs-12">

@@ -4006,7 +4006,14 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
 
 @media screen and (max-width: 490px){
     .font-xs-2x{
-        font-size:  2em;
+        font-size:  1em;
         margin: 3%;
+        font-size: 1em;
+        height: 40px;
     }
+
+    .float-righter{
+        float: none;
+    }
+
 }
