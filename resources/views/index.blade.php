@@ -158,7 +158,7 @@
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
                                     <h1 class="no-strong"><span class="accent-color-text">Vi Limited:</span> Everything you need to build a unique Life</h1>
                                     <p>Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum.</p>
-                                    <a href="#" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
+                                    <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                        <a href="#" class="btn btn-primary btn-lg">I Want This</a> </div>
+                                        <a href="{{ url('/signup') }}" class="btn btn-primary btn-lg">I Want This</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +189,7 @@
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                        <a href="#" class="btn btn-primary btn-lg">I Want This</a> </div>
+                                        <a href="{{ url('/signup') }}" class="btn btn-primary btn-lg">I Want This</a> </div>
                                     <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/keke.png" alt=""> </div>
 
                                 </div>
