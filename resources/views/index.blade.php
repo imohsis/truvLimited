@@ -37,79 +37,7 @@
         </div>
         <!-- Start Body Container -->
         <div class="body footer-style2"> 
-            <!-- Start Header -->
-            <div class="topbar hidden-sm hidden-xs">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <nav class="secondary-menu">
-                                <ul class="pull-left">
-                                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-youtube"></i></a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-6">
-                            <nav class="secondary-menu">
-                                <ul class="pull-right">
-                                    <li><a href="page-signup.html">Sign Up</a></li>
-                                    <li><a href="page-login.html">Login</a></li>
-                                    <li><a href="page-terms.html">Locations</a></li>
-                                    <li><a href="page-faqs.html">FAQS</a></li>
-                                    <li class="dropdown pull-right"><a data-toggle="dropdown"><img src="images/flag-icon-us.png" alt="us"> English US <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown"><a href="#"><img src="images/flag-icon-us.png" alt="us"> English US</a></li>
-                                            <li class="dropdown"><a href="#"><img src="images/flag-icon-uk.png" alt="us"> English UK</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <header class="site-header" id="sticky-nav">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h1 class="logo"> <a href="index.html"> <img src="images/logo.png" alt="Site Logo"> </a> </h1>
-                        </div>
-                        <div class="col-md-9">
-                            <button class="mmenu-toggle"><i class="fa fa-bars fa-lg"></i></button>
-                            <nav class="main-menu">
-                                <ul class="sf-menu" id="main-menu">
-                                    <li><a href="{{ url('/') }}">Home <i class=""></i></a>
-                                        
-                                    </li>
-                                    <li><a href="{{ url('/about') }}">About Us <i class=""></i></a>
-                                        
-                                    </li>
-                                    <li><a href="{{ url('/opportunity') }}">The Opportunity <i class=""></i></a>
-                                        
-                                    </li>
-                                    <li><a href="{{ url('/gallery') }}">Our People <i class=""></i></a>
-                                        
-                                    </li>
-                                    <li><a href="{{ url('/contact') }}">Contact Us <i class=""></i></a>
-                                        
-                                    </li>
-                                   
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- Start Search Box -->
-                <nav class="mobile-menu">
-                    <div class="container">
-                        <div class="row"></div>
-                    </div>
-                </nav>
-            </header>
-            <!-- End Header --> 
+            @include('includes.header') 
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content full">
@@ -318,72 +246,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Start Footer -->
-            <footer class="site-footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <section class="footer-widget" id="newsletter">
-                                <h4>Newsletter</h4>
-                                <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-                                <form>
-                                    <div class="input-group input-group-lg">
-                                        <input type="text" class="form-control input-lg">
-                                        <span class="input-group-btn input">
-                                            <button class="btn btn-primary" type="button">Go!</button>
-                                        </span> </div>
-                                    <!-- /input-group -->
-                                </form>
-                            </section>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <section class="footer-widget" id="twitter">
-                                <h4>Latest Tweet</h4>
-                                <div class="twitter-widget"></div>
-                            </section>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <section class="footer-widget" id="contact">
-                                <h4>Contact Us</h4>
-                                <address class="ico">
-                                    <p><i class="fa fa-map-marker"></i> <span><strong>Address:</strong> 57, Opebi Road,<br>
-                                            Ikeja, Lagos</span></p>
-                                    <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> (123) 456-7890</span></p>
-                                    <p><i class="fa fa-envelope"></i> <span><strong>Email:</strong> visionintegrated@gmail.com</span></p>
-                                </address>
-                            </section>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <section class="footer-widget" id="text-widget">
-                                <h4>Latest Flickr Images</h4>
-                                <ul class="flickr-widget clearfix" data-flickr-userid="52617155@N08" data-images-count="6">
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- End Footer -->
-            <footer class="site-footer-bottom">
-                <div class="container">
-                    <div class="row">
-                       
-                        <div class="col-md-8">
-                            <p>Copyrights © 2017 Vision Integrated. All rights reserved. Lovely Designed by <a href="http://www.thinkshifts.com">Thinkshifts UK</a></p>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="social-icons-bar pull-right">
-                               <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-lg fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- End footer --> 
+            @include('includes.footer')
             <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a> </div>
         <!-- End Body Container --> 
         <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- Jquery Library Call --> 
