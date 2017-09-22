@@ -20,6 +20,10 @@ Route::get('/landing', function() {
 });
 
 Route::get('/signup', function(){
+    return redirect('/registration');
+});
+
+Route::get('/registration', function(){
     return view('register');
 });
 

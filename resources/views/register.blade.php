@@ -55,7 +55,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2><strong>Registration</strong></h2>
+                                <h2><strong>Complete Registration</strong></h2>
                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 
                                 <hr>

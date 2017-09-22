@@ -222,7 +222,6 @@
                             <!-- Start Sidebar -->
                             <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
-                                    <h4>Stages Involved</h4>
                                     <img src="{{ asset('/images/pyramid.png') }}" alt=""/>
                                 </div>
                                 
