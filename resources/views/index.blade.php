@@ -65,7 +65,7 @@
                                              data-start="300"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 5">Versatile Responsive Theme </div>
+                                             style="z-index: 5"> </div>
 
                                         <!-- LAYER NR. 2 -->
                                         <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
@@ -75,7 +75,7 @@
                                              data-start="600"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 6">50+ Unique Pages </div>
+                                             style="z-index: 6"> </div>
 
                                         <!-- LAYER NR. 3 -->
                                         <div class="tp-caption with_white_background skewfromleft tp-resizeme"
@@ -105,7 +105,7 @@
                                              data-start="1500"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 9">6 Type of Headers </div>
+                                             style="z-index: 9"></div>
 
                                         <!-- LAYER NR. 5 -->
                                         <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
@@ -115,7 +115,7 @@
                                              data-start="1800"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 10">and much more... </div>
+                                             style="z-index: 10"> </div>
                                     </li>
                                     
                                 </ul>
