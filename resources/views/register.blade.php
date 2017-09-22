@@ -60,7 +60,7 @@
                                 
                                 <hr>
                                 <div class="col-md-4 col-xs-12 ">
-                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span></a>
+                                    <a href="{{ url('/kekeownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke Napep Ownership Scheme</span><span class='visible-xs'>&nbsp;&nbsp;</span></a>
                                 </div><div class='visible-xs'><br/><br/><br/></div>
                                 <div class="col-md-4 col-xs-12">
                                     <a href="{{ url('/bikeownershipsignup') }}" class="btn btn-warning font-2x centralize-e  bg-gradient-gray">Motorcycle Ownership Scheme </a>

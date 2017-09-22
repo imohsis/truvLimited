@@ -4015,5 +4015,9 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
     .float-righter{
         float: none;
     }
+    
+    .centralize-e{
+        margin: 0;
+    }
 
 }
