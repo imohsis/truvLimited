@@ -50,7 +50,7 @@
                                     </section>
                                 </div>
                                 <div class="col-md-5">
-                                    <iframe src="https://player.vimeo.com/video/28496744?title=0&amp;byline=0&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <iframe src="https://player.vimeo.com/video/28496744?title=0&amp;byline=0&amp;autoplay=0&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
