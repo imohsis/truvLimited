@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Vi Limited - Responsive HTML5 template</title>
+        <title>Vi Limited - Responsive HTML5 Vision</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -85,7 +85,7 @@
                                              data-start="900"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 7">Wide &amp; Boxed Layouts </div>
+                                             style="z-index: 7"><span class='font-xs-2x'>Wide &amp; Boxed Layouts</span>  </div>
 
                                         <!-- LAYER NR. 4 -->
                                         <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
@@ -95,7 +95,7 @@
                                              data-start="1200"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 8">Unlimited Color Possibilities </div>
+                                             style="z-index: 8"><span class='font-xs-2x'>Unlimited Color Possibilities</span> </div>
 
                                         <!-- LAYER NR. 5 -->
                                         <div class="tp-caption with_white_background skewfromleft tp-resizeme"
@@ -141,7 +141,7 @@
                         <div class="">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/packages.jpg" alt=""> </div>
+                                    <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/packages.jpg"  alt=""> </div>
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Keke Napep Ownership Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>

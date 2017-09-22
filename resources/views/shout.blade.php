@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Tentered - Responsive HTML5 template</title>
+        <title>Tentered - Responsive HTML5 Vision</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -302,7 +302,7 @@
                                         <!-- MAIN IMAGE --> 
                                         <img src="http://placehold.it/1280x842&amp;text=IMAGE+PLACEHOLDER" alt="">
                                         <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="180" data-hoffset="0" data-x="center"><strong>Unique Premium Template</strong></div>
+                                        <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="180" data-hoffset="0" data-x="center"><strong>Unique Premium Vision</strong></div>
                                         <!-- LAYER NR. 2 -->
                                         <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="260" data-hoffset="0" data-x="center">ready to use for everyone</div>
                                     </li>
@@ -464,7 +464,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <h1 class="no-strong color-text">tentered is well designed and professionally coded template, ready for everyone</h1>
+                                    <h1 class="no-strong color-text">tentered is well designed and professionally coded Vision, ready for everyone</h1>
                                     <a class="btn transparent btn-lg" href="#">Tell me more</a> </div>
                             </div>
                         </div>
@@ -625,7 +625,7 @@
                                         <p>Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. </p>
                                     </div>
                                     <div class="block margin-30"> <i class="fa ic-sm gray-color color-text fa-lg fa-columns"></i>
-                                        <h3 class="short">Tons of templates</h3>
+                                        <h3 class="short">Tons of Visions</h3>
                                         <p>Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. </p>
                                     </div>
                                 </div>

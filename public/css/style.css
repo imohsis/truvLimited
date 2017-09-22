@@ -4003,3 +4003,10 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
 .padding-zero{
     padding: 0;
 }
+
+@media screen and (max-width: 490px){
+    .font-xs-2x{
+        font-size:  2em;
+        margin: 3%;
+    }
+}
