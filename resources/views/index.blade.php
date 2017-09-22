@@ -85,7 +85,7 @@
                                              data-start="900"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 7"><span class='font-xs-2x'>Wide &amp; Boxed Layouts</span>  </div>
+                                             style="z-index: 7"><span class='font-xs-2x'>Unlimited &amp; Opportunities</span>  </div>
 
                                         <!-- LAYER NR. 4 -->
                                         <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
@@ -95,17 +95,25 @@
                                              data-start="1200"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 8"><span class='font-xs-2x'>Unlimited Color Possibilities</span> </div>
-
+                                             style="z-index: 8"><span class='font-xs-2x '>Opportunity For Everyone</span> </div>
+                                             
                                         <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
+                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme "
                                              data-x="63"
                                              data-y="290" 
                                              data-speed="1000"
                                              data-start="1500"
                                              data-easing="Power3.easeInOut"
                                              data-endspeed="300"
-                                             style="z-index: 9"></div>
+                                             style="z-index: 9"><div class="tp-caption with_colored_background skewfromleft tp-resizeme"
+                                             data-x="64"
+                                             data-y="233" 
+                                             data-speed="1000"
+                                             data-start="1200"
+                                             data-easing="Power3.easeInOut"
+                                             data-endspeed="300"
+                                             style="z-index: 8"> </div>
+</div>
 
                                         <!-- LAYER NR. 5 -->
                                         <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
