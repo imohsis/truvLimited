@@ -182,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container margin-40 padding-tb45">
+                <div class="container margin-40 padding-tb75">
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="heading-hr margin-60"><span>Loved by over <span class="accent-color-text">30000</span> families</span></h4>
