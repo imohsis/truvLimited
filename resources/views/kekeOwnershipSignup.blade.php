@@ -56,9 +56,9 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <h2><strong>Registration</strong></h2>
-                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">keke Napep Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">Keke Napep Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
-                                <form method="post">
+                                <form >
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">

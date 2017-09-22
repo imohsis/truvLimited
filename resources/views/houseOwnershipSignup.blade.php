@@ -58,7 +58,7 @@
                                 <h2><strong>Registration</strong></h2>
                                 <p class="lead"><span style="color: #3498db; font-weight: 300; ">House Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
-                                <form method="post">
+                                <form >
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
@@ -221,7 +221,7 @@
                             <!-- Start Sidebar -->
                             <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
-                                    <h4>Pyramid</h4>
+                                    <h4>Stages Involved</h4>
                                     <img src="{{ asset('/images/pyramid.jpg') }}" alt=""/>
                                 </div>
                                 
