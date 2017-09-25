@@ -58,7 +58,8 @@
                                 <h2><strong>Registration</strong></h2>
                                 <p class="lead"><span style="color: #3498db; font-weight: 300; ">Keke Napep Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
-                                <form >
+                                <form method="post" action="{{ url('/register') }}" enctype="multipart/form-data">
+                                    <input type="hidden" name ="schemeId" value ="1" />
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
@@ -87,10 +88,13 @@
                                             </div>
                                         </div>
                                         <div class="col-md-9">
-                                            <select name="level" class="form-control input-lg">
-                                                <option>Bronze | Fee = ₦2,000</option>
-                                                <option>Silver | Fee = ₦4,000</option>
-                                                <option>Gold | Fee = ₦6,000</option>
+                                            <select name="level" class="form-control input-lg" name="startingClassId">
+                                                @if(isset($startingClasses)
+                                                @foreach($startingClasses as $startingClass)
+                                                <option value="{{ $startingClass->id}}"> {{ $startingClass->name }}| Fee = ₦{{ number_format($startingClass->price)}}</option>
+                                               
+                                                @endforeach
+                                                @endif
                                             </select>
                                         </div>
                                         
@@ -137,7 +141,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
-                                                <select name="Month" class="form-control input-lg">
+                                                <select name="month" class="form-control input-lg">
                                                     <option selected>Month</option>
                                                     <option>Jan</option>
                                                     <option>Feb</option>
@@ -154,7 +158,7 @@
                                                 </select>
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
-                                                <select name="Year" class="form-control input-lg">
+                                                <select name="year" class="form-control input-lg">
                                                     <option selected>Year</option>
                                                     <option>1980</option>
                                                     <option>1981</option>

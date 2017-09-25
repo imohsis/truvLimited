@@ -42,3 +42,41 @@ Route::get('/kekeownershipsignup', function(){
 Route::get('/bikeownershipsignup', function(){
     return view('bikeOwnershipSignup');
 });
+
+Route::get('/member', function(){
+    return view('member.index');
+    
+});
+
+Route::get('/network', function(){
+    return view('member.network');
+});
+
+Route::get('/portfolio', function(){
+   return view('member.portfolio'); 
+});
+
+Route::get('/changepassword', function(){
+   return view('member.changepassword'); 
+});
+
+
+Route::get('/admin', function() {
+    return view('admin.index');
+});
+
+Route::get('/admin/singlemember', function(){
+    return view('admin.singlemember');
+});
+
+Route::get('/admin/singlememberportfolio', function(){
+    return view('admin.singlememberportfolio');
+});
+
+Route::get('/admin/changepassword', function(){
+    return view('admin.changepassword');
+});
+
+Route::get('/admin/allmembers', function(){
+    return view('admin.allmembers');
+});
