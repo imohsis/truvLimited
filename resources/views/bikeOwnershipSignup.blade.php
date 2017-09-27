@@ -62,6 +62,21 @@
                                 <form >
                                     <div class="row">
                                         <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Select Your Starting Level</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <select name="level" class="form-control input-lg">
+                                                <option>Bronze | Fee = ₦2,000</option>
+                                                <option>Silver | Fee = ₦4,000</option>
+                                                <option>Gold | Fee = ₦6,000</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="form-group">
                                             <div class="col-md-9">
                                                 <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name">
                                             </div>
@@ -81,21 +96,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <label>Select Your Starting Level</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <select name="level" class="form-control input-lg">
-                                                <option>Bronze | Fee = ₦2,000</option>
-                                                <option>Silver | Fee = ₦4,000</option>
-                                                <option>Gold | Fee = ₦6,000</option>
-                                            </select>
-                                        </div>
-                                        
-                                    </div><br/>
+                                    
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">

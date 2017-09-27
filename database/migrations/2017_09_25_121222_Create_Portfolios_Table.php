@@ -16,9 +16,9 @@ class CreatePortfoliosTable extends Migration
         Schema::create('Portfolios', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('member_id')->references('id')->on('Members');
-            $table->integer('scheme_id')->references('id')->on('Schemes');
-            $table->integer('starting_class_id')->references('id')->on('StartingClasses');
-            $table->integer('stage_id')->references('id')->on('Stages');
+            $table->integer('scheme_id');
+            $table->integer('starting_class_id');
+            $table->integer('stage_id');
             $table->timestamps();
         });
     }
