@@ -90,6 +90,14 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                      <a href="/password/reset" >forgot password?</a>
+                  </div>
+                </div>
+              </div>
+                
             </form>
           </div>
             
@@ -113,52 +121,7 @@
   </div>
   
   <!-- Start Footer -->
-  <footer class="site-footer-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <section class="footer-widget" id="newsletter">
-            <h4>Newsletter</h4>
-            <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-            <form>
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control input-lg">
-                <span class="input-group-btn input">
-                <button class="btn btn-primary" type="button">Go!</button>
-                </span> </div>
-              <!-- /input-group -->
-            </form>
-          </section>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <section class="footer-widget" id="twitter">
-            <h4>Latest Tweet</h4>
-            <div class="twitter-widget"></div>
-          </section>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <section class="footer-widget" id="contact">
-            <h4>Contact Us</h4>
-            <address class="ico">
-            <p><i class="fa fa-map-marker"></i> <span><strong>Address:</strong> 1234 Street Name,<br>
-              City Name, United States</span></p>
-            <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> (123) 456-7890</span></p>
-            <p><i class="fa fa-envelope"></i> <span><strong>Email:</strong> mail@example.com</span></p>
-            </address>
-          </section>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <section class="footer-widget" id="text-widget">
-            <h4>About Tentered</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod nisi.</p>
-            <p>Cras at ultrices erat, sed vulputate eros. Nunc at augue gravida est fermentum vulputate.</p>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+
  @include('includes.footer')
   <!-- End footer --> 
   <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a> </div>

@@ -116,3 +116,5 @@ Route::group(['middleware' => ['member'], 'prefix' => 'member'], function() {
 Route::post('/changepassword', 'ChangePasswordController@changePassword')->middleware('auth');
 Route::get('/logout', 'LogoutController@logout');
 
+
+Auth::routes();

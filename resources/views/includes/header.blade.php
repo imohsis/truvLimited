@@ -36,33 +36,33 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="images/vision.png" alt="Site Logo"> </a> </h1>
+                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset('/images/vision.png')}}" alt="Site Logo"> </a> </h1>
                         </div>
                         <div class="col-md-9">
                             <button class="mmenu-toggle"><i class="fa fa-bars fa-lg"></i></button>
                             <nav class="main-menu">
                                 <ul class="sf-menu" id="main-menu">
                                     <li><a href="{{ url('/') }}">Home <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li><a href="{{ url('/about') }}">About Us <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li><a href="{{ url('/opportunity') }}">The Opportunity <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li><a href="{{ url('/gallery') }}">Our People <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li><a href="{{ url('/process') }}">How It Works <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li><a href="{{ url('/contact') }}">Contact Us <i class=""></i></a>
-                                        
+
                                     </li>
                                     <li class="visible-xs"><a href="{{ url('/signup') }}">Registration</a></li>
                                     <li class="visible-xs"><a href="">Login</a></li>
-                                   
+
                                 </ul>
                             </nav>
                         </div>
