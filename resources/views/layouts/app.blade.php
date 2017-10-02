@@ -132,11 +132,11 @@
                     <a href="{{ url('/member#hello') }}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
                 </li>
                 <li>
-                    <a href="{{ url('/portfolio#hello') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw"
+                    <a href="{{ url('/member/portfolio#hello') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw"
                                                                       aria-hidden="true"></i>Portfolio</a>
                 </li>
                 <li>
-                    <a href="{{ url('/network#hello') }}" class="waves-effect"><i class="fa fa-cloud fa-fw"
+                    <a href="{{ url('/member/network#hello') }}" class="waves-effect"><i class="fa fa-cloud fa-fw"
                                                                       aria-hidden="true"></i>Network</a>
                 </li>
                 <li>

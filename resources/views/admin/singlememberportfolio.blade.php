@@ -26,38 +26,53 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($portfolios as $index => $portfolio)
+                        <?php
+                        $scheme = "";
+                        switch ($portfolio->scheme_id):
+                            case ($portfolio->scheme_id == App\Schemes::$KEKEANDMOTOCYCLEOWNERSHIPSCHEME):
+                                $scheme = "Keke And Motocycle Ownership Scheme";
+                                break;
+                            case ($portfolio->scheme_id == App\Schemes::$HOUSEOWNERSHIPSCHEME):
+                                $scheme = "House Ownership Scheme";
+                                break;
+                            case ($portfolio->scheme_id == App\Schemes::$FINANCIALEMPOWERMENTSCHEME):
+                                $scheme = "Financial Empowerment Scheme";
+                                break;
+                        endswitch;
+
+                        $startingClass = "";
+                        $startingClassId = $portfolio->scheme_id;
+                        switch ($startingClassId):
+                            case ($startingClassId == \App\StartingClasses::$BRONZE):
+                                $startingClass = "Bronze Starting Class";
+                                break;
+                            case ($startingClassId == \App\StartingClasses::$GOLD):
+                                $startingClass = "Gold Starting Class";
+                                break;
+                            case ($startingClassId == \App\StartingClasses::$SILVER):
+                                $startingClass = "Silver Staring Class";
+                                break;
+                        endswitch;
+                        ?>
                         <tr style="background-color: #EDF1F5;">
-                            <td>1</td>
-                            <td class="txt-oflo"> &nbsp;Keke Napep Ownership Scheme</td>
-                            <td class="">Bronze | Fee = ₦2,000</td>
-                            <td class="">Stage One</td>
+                            <td>{{ $index + 1 }}</td>
+                            <td class="txt-oflo"> &nbsp;
+                                {{ $scheme }}
+                            </td>
+                            <td class="">
+                                {{ $startingClass }}
+                            </td>
+                            
+                            <td class="">{{ \App\Stages::determineStage($portfolio->stage_id) }}</td>
                         </tr>
-                        <tr >
-                             <td>2</td>
-                            <td class="txt-oflo"> &nbsp;House Ownership Scheme</td>
-                            <td class="">Gold | Fee = ₦6,000</td>
-                            <td class="">Stage Three</td>
-                        </tr>
-                       
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>
-            <ul class="pagination">
+          
 
-
-                @if(isset($pagination))
-                @if($pagination->currentPage <= 0)
-                <li class="disabled"><span>« &nbsp;previous</span></li>
-                @else
-                <li ><a href="{{ url('/transfers?page='.($pagination->currentPage - 1).'#hello') }}"><span>« &nbsp;previous</span></a></li>
-                @endif     
-                @if($pagination->currentPage < ($pagination->totalPages - 1))
-                <li><a href="{{ url('/transfers?page='.($pagination->currentPage + 1).'#hello') }}" rel="next">next &nbsp;»</a></li>
-                @else
-                <li class="disabled"><span>next &nbsp;»</span></li>
-                @endif
-                @endif
-            </ul>
         </div>
     </div>
 </div>

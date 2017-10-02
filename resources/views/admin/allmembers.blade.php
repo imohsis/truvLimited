@@ -27,43 +27,26 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($members as $member)
+                        @if($member->user() != null)
                         <tr style="background-color: #EDF1F5;">
-                            <td>1</td>
-                            <td>VIX00INT001</td>
-                            <td class="txt-oflo"> &nbsp;Wale Akanbi</td>
-                            <td class="">joe45ola@gmail.com</td>
-                            <td class="">09083345566</td>
-                            <td>Lagos</td>
-                            <td><a href="{{ url('/admin/singlemember')}}" class="btn btn-default"><span class="">View</span></a></td>
+                            <td>{{ $member->id }}</td>
+                            <td>{{ $member->member_id }}</td>
+                            <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
+                            <td class="">{{ $member->user()->email }}</td>
+                            <td class="">{{ $member->phone }}</td>
+                            <td>{{ $member->location }}</td>
+                            <td><a href="{{ url('/admin/members/'.$member->id)}}" class="btn btn-default"><span class="">View</span></a></td>
                         </tr>
-                        <tr >
-                            <td>2</td>
-                             <td>VIX00INT002</td>
-                            <td class="txt-oflo"> &nbsp;Snow Joseph</td>
-                            <td class="">snowjos@gmail.com</td>
-                            <td class="">070499883996</td>
-                            <td>Ogun</td>
-                            <td><a href="{{ url('/admin/singlemember')}}" class="btn btn-default"><span class="">View</span></a></td>
-                        </tr>
-                       
+                        @endif
+                        @endforeach
+                        
                     </tbody>
                 </table>
             </div>
             <ul class="pagination">
-
-
-                @if(isset($pagination))
-                @if($pagination->currentPage <= 0)
-                <li class="disabled"><span>« &nbsp;previous</span></li>
-                @else
-                <li ><a href="{{ url('/transfers?page='.($pagination->currentPage - 1).'#hello') }}"><span>« &nbsp;previous</span></a></li>
-                @endif     
-                @if($pagination->currentPage < ($pagination->totalPages - 1))
-                <li><a href="{{ url('/transfers?page='.($pagination->currentPage + 1).'#hello') }}" rel="next">next &nbsp;»</a></li>
-                @else
-                <li class="disabled"><span>next &nbsp;»</span></li>
-                @endif
-                @endif
+             
+                {{ $members->links() }}
             </ul>
         </div>
     </div>

@@ -7,24 +7,36 @@ namespace App\Services;
  * |------------------------- SchemeService Class ------------------------------
  * |----------------------------------------------------------------------------
  * |
- * | This class is responsible for handling operations regarding to scheme 
- * | account.
+ * | This class is responsible for handling operations regarding to schemes.
  * |
  * |----------------------------------------------------------------------------
  * |
  */
 class SchemeService {
-    
+
     /**
      * 
-     * This method is responsible for retrieving a Scheme by it's id.
+     * This method is responsible for confirming the validity of a Scheme i.e 
+     * if the id given actually belongs to an existent Scheme defined in the 
+     * /App/Schemes.php class.
      * 
-     * @param type $schemeId | the id of the scheme entry to be retrieved.
+     * @param int $schemeId | the scheme id in question.
      * 
-     * @return type
+     * @return boolean.
      * 
      */
-    public function getSchemeById($schemeId){
-        return \App\Scheme::find($id);
+    public function confirmSchemeValidity($schemeId) {
+        switch ($schemeId) {
+            case ($schemeId == \App\Schemes::$HOUSEOWNERSHIPSCHEME):
+                return true;
+            case ($schemeId == \App\Schemes::$KEKEANDMOTOCYCLEOWNERSHIPSCHEME):
+                return true;
+            case ($schemeId == \App\Schemes::$FINANCIALEMPOWERMENTSCHEME):
+                return true;
+
+            default:
+                return false;
+        }
     }
+
 }

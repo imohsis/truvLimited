@@ -7,43 +7,30 @@
             <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
 
             </div>
-            <h3 class="box-title"><span style="color: #9FC735">My Transfers</span></h3>
+            <h3 class="box-title"><span style="color: #9FC735">My Network</span></h3>
             <div class="table-responsive">
-                 @if(session('success'))
-                <span style="color: green">{{ session('success') }}</span>
-                @endif
-                @if(session('error'))
-                <span style="color: red">{{ session('error') }}</span>
-                @endif
+              
                 <table class="table">
                     <thead>
                         <tr>
 
-                            <th>Transfer Id</th>
-                            <th>PAYMENT METHOD</th>
-                            <th>Recipient Name</th>
-                            <th>Payment Status</th>
+                            <th>S/N</th>
+                            <th>Name</th>
+                            <th>Location</th>
                             <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @if(isset($transfers))
-                        @foreach($transfers as $transfer)
+                        @if(isset($members))
+                        @foreach($members as $index => $member)
                         <tr class="clickable">
 
-                            <td class="txt-oflo">{{ $transfer->transactionId }}</td>
+                            <td class="txt-oflo">{{ $index + 1 }}</td>
                             <td>
-                                @if($transfer->paymentOption == 1)
-                                    Bank Payment
-                                @endif
-                                @if($transfer->paymentOption == 2)
-                                    Credit Card Payment
-                                @endif
+                              {{ $member->full_name }}
                             </td>
-                            <td><img src="/countries/{{ $transfer->recipientCountryId }}.png" class="contact-country-image"/> {{ $transfer->recipientName }}</td>
-                            <td class="txt-oflo"> &nbsp;{{ $transfer->transactionStatus }}</td>
-                            <td>{{ $transfer->date }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
-
+                            <td>{{ $member->location }}</td>
+                            <td class="txt-oflo"> &nbsp;{{ $member->created_at }}</td>
                         </tr>  
                         @endforeach
                         @endif
@@ -51,20 +38,9 @@
                 </table>
             </div>
              <ul class="pagination">
-
-
-                 @if(isset($pagination))
-                @if($pagination->currentPage <= 0)
-                <li class="disabled"><span>« &nbsp;previous</span></li>
-                @else
-                <li ><a href="{{ url('/transfers?page='.($pagination->currentPage - 1).'#hello') }}"><span>« &nbsp;previous</span></a></li>
-                @endif     
-                @if($pagination->currentPage < ($pagination->totalPages - 1))
-                <li><a href="{{ url('/transfers?page='.($pagination->currentPage + 1).'#hello') }}" rel="next">next &nbsp;»</a></li>
-                @else
-                <li class="disabled"><span>next &nbsp;»</span></li>
-                @endif
-                @endif
+                 @if(null !== $members)
+                 {{ $members->links() }}
+                 @endif
             </ul>
         </div>
     </div>

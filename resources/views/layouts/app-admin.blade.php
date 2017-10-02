@@ -133,12 +133,25 @@
                     <a href="{{ url('/admin#hello') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw"
                                                                      aria-hidden="true"></i>Home</a>
                 </li>
-                
                 <li >
-                    <a href="{{ url('/admin/allmembers') }}" class="waves-effect"><i class="fa fa-users fa-fw"
-                                                                     aria-hidden="true"></i>All Members</a>
+                    <a href="{{ url('/admin#hello') }}" class="waves-effect"><i class="fa fa-check-circle-o fa-fw"
+                                                                     aria-hidden="true"></i>New Members</a>
                 </li>
                 
+                <li >
+                    <a href="{{ url('/admin/members') }}" class="waves-effect"><i class="fa fa-users fa-fw"
+                                                                     aria-hidden="true"></i>Existing Members</a>
+                </li>
+                @if(auth()->user() != null && auth()->user()->role_id == \App\UserRole::$ADMINISTRATOR)
+                <li >
+                    <a href="{{ url('/admin/coordinator/add') }}" class="waves-effect"><i class="fa fa-bomb fa-fw"
+                                                                     aria-hidden="true"></i>Add Coordinator</a>
+                </li>
+                <li >
+                    <a href="{{ url('/admin/coordinators') }}" class="waves-effect"><i class="fa fa-at fa-fw"
+                                                                     aria-hidden="true"></i>View Coordinators</a>
+                </li>
+                @endif
                 <li >
                     <a href="{{ url('/admin/changepassword#hello') }}" class="waves-effect"><i class="fa fa-key fa-fw"
                                                                      aria-hidden="true"></i>Change Password</a>
@@ -167,7 +180,7 @@
                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
 
                     <ol class="breadcrumb hidden-xs">
-                        <li><a href="#">Admin Dashboard</a></li>
+                        <li><a href="#">{{ auth()->user()->name }}</a></li>
                     </ol>
                 </div>
                 <!-- /.col-lg-12 -->

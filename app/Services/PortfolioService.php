@@ -35,5 +35,45 @@ class PortfolioService {
                     'stage_id' => $stageId
         ]);
     }
-
+    
+    /**
+     * 
+     * This method is responsible for retrieving all $member
+     * 
+     * @param $member | the member whose portfolio is to be retrieved.
+     * 
+     * @return array collection
+     * 
+     */
+    public function getAllPortfoliosForAMember($member){
+        if($member != null){
+            return \App\Portfolio::where('member_id', '=', $member->id)->get();
+        }
+        return [];
+    }
+    
+    /**
+     * 
+     * This method is responsible for adding(crediting) a specified amount to a 
+     * member portfolio record. This method is mostly called when you want to
+     * add 1 as a result of a referred member.
+     * 
+     * @param \App\Member $memberToCredit | the member to be credited.
+     * 
+     * @param int $amount | the amount to credit.
+     * 
+     * @return boolean
+     * 
+     */
+    public function creditMemberPortfolioStageId($memberToCredit, $amount){
+        if($memberToCredit == null){
+            $portfolios = $this->getAllPortfoliosForAMember($memberToCredit);
+            if(count($portfolios) >  0){
+               $portfolio =  $portfolios->get(0);
+               $portfolio->stage_id += $amount;
+               return $portfolio->save();
+            }
+        }
+        return false;
+    }
 }

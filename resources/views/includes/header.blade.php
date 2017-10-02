@@ -17,7 +17,7 @@
                             <nav class="secondary-menu">
                                 <ul class="pull-right">
                                     <li><a href="{{ url('/signup') }}">Registration</a></li>
-                                    <li><a href="">Login</a></li>
+                                    <li><a href="{{ url('/login') }}">Login</a></li>
                                     <li><a href="">Locations</a></li>
                                     <li><a href="">FAQS</a></li>
                                     <li class="dropdown pull-right"><a data-toggle="dropdown"><img src="images/flag-icon-us.png" alt="us"> English US <b class="caret"></b></a>

@@ -4,11 +4,11 @@ namespace App\Services;
 
 /**
  * |----------------------------------------------------------------------------
- * |------------------------- StartingLevelService Class ------------------------------
+ * |------------------------- StartingClassService Class -----------------------
  * |----------------------------------------------------------------------------
  * |
- * | This class is responsible for handling operations regarding to starting level 
- * | operations.
+ * | This class is responsible for handling operations regarding to starting
+ * | classes.
  * |
  * |----------------------------------------------------------------------------
  * |
@@ -17,14 +17,25 @@ class StartingClassService {
     
     /**
      * 
-     * This method is responsible for retrieving a Starting Level by it's id.
+     * This method is responsible for checking the is the startingClass specified
+     * is a valid starting class.
      * 
-     * @param type $id | the id of the starting level to be retrieved.
+     * @param int $startingClassId | the id in question.
      * 
-     * @return StartingLevel.
+     * @return boolean
      * 
      */
-    public function getStartingClassById($id){
-       return \App\StartingClass::find($id); 
+    public function confirmStartingClassValidity($startingClassId){
+        switch ($startingClassId) {
+            case ($startingClassId == \App\StartingClasses::$BRONZE):
+                return true;
+            case ($startingClassId == \App\StartingClasses::$SILVER):
+                return true;
+            case ($startingClassId == \App\StartingClasses::$GOLD):
+                return true;
+            default:
+                return false;
+        }
     }
+    
 }
