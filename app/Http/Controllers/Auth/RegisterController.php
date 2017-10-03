@@ -118,7 +118,7 @@ use RegistersUsers;
     private function createUserWithCorrespondingData(array $data, $referalId) {
         \Illuminate\Support\Facades\DB::beginTransaction();
 
-        $dateOfBirth = \Carbon\Carbon::createFromDate($data['year'], $data['month'], $data['day'])->format('y/m/d');
+        $dateOfBirth = \Carbon\Carbon::create($data['year'], $data['month'], $data['day']);
         $user = User::create([
                     'name' => $data['name'],
                     'email' => $data['email'],
