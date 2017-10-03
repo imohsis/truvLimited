@@ -62,7 +62,8 @@ use RegistersUsers;
                     'startingClassId' => 'required',
                     'day' => 'required|numeric|min:1',
                     'month' => 'required|numeric|min:1',
-                    'year' => 'required|numeric|min:1900'
+                    'year' => 'required|numeric|min:1900',
+                    'phone' => 'required|numeric'
         ]);
     }
 
@@ -79,6 +80,11 @@ use RegistersUsers;
         if (!$this->confirmSchemeAndStartingClassValidity($request['schemeId'], $request['startingClassId'])) {
             return redirect()->back()->with('error', 'invalid scheme id or starting class id');
         }
+        
+        if($request['tellerId'] == null && $request['transactionId'] == null){ 
+            return redirect()->back()->with('error', 'you must enter either teller id or transaction id');
+        }
+        
         $referalId = 0;
         if ($request['referalId'] != null) {
             $referalId = $this->determineReferal($request['referalId']);
@@ -127,7 +133,9 @@ use RegistersUsers;
         ]);
 
         if ($user != null) {
-            $member = $this->memberService->createMember($data['name'], $data['phone'], $data['email'], $data['location'], $dateOfBirth, $data['gender'], $data['tellerId'], $data['transactionId'], false, false, $user->id, $referalId);
+            $member = $this->memberService->createMember($data['name'], $data['phone'], 
+                    $data['email'], $data['location'], $dateOfBirth, $data['gender'],
+                    $data['tellerId'], $data['transactionId'], false, false, $user->id, $referalId);
 
             if ($member != null) {
                 $portfolio = $this->portfolioService->createPortfolio($member->id, $data['schemeId'], $data['startingClassId'], 0);

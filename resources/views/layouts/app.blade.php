@@ -51,7 +51,7 @@
         <div class="navbar-header">
             <div class="top-left-part">
                 <!-- Logo -->
-                <a class="logo" href="{{ url('/admin') }}">
+                <a class="logo" href="{{ url('/member') }}">
                     <!-- Logo icon image, you can use font-icon also --><b>
                         <!--This is dark logo icon--><img src="/plugins/images/logo.png" alt="home"
                                                           class="dark-logo"/><!--This is light logo icon--><img
@@ -131,6 +131,7 @@
                 <li  style="padding: 70px 0 0;">
                     <a href="{{ url('/member#hello') }}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
                 </li>
+                
                 <li>
                     <a href="{{ url('/member/portfolio#hello') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw"
                                                                       aria-hidden="true"></i>Portfolio</a>

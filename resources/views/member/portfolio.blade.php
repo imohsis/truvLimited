@@ -63,7 +63,7 @@
                             <td class="">
                                 {{ $startingClass }}
                             </td>
-                            
+                            <?php dd($portfolio->stage_id); ?>
                             <td class="">{{ \App\Stages::determineStage($portfolio->stage_id) }}</td>
                         </tr>
                         @endforeach
