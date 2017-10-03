@@ -79,9 +79,12 @@ use RegistersUsers;
         if (!$this->confirmSchemeAndStartingClassValidity($request['schemeId'], $request['startingClassId'])) {
             return redirect()->back()->with('error', 'invalid scheme id or starting class id');
         }
-        $referalId = $this->determineReferal($request['referalId']);
-        if ($referalId == null) {
-            return redirect()->back()->with('error', 'invalid referral code');
+        $referalId = 0;
+        if ($request['referalId'] != null) {
+            $referalId = $this->determineReferal($request['referalId']);
+            if ($referalId == null) {
+                return redirect()->back()->with('error', 'invalid referral code');
+            }
         }
         $request['referalId'] = $referalId;
         $this->validator($request->all())->validate();
