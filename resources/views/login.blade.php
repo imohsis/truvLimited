@@ -105,7 +105,7 @@
           <aside class="col-md-3 sidebar right-sidebar">
             <div class="widget sidebar-widget recent-posts">
               <h4>Latest Images</h4>
-              <img src="{{ asset('/') }}" alt="true v limited"/>
+              <img src="{{ asset('/images/bike.jpg') }}" alt="true v limited"/>
             </div>
             <section class="widget sidebar-widget" id="text-widget1">
               <h4>About Tentered</h4>

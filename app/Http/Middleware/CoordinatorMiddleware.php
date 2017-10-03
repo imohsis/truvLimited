@@ -15,7 +15,11 @@ class CoordinatorMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user() == null || auth()->user()->role_id != \App\UserRole::$COORDINATOR){
+        if(auth()->user() == null){
+            return redirect('/login');
+        }
+        
+        if(auth()->user()->role_id != \App\UserRole::$COORDINATOR){
             if(auth()->user()->role_id != \App\UserRole::$ADMINISTRATOR && auth()->user()->role_id == \App\UserRole::$MEMBER){
                 return redirect('/login');
             }
