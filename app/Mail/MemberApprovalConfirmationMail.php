@@ -14,8 +14,6 @@ class MemberApprovalConfirmationMail extends Mailable {
 
     private $email;
     private $password;
-    private $subjecte;
-    private $messager;
     private $name;
 
     /**
