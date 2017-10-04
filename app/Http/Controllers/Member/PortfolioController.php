@@ -19,7 +19,7 @@ class PortfolioController extends Controller
     
     public function show(){
         $member = $this->memberService->getMemberByUserId(auth()->user()->id);
-        $portfolios = $this->portfolioService->getAllPortfoliosForAMember($member);
+        $portfolios = $this->portfolioService->getAllApprovedPortfoliosForAMember($member);
         return view('member.portfolio')->with('portfolios', $portfolios);
     }
 }

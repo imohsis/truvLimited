@@ -54,8 +54,10 @@
                                 $startingClass = "Silver Staring Class";
                                 break;
                         endswitch;
+                        
+                        $backgroundColor = (($index + 1) % 2) == 0 ? "#FFFFFF" : "#EDF1F5";
                         ?>
-                        <tr style="background-color: #EDF1F5;">
+                        <tr style="background-color: {{ $backgroundColor }};">
                             <td>{{ $index + 1 }}</td>
                             <td class="txt-oflo"> &nbsp;
                                 {{ $scheme }}

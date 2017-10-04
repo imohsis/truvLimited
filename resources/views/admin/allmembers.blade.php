@@ -9,11 +9,15 @@
             </div>
             <h3 class="box-title"><span style="color: #9FC735">All Members</span></h3>
             <div class="table-responsive">
-                @if(session('success'))
-                <span style="color: green">{{ session('success') }}</span>
+                @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
                 @endif
-                @if(session('error'))
-                <span style="color: red">{{ session('error') }}</span>
+                @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
                 @endif
                 <table class="table">
                     <thead>

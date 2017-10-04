@@ -9,14 +9,17 @@ class IndexController extends Controller
 {
     //
     private $memberService;
+    private $portfolioService;
     
-    public function __construct(\App\Services\MemberService $memberService) {
+    public function __construct(\App\Services\MemberService $memberService,
+    \App\Services\PortfolioService $portfolioService) {
         $this->memberService = $memberService;
+        $this->portfolioService = $portfolioService;
     }
     
     public function show(){
-        $awaitingMembers = $this->memberService->getAllUnApprovedAndUnReviewedMembers();
+        $awaitingPortfolios = $this->portfolioService->getAllUnReviewedPortfolios();
         return view('admin.index')
-                ->with('awaitingMembers', $awaitingMembers);
+                ->with('awaitingPortfolios', $awaitingPortfolios);
     }
 }

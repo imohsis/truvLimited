@@ -69,7 +69,7 @@
                                 @endif
                                 <form method="post" action="{{ url('/register') }}" enctype="multipart/form-data">
                                     {{ csrf_field() }}
-                                    <input type="hidden" name ="schemeId" value ="1" />
+                                    <input type="hidden" name ="schemeId" value ="2" />
                                     <input type="hidden" name ="password" value="default"/>
                                     <div class="row">
                                         <div class="form-group">

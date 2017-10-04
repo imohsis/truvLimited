@@ -54,52 +54,15 @@
             <div class="top-left-part">
                 <!-- Logo -->
                 <a class="logo" href="{{ url('/admin') }}">
-                    <!-- Logo icon image, you can use font-icon also --><b>
+                    <!-- Logo icon image, you can use font-icon also -->
                         <!--This is dark logo icon--><img src="/plugins/images/logo.png" alt="home"
                                                           class="dark-logo"/><!--This is light logo icon--><img
                                 src="/plugins/images/logo.png" alt="home" class="light-logo"/>
-                    </b> </a>
+                    </a>
             </div>
             <ul class="nav navbar-top-links navbar-left">
                 <li><a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="fa fa-bars"></i></a></li>
-                <li class="dropdown">
-                    <a aria-expanded="false" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#"> <i class="fa fa-bell"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-                    </a>
-                    <ul class="dropdown-menu mailbox animated bounceInDown">
-                        <li>
-                            <div class="drop-title">You have 4 new notifications</div>
-                        </li>
-                        <li>
-                            <div class="message-center">
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Ola Olu</h5> <span class="mail-desc">Transfer awating approval</span> <span class="time">9:30 AM</span>
-                                        <h5>Ola Olu</h5> <span class="mail-desc">Transfer awating approval</span> <span class="time">9:30 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Sonu Nigam</h5> <span class="mail-desc">Transfer awating approval</span> <span class="time">9:10 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Arijit Sinh</h5> <span class="mail-desc">Transfer awating approval</span> <span class="time">9:08 AM</span> </div>
-                                </a>
-                                <a href="#">
-                                    <div class="user-img"> <img src="../plugins/images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                    <div class="mail-contnet">
-                                        <h5>Pavan kumar</h5> <span class="mail-desc">Transfer awating approval</span> <span class="time">9:02 AM</span> </div>
-                                </a>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
+               
 
             </ul>
             <!-- /Logo -->

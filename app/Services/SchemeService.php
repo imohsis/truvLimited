@@ -38,5 +38,28 @@ class SchemeService {
                 return false;
         }
     }
-
+    
+    
+    /**
+     * 
+     * This method is responsible for returning the scheme that a number repre-
+     * sents.
+     * 
+     * @param int $schemeId | the scheme id which is the number in question.
+     * 
+     * @return String | the scheme.
+     * 
+     */
+    public function determineScheme($schemeId){
+        switch($schemeId){
+            case($schemeId == \App\Schemes::$HOUSEOWNERSHIPSCHEME):
+                return "House Ownership Scheme";
+            case ($schemeId == \App\Schemes::$KEKEANDMOTOCYCLEOWNERSHIPSCHEME):
+                return "Keke and Motocycle Ownership Scheme";
+            case ($schemeId == \App\Schemes::$FINANCIALEMPOWERMENTSCHEME):
+                return "Financial Empowerment Scheme";
+            default:
+                return null;
+        }
+    }
 }

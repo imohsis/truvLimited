@@ -34,15 +34,16 @@ class MemberController extends Controller
     public function approveMember(Request $request){
         $this->validate($request, [
             'id' => 'required',
-            'password' => 'required|min:8|confirmed'
+            
         ]);
         
         $member = $this->memberService->getMemberById($request['id']);
         if($member == null){
             return redirect()->back()->with('error', 'member does not exist');
         }
-        
-        if($this->memberService->approveMember($member, auth()->user()->id, $request['password']) != null){
+        $fullNameArray = explode(" ", $member->full_name);
+        $lastName = count($fullNameArray >= 2) ? $fullNameArray[(count($fullNameArray) - 1)] : $member->full_name;
+        if($this->memberService->approveMember($member, auth()->user()->id, $lastName."111") != null){
             return redirect()->back()->with('success', 'member approved successfully');
         }
         

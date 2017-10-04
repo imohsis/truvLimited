@@ -21,8 +21,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if(isset($members))
-                        @foreach($members as $index => $member)
+                        @if(isset($portfolios))
+                        @foreach($portfolios as $index => $portfolio)
+                        <?php $member = App\Member::find($portfolio->member_id); ?>
+                        @if($member != null)
                         <tr class="clickable">
 
                             <td class="txt-oflo">{{ $index + 1 }}</td>
@@ -32,14 +34,15 @@
                             <td>{{ $member->location }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->created_at }}</td>
                         </tr>  
+                        @endif
                         @endforeach
                         @endif
                     </tbody>
                 </table>
             </div>
              <ul class="pagination">
-                 @if(null !== $members)
-                 {{ $members->links() }}
+                 @if(null !== $portfolios)
+                 {{ $portfolios->links() }}
                  @endif
             </ul>
         </div>

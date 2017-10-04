@@ -56,7 +56,7 @@ use RegistersUsers;
 
         return Validator::make($data, [
                     'name' => 'required|string|max:255',
-                    'email' => 'required|string|email|max:255|unique:users',
+                    'email' => 'required|string|email|max:255',
                     'password' => 'required|string|min:6',
                     'schemeId' => 'required',
                     'startingClassId' => 'required',
@@ -80,11 +80,11 @@ use RegistersUsers;
         if (!$this->confirmSchemeAndStartingClassValidity($request['schemeId'], $request['startingClassId'])) {
             return redirect()->back()->with('error', 'invalid scheme id or starting class id');
         }
-        
-        if($request['tellerId'] == null && $request['transactionId'] == null){ 
+
+        if ($request['tellerId'] == null && $request['transactionId'] == null) {
             return redirect()->back()->with('error', 'you must enter either teller id or transaction id');
         }
-        
+
         $referalId = 0;
         if ($request['referalId'] != null) {
             $referalId = $this->determineReferal($request['referalId']);
@@ -95,7 +95,7 @@ use RegistersUsers;
         $request['referalId'] = $referalId;
         $this->validator($request->all())->validate();
         event(new \Illuminate\Auth\Events\Registered($user = $this->create($request->all())));
-        
+
         return $this->registered($request, $user) ?: redirect($this->redirectPath());
     }
 
@@ -116,7 +116,7 @@ use RegistersUsers;
      * things needed to complete the registration process.
      * 
      * @param array $data | an array containing form input.
-     * @param type $referalId | the referalId for the member.
+     * @param type $referalId | the referalId for the referring portfolio.
      * 
      * @return User
      * 
@@ -125,20 +125,14 @@ use RegistersUsers;
         \Illuminate\Support\Facades\DB::beginTransaction();
 
         $dateOfBirth = \Carbon\Carbon::create($data['year'], $data['month'], $data['day']);
-        $user = User::create([
-                    'name' => $data['name'],
-                    'email' => $data['email'],
-                    'password' => bcrypt($data['password']),
-                    'role_id' => \App\UserRole::$MEMBER,
-        ]);
+        $user = $this->createUserIfUserDoesNotExist($data['name'], $data['email'], bcrypt($data['password']), \App\UserRole::$MEMBER);
 
         if ($user != null) {
-            $member = $this->memberService->createMember($data['name'], $data['phone'], 
-                    $data['email'], $data['location'], $dateOfBirth, $data['gender'],
-                    $data['tellerId'], $data['transactionId'], false, false, $user->id, $referalId);
+            $member = $this->memberService->createMemberIfMemberDoesNotExist($data['name'], $data['phone'], $data['email'], $data['location'], $dateOfBirth, $data['gender'], false, false, $user->id);
 
             if ($member != null) {
-                $portfolio = $this->portfolioService->createPortfolio($member->id, $data['schemeId'], $data['startingClassId'], 0);
+                $portfolio = $this->portfolioService->createPortfolio($member->id, $data['schemeId'], $data['startingClassId'], 0, 
+                        $data['tellerId'], $data['transactionId'], false, false, $referalId);
                 if ($portfolio != null) {
                     \Illuminate\Support\Facades\DB::commit();
                     session(['success' => true, 'scheme' => $data['schemeId'],
@@ -173,7 +167,7 @@ use RegistersUsers;
     /**
      * 
      * This method encapsulates the process involved in determining the referal 
-     * id to be associated with the registering member's account.
+     * id to be associated with the registering portofolio account.
      * 
      * @param type $referalId | the referalId in question.
      * 
@@ -182,10 +176,37 @@ use RegistersUsers;
      */
     private function determineReferal($referalId) {
         if ($referalId != null) {
-            $member = $this->memberService->getMemberByMemberId($referalId);
-            return ($member == null) ? null : $member->id;
+            $portfolio = $this->portfolioService->getPortfolioByPortfolioCode($referalId);
+            return ($portfolio == null) ? null : $portfolio->id;
         }
         return null;
+    }
+
+    /**
+     * 
+     * This method creates a user if a user record specified by the same email 
+     * does not exist else it retrieves the existing one.
+     * 
+     * @param type $name | the user's name.
+     * @param type $email | the user's email.
+     * @param type $password | the user's password.
+     * @param type $roleId | a id depicting the user role.
+     * 
+     * @return App\User | response
+     * 
+     */
+    private function createUserIfUserDoesNotExist($name, $email, $password, $roleId) {
+        $users = User::where('email', '=', $email)->get();
+        $user = (count($users) > 0) ? $users->get(0) : null;
+        if ($user == null) {
+            $user = User::create([
+                        'name' => $name,
+                        'email' => $email,
+                        'password' => $password,
+                        'role_id' => $roleId,
+            ]);
+        }
+        return $user;
     }
 
 }

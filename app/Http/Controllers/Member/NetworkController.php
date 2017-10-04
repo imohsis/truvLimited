@@ -22,6 +22,6 @@ class NetworkController extends Controller
     public function show(){
         $member = $this->memberService->getMemberByUserId(auth()->user()->id);
         if($member == null) { return redirect()->back()->with('error', 'member not found'); }
-        return view('member.network')->with('members', $this->referralService->getAllMembersReferredByThisMember($member));
+        return view('member.network')->with('portfolios', $this->referralService->getAllPortfoliosReferredByThisMember($member));
     }
 }

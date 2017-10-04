@@ -2,14 +2,14 @@
 
 @section('main-content')
 
-@if($member == null)
+@if($portfolio == null || $member == null)
 <div class="row">
     <div class="col-md-12 col-lg-12 col-sm-12">
         <div class="white-box">
             <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
 
             </div>
-            <h3 class="box-title"><span style="color: #9FC735">Sorry Member Not Found</span></h3>
+            <h3 class="box-title"><span style="color: #9FC735">Sorry Data Not Found</span></h3>
         </div>
     </div>
 </div>
@@ -22,35 +22,23 @@
                 <div class="overlay-box">
                     <div class="user-content">
                         <a href="javascript:void(0)"><img src="/plugins/images/prof.png" class="thumb-lg img-circle" alt="img"></a>
-                        <h4 class="text-white">{{ $member->full_name }}  </h4>
-                        <h1 class="text-white">{{ $member->member_id }}</h1> </div>
+                       
+                        <h1 class="text-white">{{ $member->full_name }}</h1> 
+                    </div>
                 </div>
             </div>
             <div class="user-btm-box">
                 <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/members/'.$member->id.'/portfolios')}}" class="btn btn-default">View Portfolio</a>
-                </div><div class="visible-xs"><br/></div>
-                @if($member->approved_status == true)
-                @if(!$member->user()->is_deactivate)
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/deactivateaccount/'.$member->user()->id)}}" class="btn btn-default">Deactivate account</a>
+                    <a href="{{ url('/admin/members/'.$member->id.'/portfolios') }}" class="btn btn-default">Portfolios</a>
                 </div>
-                @else
+                @if($portfolio->approved_status != true && $portfolio->disapproved_status != true)
+                 <div class="col-md-4 col-sm-12 text-center">
+                    <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
+                </div>
                 <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/activateaccount/'.$member->user()->id)}}" class="btn btn-default">Activate account</a>
+                    <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
                 </div>
                 @endif
-                @else
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#disApproveMember" class="btn btn-default">DisApprove</a>
-                </div>
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#approveMember" class="btn btn-default">&nbsp;&nbsp;&nbsp;Approve&nbsp;&nbsp;</a>
-                </div>
-                @endif
-
-
-
             </div>
         </div>
 
@@ -97,15 +85,26 @@
                     <div class="col-md-12">
                         <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
+                <div>
+                    <label class="col-md-12">Scheme</label>
+                    <div class="col-md-12">
+                           <input type="text" placeholder="" value="{{ $schemeName }}" name="packageName" class="form-control form-control-line"/>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-12">Teller Id</label>
+                    <div class="col-md-12">
+                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                </div>
+                 <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                 <?php $userThatApproved = \App\User::find($member->approved_by); ?>
                 @if($userThatApproved != null)
@@ -122,7 +121,7 @@
     </div>
 </div>
 
-<div id="approveMember" class="modal fade" role="dialog">
+<div id="approveRegistration" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -132,9 +131,9 @@
                 <h4 class="modal-title">Are you sure you want to approve {{ $member->full_name }} Registration</h4>
             </div>
             <div class="modal-body">
-                <form method="post" action="{{ url('/admin/approvemember') }}">
+                <form method="post" action="{{ url('/admin/approveportfolio') }}">
                     {{ csrf_field() }}
-                    <input type="hidden" name="id" value="{{ $member->id }}"/>
+                    <input type="hidden" name="portfolioId" value="{{ $portfolio->id }}"/>
 
                     <input type="submit" class="btn btn-warning" value="Yes"/>  
 
@@ -149,7 +148,7 @@
 </div>
 
 
-<div id="disApproveMember" class="modal fade" role="dialog">
+<div id="disApproveRegistration" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -159,9 +158,9 @@
                 <h4 class="modal-title">Are you sure you want to disapprove {{ $member->full_name }} Registration</h4>
             </div>
             <div class="modal-body">
-                <form method="post" action="{{ url('/admin/disapprovemember') }}">
+                <form method="post" action="{{ url('/admin/disapproveportfolio') }}">
                     {{ csrf_field() }}
-                    <input type="hidden" name="id" value="{{ $member->id }}"/>
+                    <input type="hidden" name="portfolioId" value="{{ $portfolio->id }}"/>
                     <input type="submit" class="btn btn-warning" value="Yes, I am very sure"/>  
 
                 </form>

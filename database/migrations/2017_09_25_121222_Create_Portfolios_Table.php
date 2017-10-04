@@ -19,6 +19,13 @@ class CreatePortfoliosTable extends Migration
             $table->integer('scheme_id');
             $table->integer('starting_class_id');
             $table->integer('stage_id');
+            $table->text('portfolio_code')->nullable();
+            $table->text('teller_id')->nullable();
+            $table->text('transaction_id')->nullable();
+            $table->boolean('approved_status')->default(false);
+            $table->boolean('disapproved_status')->default(false);
+            $table->integer('approved_by')->default(0);
+            $table->integer('refered_by')->default(0);//the id of the portfolio that refered this particular portfolio, left as 0 if nobody refered this member.
             $table->timestamps();
         });
     }

@@ -22,7 +22,7 @@
                             <th>Scheme</th>
                             <th>Starting Class</th>
                             <th>Stage</th>
-
+                            <th>Referral Code</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,8 +54,9 @@
                                 $startingClass = "Silver Staring Class";
                                 break;
                         endswitch;
+                        $backgroundColor = (($index + 1) % 2) == 0 ? "#FFFFFF" : "#EDF1F5";
                         ?>
-                        <tr style="background-color: #EDF1F5;">
+                        <tr style="background-color: {{ $backgroundColor }};">
                             <td>{{ $index + 1 }}</td>
                             <td class="txt-oflo"> &nbsp;
                                 {{ $scheme }}
@@ -63,8 +64,9 @@
                             <td class="">
                                 {{ $startingClass }}
                             </td>
-                            <?php dd($portfolio->stage_id); ?>
+                           
                             <td class="">{{ \App\Stages::determineStage($portfolio->stage_id) }}</td>
+                            <td>{{ $portfolio->portfolio_code }}</td>
                         </tr>
                         @endforeach
 

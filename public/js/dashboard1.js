@@ -1,15 +1,7 @@
  $(document).ready(function () {
      "use strict";
      // toat popup js
-     $.toast({
-         heading: 'Welcome ',
-         text: 'how are you doing today.',
-         position: 'top-right',
-         loaderBg: '#fff',
-         icon: 'info',
-         hideAfter: 3500,
-         stack: 6
-     })
+    
 
 
      //ct-visits

@@ -14,33 +14,33 @@
         <meta name="format-detection" content="telephone=no">
         <!-- CSS
           ================================================== -->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css"> 
-        <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
-        <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
-        <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen" /> 
+        <link href="{{ url('/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ url('/css/style.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ url('/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ url('/plugins/owl-carousel/css/owl.carousel.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{ url('/plugins/owl-carousel/css/owl.theme.css')}}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{ url('plugins/rs-plugin/css/settings.css')}}" media="screen" />
         <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
         <!-- Color Style -->
-        <link href="colors/blue.css" rel="stylesheet" type="text/css">
+        <link href="{{ url('/colors/blue.css')}}" rel="stylesheet" type="text/css">
         <!-- SCRIPTS
           ================================================== -->
-        <script src="js/modernizr.js"></script><!-- Modernizr -->
+        <script src="{{ url('/js/modernizr.js')}}"></script><!-- Modernizr -->
     </head>
     <body>
         <!--[if lt IE 7]>
                 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]--> 
+        <![endif]-->
         <!-- Preloader -->
         <div id="preloader">
             <div id="status"></div>
         </div>
         <!-- Start Body Container -->
-        <div class="body footer-style2"> 
+        <div class="body footer-style2">
             <!-- Start Header -->
 
             @include('includes.header')
-            <!-- End Header --> 
+            <!-- End Header -->
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content page-content full">
@@ -66,6 +66,11 @@
                                 @foreach ($errors->all() as $error)
                                 <span class="help-block" style="color: red;"> {{ $error }}</span>
                                 @endforeach
+                                @endif
+                                @if (session('status'))
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
                                 @endif
                                 <form method="post" action="/password/reset">
                                     {{ csrf_field() }}
@@ -142,22 +147,22 @@
             </div>
 
             <!-- Start Footer -->
-            
+
             @include('includes.footer')
-            <!-- End footer --> 
+            <!-- End footer -->
             <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a> </div>
-        <!-- End Body Container --> 
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- Jquery Library Call --> 
+        <!-- End Body Container -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- Jquery Library Call -->
         <script>if (typeof jQuery == 'undefined') {
     document.write(unescape("%3Cscript src='js/jquery-2.0.0.min.js' type='text/javascript'%3E%3C/script%3E"));
-}</script> 
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>  
-        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script> 
-        <script src="plugins/page-scroller/jquery.pagescroller.js"></script> 
-        <script src="js/helper-plugins.js"></script> <!-- Plugins --> 
-        <script src="js/bootstrap.js"></script> <!-- UI --> 
-        <script src="js/init.js"></script> <!-- All Scripts -->   
-        <!-- End Js --> 
+}</script>
+        <script src="{{ url('/plugins/prettyphoto/js/prettyphoto.js')}}"></script>
+        <script src="{{ url('/plugins/prettyphoto/js/prettyphoto.js')}}"></script>
+        <script src="{{ url('/plugins/owl-carousel/js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url('/plugins/page-scroller/jquery.pagescroller.js')}}"></script>
+        <script src="{{ url('/js/helper-plugins.js')}}"></script> <!-- Plugins -->
+        <script src="{{ url('/js/bootstrap.js')}}"></script> <!-- UI -->
+        <script src="{{ url('/js/init.js')}}"></script> <!-- All Scripts -->
+        <!-- End Js -->
     </body>
 </html>

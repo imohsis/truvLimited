@@ -15,10 +15,16 @@ namespace App\Services;
  */
 class ReferralService {
 
+    private $portfolioService;
+
+    public function __construct(PortfolioService $portfolioService) {
+        $this->portfolioService = $portfolioService;
+    }
+
     /**
      * 
      * This method is responsible for retrieving a paginated collection of all 
-     * members that was referred by a particular member.
+     * portfolios that was referred by a particular member.
      * 
      * @param \App\Member $member | the member in question.
      * @param limit | an integer value depicting how many records should be re-
@@ -27,9 +33,20 @@ class ReferralService {
      * @return paginated collection.
      * 
      */
-    public function getAllMembersReferredByThisMember($member, $limit = 15){
-       return ($member != null) ? \App\Member::where('refered_by', '=', $member->id)
-               ->where('approved_status', '=', true)->paginate($limit) : null;
+    public function getAllPortfoliosReferredByThisMember($member, $limit = 15) {
+        $portfolios = $this->portfolioService->getAllPortfoliosForAMember($member);
+        $resultSet = [];
+        if($portfolios != null){
+            foreach($portfolios as $portfolio){
+                $referedPortfolios = $this->portfolioService->getAllPortfoliosReferredByAPortfolio($portfolio);
+                if($referedPortfolios != null){
+                    foreach($referedPortfolios as $referedPortfolio){
+                        array_push($resultSet, $referedPortfolio);
+                    }
+                }
+            }
+        }
+        return new \Illuminate\Pagination\LengthAwarePaginator($resultSet, count($resultSet), $limit);
     }
-    
+
 }

@@ -99,6 +99,9 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::get('/deactivateaccount/{userId}', 'Admin\AccountController@deactivateAccount');
     Route::get('/members/{id}/portfolios', 'Admin\PortfolioController@showMemberPortfolios');
     Route::get('/members', 'Admin\MemberController@index');
+    Route::get('/portfolios/{id}', 'Admin\PortfolioController@show');
+    Route::post('/approveportfolio', 'Admin\PortfolioController@approvePortfolio');
+    Route::post('/disapproveportfolio', 'Admin\PortfolioController@disapprovePortfolio');
 });
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {
