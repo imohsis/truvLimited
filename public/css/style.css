@@ -4021,3 +4021,11 @@ div.show-grid [class*="col-md-"] span.show-grid-block {
     }
 
 }
+
+.color-green{
+    color: green;
+}
+
+.color-blue{
+    color: #4C97DD;
+}

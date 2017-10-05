@@ -173,7 +173,7 @@
                                                     <option value="12">Dec</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                            <div class="col-md-3 col-sm-3 col-xs-4">
                                                 <select name="year" class="form-control input-lg">
                                                     <option selected>Year</option>
                                                           <option value="1960">1960</option>

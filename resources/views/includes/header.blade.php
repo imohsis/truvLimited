@@ -61,7 +61,7 @@
 
                                     </li>
                                     <li class="visible-xs"><a href="{{ url('/signup') }}">Registration</a></li>
-                                    <li class="visible-xs"><a href="">Login</a></li>
+                                    <li class="visible-xs"><a href="{{ url('/login') }}">Login</a></li>
 
                                 </ul>
                             </nav>
