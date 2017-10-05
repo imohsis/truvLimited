@@ -85,10 +85,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="col-md-12 col-xs-4">
+                                            <div class="col-md-12 col-xs-3">
                                                 <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Login">
                                             </div>
-                                            <div class="col-xs-4 visible-xs">
+                                            <div class="col-xs-6 visible-xs">
                                                 <a href="/password/reset" >forgot password?</a>
                                             </div>
                                         </div>
