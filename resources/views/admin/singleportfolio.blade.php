@@ -106,7 +106,13 @@
                     <div class="col-md-12">
                         <input type="text" placeholder="" value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
-                <?php $userThatApproved = \App\User::find($member->approved_by); ?>
+                <div class="form-group">
+                    <label class="col-md-12">Paid Into</label>
+                    <div class="col-md-12">
+                        <input type="text" placeholder="" value="{{ $portfolio->bank_paid_into }}" name="bankPaidInto" class="form-control form-control-line">
+                    </div>
+                </div>
+                <?php $userThatApproved = \App\User::find($portfolio->approved_by); ?>
                 @if($userThatApproved != null)
                 <div class="form-group">
                     <label class="col-md-12">Approved By</label>

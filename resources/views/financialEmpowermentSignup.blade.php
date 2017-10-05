@@ -317,6 +317,23 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label><strong>Paid Into</strong></label>
+                                            </div>
+                                            <div class="col-md-9 col-sm-3 col-xs-4">
+                                                <select name="bankPaidInto" class="form-control input-lg">
+                                                    <option value="0" selected>Select Bank</option>
+                                                    <option value="GT Bank PLC">GT Bank PLC</option>
+                                                    <option value="Zenith Bank PLC">Zenith Bank PLC</option>
+                                                    <option value="Fidelity Bank PLC">Fidelity Bank PLC</option>
+                                                    <option value="Diamond Bank PLC">Diamond Bank PLC</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="row">
                                         <div class="form-group">

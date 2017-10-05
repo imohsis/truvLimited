@@ -63,8 +63,9 @@ use RegistersUsers;
                     'day' => 'required|numeric|min:1',
                     'month' => 'required|numeric|min:1',
                     'year' => 'required|numeric|min:1900',
-                    'phone' => 'required|numeric'
-        ]);
+                    'phone' => 'required|numeric',
+                    'bankPaidInto' => 'required'
+         ]);
     }
 
     /**
@@ -132,7 +133,7 @@ use RegistersUsers;
 
             if ($member != null) {
                 $portfolio = $this->portfolioService->createPortfolio($member->id, $data['schemeId'], $data['startingClassId'], 0, 
-                        $data['tellerId'], $data['transactionId'], false, false, $referalId);
+                        $data['tellerId'], $data['transactionId'], false, false, $referalId, $data['bankPaidInto']);
                 if ($portfolio != null) {
                     \Illuminate\Support\Facades\DB::commit();
                     session(['success' => true, 'scheme' => $data['schemeId'],

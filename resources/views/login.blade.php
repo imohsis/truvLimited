@@ -92,8 +92,11 @@
               </div>
               <div class="row">
                 <div class="form-group">
-                  <div class="col-md-12">
+                  <div class="col-md-2">
                       <a href="/password/reset" >forgot password?</a>
+                  </div>
+                     <div class="col-md-4">
+                      <a href="/signup" >Don't have an account? Register now!</a>
                   </div>
                 </div>
               </div>

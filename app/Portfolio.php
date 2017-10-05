@@ -10,7 +10,8 @@ class Portfolio extends Model {
     protected $table = 'Portfolios';
     protected $fillable = [
         'member_id', 'scheme_id', 'starting_class_id', 'stage_id', 'teller_id',
-        'transaction_id', 'approved_status', 'disapproved_status', 'refered_by'
+        'transaction_id', 'approved_status', 'disapproved_status', 'refered_by',
+        'bank_paid_into'
     ];
 
     /**

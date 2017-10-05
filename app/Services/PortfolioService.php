@@ -35,7 +35,7 @@ class PortfolioService {
      * 
      */
     public function createPortfolio($memberId, $schemeId, $startingClassId, $stageId,
-            $tellerId, $transactionId, $approvalStatus, $disapprovedStatus, $referredBy) {
+            $tellerId, $transactionId, $approvalStatus, $disapprovedStatus, $referredBy, $bankPaidInto) {
         $portfolio =  \App\Portfolio::create([
                     'member_id' => $memberId,
                     'scheme_id' => $schemeId,
@@ -45,7 +45,8 @@ class PortfolioService {
                     'transaction_id' => $transactionId,
                     'approved_status' => $approvalStatus,
                     'disapproved_status' => $disapprovedStatus,
-                    'refered_by' => $referredBy
+                    'refered_by' => $referredBy,
+                    'bank_paid_into' => $bankPaidInto
         ]);
         
         if($portfolio != null){
