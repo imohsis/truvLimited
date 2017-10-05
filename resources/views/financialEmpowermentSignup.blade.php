@@ -320,9 +320,9 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <label><strong>Paid Into</strong></label>
+                                                <label><strong>Bank Paid Into</strong></label>
                                             </div>
-                                            <div class="col-md-9 col-sm-3 col-xs-4">
+                                            <div class="col-md-9 col-sm-9 col-xs-9">
                                                 <select name="bankPaidInto" class="form-control input-lg">
                                                     <option value="0" selected>Select Bank</option>
                                                     <option value="GT Bank PLC">GT Bank PLC</option>
