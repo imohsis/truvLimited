@@ -65,7 +65,7 @@
                                 {{ $startingClass }}
                             </td>
                            
-                            <td class="">{{ \App\Stages::determineStage($portfolio->stage_id) }}</td>
+                            <td class="">{!! \App\Stages::determineStage($portfolio->stage_id) !!}</td>
                             <td>{{ $portfolio->portfolio_code }}</td>
                         </tr>
                         @endforeach
