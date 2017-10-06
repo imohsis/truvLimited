@@ -36,7 +36,11 @@
                                 {{ $coordinator->email }}
                             </td>
                             <td class="">
-                                {{ !$coordinator->is_deactivate }}
+                                @if($coordinator->is_deactivate)
+                                Deactivated
+                                @else
+                                Activated
+                                @endif
                             </td>
                             <td>
                                 @if(!$coordinator->is_deactivate)
