@@ -144,7 +144,9 @@
 
                     <br/>
 
-                    <div class="">
+                   <div class="pages" id="features">
+
+                        <div class="">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/packages.jpg"  alt=""> </div>
