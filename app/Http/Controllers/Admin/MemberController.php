@@ -12,16 +12,19 @@ class MemberController extends Controller
     
     public function __construct(\App\Services\MemberService $memberService) {
         $this->memberService = $memberService;
+        $this->portfolioService = $portfolioService;
     }
     
     public function index(){
+         
         return view('admin.allmembers')
                 ->with('members', $this->memberService->getAllApprovedAndReviewedMembers());
     }
     
     public function show($id){
         $member = $this->memberService->getMemberById($id);
-        return view('admin.singlemember')->with('member', $member);
+        $portfolio = $this->portfolioService->getPortfolioById($id);
+        return view('admin.singlemember')->with('member', $member)->('portfolio', $portfolio);
     }
     
     /**

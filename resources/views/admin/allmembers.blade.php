@@ -40,6 +40,7 @@
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
                             <td>{{ $member->location }}</td>
+                            
                             <td><a href="{{ url('/admin/members/'.$member->id)}}" class="btn btn-default"><span class="">View</span></a></td>
                         </tr>
                         @endif

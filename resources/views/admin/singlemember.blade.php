@@ -103,6 +103,11 @@
                         <input type="text" placeholder="" value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-12">Referral ID</label>
+                    <div class="col-md-12">
+                        <input type="text" placeholder="" value="{{ $portfolio->portfolio_code }}" name="tellerId" class="form-control form-control-line"> </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
                         <input type="text" placeholder="" value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
