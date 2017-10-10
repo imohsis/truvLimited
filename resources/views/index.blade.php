@@ -159,7 +159,7 @@
                         </div>
                     </div>
 
-                    <div class="pages" id="features">
+                    <div class="pages" id="features" style="margin-top: 50px">
 
                         <div class="">
                             <div class="container">
