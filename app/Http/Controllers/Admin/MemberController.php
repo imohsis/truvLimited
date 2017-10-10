@@ -9,6 +9,7 @@ class MemberController extends Controller
 {
     //
     private $memberService;
+    private $portfolioService;
     
     public function __construct(\App\Services\MemberService $memberService) {
         $this->memberService = $memberService;
