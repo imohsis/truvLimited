@@ -153,7 +153,7 @@
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Keke Napep & Motocycle Ownership Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                        <a href="{{ url('/kekebikeownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
+                                        <a href="{{url('/houseownershipsignup' ) }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                                 </div>
                             </div>
                         </div>
@@ -164,12 +164,12 @@
                         <div class="">
                             <div class="container">
                                 <div class="row">
-                                    
+                                   
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>House Ownership Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-                                        <a href="{{ url('/houseownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
-                                        <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="500" height="500"> </div>
+                                        <a href="{{  url('/kekebikeownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
+                                        <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="300" height="300"> </div>
                                 </div>
                             </div>
                         </div>
