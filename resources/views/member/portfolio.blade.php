@@ -7,7 +7,7 @@
             <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
 
             </div>
-            <h3 class="box-title"><span style="color: #9FC735">John's Portfolio</span></h3>
+            <h3 class="box-title"><span style="color: #9FC735">My Portfolio</span></h3>
             <div class="table-responsive">
                 @if(session('success'))
                 <span style="color: green">{{ session('success') }}</span>
