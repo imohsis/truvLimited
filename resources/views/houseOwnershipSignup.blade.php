@@ -79,9 +79,9 @@
                                         </div>
                                         <div class="col-md-9">
                                             <select id="level" name="startingClassId" class="form-control input-lg">
-                                                <option value="1">Bronze | Fee = ₦2,000</option>
-                                                <option value="2">Silver | Fee = ₦4,000</option>
-                                                <option value="3">Gold | Fee = ₦6,000</option>
+                                                <option value="1">Classic | Fee = ₦3,000</option>
+                                                <option value="2">Premium | Fee = ₦5,000</option>
+                                                <option value="3">Platinum | Fee = ₦10,000</option>
                                             </select>
                                         </div>
 
@@ -375,14 +375,14 @@
                    
                 $startingClass = "";
                 $startingClassId = session('startingClass');
-                if($startingClassId == \App\StartingClasses::$BRONZE){
-                    $startingClass = "Bronze Starting Class";
+                if($startingClassId == \App\StartingClasses::$CLASSIC){
+                    $startingClass = "Classic Starting Class";
                 }
-                if($startingClassId == \App\StartingClasses::$GOLD){
-                    $startingClass = "Gold Starting Class";
+                if($startingClassId == \App\StartingClasses::$PREMIUM){
+                    $startingClass = "Premium Starting Class";
                 }
-                if($startingClassId == \App\StartingClasses::$SILVER){
-                        $startingClass = "Silver Staring Class";
+                if($startingClassId == \App\StartingClasses::$PLATINUM){
+                        $startingClass = "Platinum Staring Class";
                 }
             ?>
             <!-- Modal -->
@@ -396,7 +396,7 @@
                             <h4 class="modal-title">Successful</h4>
                         </div>
                         <div class="modal-body">
-                            <p>You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.</p>
+                            <p>You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.</p> <p> You will receive an email after your account has been approved</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

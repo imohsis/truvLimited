@@ -15,11 +15,11 @@ namespace App;
  */
 class StartingClasses {
     
-    public static $BRONZE = 1;
+    public static $CLASSIC = 1;
     
-    public static $SILVER = 2;
+    public static $PREMIUM= 2;
     
-    public static $GOLD = 3;
+    public static $PLATINUM = 3;
     
     
     

@@ -108,11 +108,11 @@
                 @if(auth()->user() != null && auth()->user()->role_id == \App\UserRole::$ADMINISTRATOR)
                 <li >
                     <a href="{{ url('/admin/coordinator/add') }}" class="waves-effect"><i class="fa fa-bomb fa-fw"
-                                                                     aria-hidden="true"></i>Add Coordinator</a>
+                                                                     aria-hidden="true"></i>Add Executives</a>
                 </li>
                 <li >
                     <a href="{{ url('/admin/coordinators') }}" class="waves-effect"><i class="fa fa-at fa-fw"
-                                                                     aria-hidden="true"></i>View Coordinators</a>
+                                                                     aria-hidden="true"></i>View Executivess</a>
                 </li>
                 @endif
                 <li >

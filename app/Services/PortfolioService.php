@@ -50,7 +50,7 @@ class PortfolioService {
         ]);
         
         if($portfolio != null){
-            $portfolio->portfolio_code = 'VI' . strtoupper(str_random(6)) . $portfolio->id;
+            $portfolio->portfolio_code = 'A000000' .  $portfolio->id;
             $portfolio->save();
         }
         

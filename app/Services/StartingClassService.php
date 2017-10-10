@@ -27,11 +27,11 @@ class StartingClassService {
      */
     public function confirmStartingClassValidity($startingClassId){
         switch ($startingClassId) {
-            case ($startingClassId == \App\StartingClasses::$BRONZE):
+            case ($startingClassId == \App\StartingClasses::$CLASSIC):
                 return true;
-            case ($startingClassId == \App\StartingClasses::$SILVER):
+            case ($startingClassId == \App\StartingClasses::$PREMIUM):
                 return true;
-            case ($startingClassId == \App\StartingClasses::$GOLD):
+            case ($startingClassId == \App\StartingClasses::$PLATINUM):
                 return true;
             default:
                 return false;

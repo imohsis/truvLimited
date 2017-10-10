@@ -19,4 +19,7 @@ class IndexController extends Controller
         $member = $this->memberService->getMemberByUserId(auth()->user()->id);
         return view('member.index')->with('member', $member);
     }
+    public function add_bank (){
+    	return view('member.add_bank');
+    }
 }

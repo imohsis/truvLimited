@@ -15,6 +15,7 @@
                         <tr>
 
                             <th>S/N</th>
+                            <th>ID</th>
                             <th>Name</th>
                             <th>Location</th>
                             <th>Date</th>
@@ -28,6 +29,7 @@
                         <tr class="clickable">
 
                             <td class="txt-oflo">{{ $index + 1 }}</td>
+                            <td>{{ $member->portfolio_code}}</td>
                             <td>
                               {{ $member->full_name }}
                             </td>
