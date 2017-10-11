@@ -18,9 +18,9 @@ class MemberController extends Controller
     }
     
     public function index(){
-         
+         $portfolios = Portfolio::all();
         return view('admin.allmembers')
-                ->with('members', $this->memberService->getAllApprovedAndReviewedMembers());
+                ->with('members', $this->memberService->getAllApprovedAndReviewedMembers())->with('portfolios', $portfolios);
     }
     
     public function show($id){

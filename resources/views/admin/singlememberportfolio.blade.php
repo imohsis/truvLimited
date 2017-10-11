@@ -44,14 +44,14 @@
                         $startingClass = "";
                         $startingClassId = $portfolio->scheme_id;
                         switch ($startingClassId):
-                            case ($startingClassId == \App\StartingClasses::$BRONZE):
-                                $startingClass = "Bronze Starting Class";
+                            case ($startingClassId == \App\StartingClasses::$CLASSIC):
+                                $startingClass = "Classic Starting Class";
                                 break;
-                            case ($startingClassId == \App\StartingClasses::$GOLD):
-                                $startingClass = "Gold Starting Class";
+                            case ($startingClassId == \App\StartingClasses::$PREMIUM):
+                                $startingClass = "Premium Starting Class";
                                 break;
-                            case ($startingClassId == \App\StartingClasses::$SILVER):
-                                $startingClass = "Silver Staring Class";
+                            case ($startingClassId == \App\StartingClasses::$PLATINUM):
+                                $startingClass = "Platinum Staring Class";
                                 break;
                         endswitch;
                         
