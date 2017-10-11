@@ -20,9 +20,9 @@
               <div class="form-group">
               <label class="form-control-label" for="inputSuccess1">Select Bank</label>
               <select class="form-control form-control-success" name="bank_id" id="bank_id">
-                <?php foreach ($banks as $banks):?>
-                <option value="<?php echo $banks->bank_id; ?>"><?php echo $banks->bank_name; ?></option>
-              <?php endforeach; ?>
+                
+                <option value=""></option>
+              
               </select>
             </div>
             <div class="form-group">
@@ -62,12 +62,12 @@
     <!-- <script src="scripts/ui/alert.js"></script> -->
     <script type="text/javascript">
       (function(){
-        if ("<?php echo $has_bank; ?>") {
-          $('form#user_bank').show('slow');
-        }
-        else {
+        
+          
+        
+      
           $('#create_bank').show('slow');
-        }
+        
       })()
 
       $(document).ready(function(){
@@ -82,7 +82,7 @@
           dataObject.account_number = $('#account_number').val();
           $.ajax({
             method:"POST",
-            url:"http://127.0.0.1/tbc2naira/account/index.php/user/addbanksdetails",
+            url:"",
             data:dataObject,
             contentType:"application/x-www-form-urlencoded",
             success:function(result){
