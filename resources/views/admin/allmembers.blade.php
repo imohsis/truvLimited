@@ -32,7 +32,7 @@
                     </thead>
                     <tbody>
                         @foreach($members as $member)
-                        @foreach($portfolios as $portfolio)
+
                         @if($member->user() != null)
                         <tr style="background-color: #EDF1F5;">
                             <td>{{ $member->id }}</td>
@@ -46,7 +46,7 @@
                         </tr>
                         @endif
                         @endforeach
-                        @endforeach
+                        
                     </tbody>
                 </table>
             </div>
