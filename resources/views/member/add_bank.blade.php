@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="styles/loaders.css"><div class="card" >
   <link rel="stylesheet" href="toastr/toastr.min.css">
+  <link href="{{ asset('/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
   <div class="card" >
   <div class="card-header no-bg b-a-0"><h3>Your Bank Details</h3></div>
   <div class="card-block">
@@ -59,6 +60,7 @@
 </div>
     <script src="sweetalert/dist/sweetalert.min.js"></script>
     <script src="toastr/toastr.min.js" charset="utf-8"></script>
+    <script src="{{ url('/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- <script src="scripts/ui/alert.js"></script> -->
     <script type="text/javascript">
       (function(){
