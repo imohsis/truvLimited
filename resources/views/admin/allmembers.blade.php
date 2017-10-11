@@ -25,19 +25,58 @@
                             <th>S/N</th>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Email</th>
+                            <th>Scheme/Class</th>
+                            <th> Current Stage</th>
+                            <th>Stage</th>
                             <th>Phone</th>
                             <th>Location</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($members as $member)
+                         @foreach($portfolios as $index => $portfolio)
+                        <?php
+                        $scheme = "";
+                        switch ($portfolio->scheme_id):
+                            case ($portfolio->scheme_id == App\Schemes::$KEKEANDMOTOCYCLEOWNERSHIPSCHEME):
+                                $scheme = "Keke And Motocycle Ownership Scheme";
+                                break;
+                            case ($portfolio->scheme_id == App\Schemes::$HOUSEOWNERSHIPSCHEME):
+                                $scheme = "House Ownership Scheme";
+                                break;
+                            case ($portfolio->scheme_id == App\Schemes::$FINANCIALEMPOWERMENTSCHEME):
+                                $scheme = "Financial Empowerment Scheme";
+                                break;
+                        endswitch;
 
+                        $startingClass = "";
+                        $startingClassId = $portfolio->scheme_id;
+                        switch ($startingClassId):
+                            case ($startingClassId == \App\StartingClasses::$CLASSIC):
+                                $startingClass = "Classic Starting Class";
+                                break;
+                            case ($startingClassId == \App\StartingClasses::$PREMIUM):
+                                $startingClass = "Premium Starting Class";
+                                break;
+                            case ($startingClassId == \App\StartingClasses::$PLATINUM):
+                                $startingClass = "Platinum Staring Class";
+                                break;
+                        endswitch;
+                        ?>
+                        @foreach($members as $member)
+                        @foreach($portfolios as $portfolio)
                         @if($member->user() != null)
                         <tr style="background-color: #EDF1F5;">
                             <td>{{ $member->id }}</td>
-                            <td>@foreach($portfolios as $portfolio){{ $portfolio->portfolio_code }}@endforeach</td>
+                            <td>{{ $portfolio->portfolio_code }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
+                            <td class="txt-oflo"> &nbsp;
+                                {{ $scheme }}
+                            </td>
+                            <td class="">
+                                {{ $startingClass }}
+                            </td>
+                            
+                            <td class="">{!! \App\Stages::determineStage($portfolio->stage_id) !!}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
                             <td>{{ $member->location }}</td>
@@ -46,7 +85,7 @@
                         </tr>
                         @endif
                         @endforeach
-                        
+                        @endforeach
                     </tbody>
                 </table>
             </div>
