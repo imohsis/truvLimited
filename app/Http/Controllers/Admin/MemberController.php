@@ -25,8 +25,8 @@ class MemberController extends Controller
     
     public function show($id){
         $member = $this->memberService->getMemberById($id);
-        $portfolio = Portfolio::find($id);
-        return view('admin.singlemember')->with(['member', $member, 'portfolio', $portfolio]);
+        
+        return view('admin.singlemember')->with('member', $member);
     }
     
     /**
