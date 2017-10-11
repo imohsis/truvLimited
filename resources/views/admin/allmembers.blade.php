@@ -36,7 +36,7 @@
                         @if($member->user() != null)
                         <tr style="background-color: #EDF1F5;">
                             <td>{{ $member->id }}</td>
-                            <td>{{ $portfolio->portfolio_code }}</td>
+                            <td>@foreach($portfolios as $portfolio){{ $portfolio->portfolio_code }}@endforeach</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
