@@ -32,10 +32,11 @@
                     </thead>
                     <tbody>
                         @foreach($members as $member)
+                        @foreach($portfolios as $portfolio)
                         @if($member->user() != null)
                         <tr style="background-color: #EDF1F5;">
                             <td>{{ $member->id }}</td>
-                            <td>{{ $member->member_id }}</td>
+                            <td>{{ $portfolio->portfolio_code }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
@@ -45,7 +46,7 @@
                         </tr>
                         @endif
                         @endforeach
-                        
+                        @endforeach
                     </tbody>
                 </table>
             </div>
