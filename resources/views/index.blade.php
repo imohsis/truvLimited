@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Vi Limited - Responsive HTML5 Vision</title>
+        <title>Tru V Limited</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -134,7 +134,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
-                                    <h1 class="no-strong"><span class="accent-color-text">Vi Limited:</span> Everything you need to build a unique Life</h1>
+                                    <h1 class="no-strong"><span class="accent-color-text">Tru V Limited:</span> Changing your - Life, Living and Standard
                                     <p>Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum.</p>
                                     <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
                             </div>
@@ -151,7 +151,7 @@
                                 <div class="row">
                                     <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-03.png"  alt="" width="500" height="500"> </div>
                                     <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
-                                        <h2>Keke Napep & Motocycle Ownership Scheme.</h2>
+                                        <h2>House Ownership Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
                                         <a href="{{url('/houseownershipsignup' ) }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                                 </div>
@@ -166,7 +166,7 @@
                                 <div class="row">
                                    
                                     <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
-                                        <h2>House Ownership Scheme.</h2>
+                                        <h2>Keke Napep & Motocycle Ownership Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
                                         <a href="{{  url('/kekebikeownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                                         <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="500" height="500"> </div>
@@ -185,14 +185,14 @@
                         <div class="padding-tb75">
                             <div class="container">
                                 <div class="row">
-                                    
+                                    <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-02.png" alt="" width="500" height="500"> </div>
+
                                     <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Financial Empowerment Scheme.</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
                                         <a href="{{ url('/financialempowermentsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                          
-                                     <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-02.png" alt="" width="500" height="500"> </div>
-          
+
                                 </div>
                             </div>
                         </div>

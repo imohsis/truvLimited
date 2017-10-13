@@ -15,6 +15,7 @@
         <!-- CSS
           ================================================== -->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css"> 
         <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
         <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
@@ -56,7 +57,7 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <h2><strong>Registration</strong></h2>
-                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">House Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead"><span style="color: #00A25C; font-weight: 300; ">House Ownership Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
                                 <hr>
                                 @if ($errors)
                                 @foreach ($errors->all() as $error)
@@ -67,7 +68,7 @@
                                 @if(session('error'))
                                 <span style="color: red">{{ session('error') }}</span>
                                 @endif
-                                <form method="post" action="{{ url('/register') }}" enctype="multipart/form-data">
+                                <form id="house" method="post" action="{{url('/register')}}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name ="schemeId" value ="1" />
                                     <input type="hidden" name ="password" value="default"/>
@@ -122,7 +123,7 @@
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
                                                 <select name="day" class="form-control input-lg">
-                                                    <option value="0" selected>Day</option>
+                                                    <option value="" selected>Day</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -158,7 +159,7 @@
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
                                                 <select name="month" class="form-control input-lg">
-                                                    <option value="0" selected>Month</option>
+                                                    <option value="" selected>Month</option>
                                                     <option value="01">Jan</option>
                                                     <option value="02">Feb</option>
                                                     <option value="03">Mar</option>
@@ -175,8 +176,8 @@
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-4">
                                                 <select name="year" class="form-control input-lg">
-                                                    <option selected>Year</option>
-                                                          <option value="1960">1960</option>
+                                                    <option value="">Year</option>
+                                                    <option value="1960">1960</option>
                                                     <option value="1961">1961</option>
                                                     <option value="1962">1962</option>
                                                     <option value="1963">1963</option>
@@ -256,6 +257,7 @@
                                         </div>
                                         <div class="col-md-9">
                                             <select name="location" class="form-control input-lg">
+                                                <option value="">Select your location</option>
                                                 <option value="Abia State">Abia State</option>
                                                 <option value="Adamawa State">Adamawa State</option>
                                                 <option value="Akwa Ibom State">Akwa Ibom State</option>
@@ -324,7 +326,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <select name="bankPaidInto" class="form-control input-lg">
-                                                    <option value="0" selected>Select Bank</option>
+                                                    <option value="" selected>Select Bank</option>
                                                     <option value="GT Bank PLC">GT Bank PLC</option>
                                                     <option value="Zenith Bank PLC">Zenith Bank PLC</option>
                                                     <option value="Fidelity Bank PLC">Fidelity Bank PLC</option>
@@ -419,18 +421,66 @@
         <script src="plugins/page-scroller/jquery.pagescroller.js"></script> 
         <script src="js/helper-plugins.js"></script> <!-- Plugins --> 
         <script src="js/bootstrap.js"></script> <!-- UI --> 
-        <script src="js/init.js"></script> <!-- All Scripts -->   
+        <script src="js/init.js"></script>
+        <script src="{{ url('/js/jquery.validate.js') }}"></script>
+        <script src="{{ url('/js/sweetalert.js') }}"></script>
+        <script type="text/javascript">
+            $("#house").validate({
+                rules:{
+                    name:{
+                        required: true
+                    },
+                    day:{
+                        required:true
+                    },
+                    email:{
+                        required: true,
+                        email:true
+                    },
+                    phone:{
+                        required: true,
+                        digits:true
+                    },
+                    location:{
+                        required: true
+                    },
+                    month:{
+                        required: true
+                    },
+                    year:{
+                        required:true
+                    },
+                    bankPaidInto:{
+                        required:true
+                    }
+
+                }
+            });
+        </script>
+        <!-- All Scripts -->
         <!-- End Js --> 
         @if(session('success'))
         <script>
 $(document).ready(function () {
-    $('#myModal').modal('show');
+    //$('#myModal').modal('show');
+    swal({
+        title: "Tru V Limited",
+        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an exiting member. Kindly Log in to view your portfolio</h4>',
+        type: "success",
+        html: true,
+        showCancelButton: true,
+        cancelButtonText: "Close!",
+        closeOnConfirm: false,
+        showConfirmButton:false
+    });
+
 });
 <?php session(['success' => false]); ?>
         </script>
         @endif
         <script>
             $('#level').change(function () {
+
                 var selection = this.value;
 
                 if (selection == "1") {

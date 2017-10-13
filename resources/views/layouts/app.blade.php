@@ -190,6 +190,55 @@
 <script src="{{ url('/js/custom.min.js') }}"></script>
 <script src="{{ url('/js/dashboard1.js') }}"></script>
 <script src="{{ url('/plugins/bower_components/toast-master/js/jquery.toast.js') }}"></script>
+<script src="{{ url('/js/jquery.validate.js') }}"></script>
+<script src="{{ url('/js/slick.js') }}"></script>
+<script type="text/javascript">
+    $("#house").validate({
+        rules:{
+            name:{
+                required: true
+            },
+            day:{
+                required:true
+            },
+            email:{
+                required: true,
+                email:true
+            },
+            phone:{
+                required: true,
+                digits:true
+            },
+            month:{
+                required: true
+            },
+            year:{
+                required:true
+            },
+            bankpaidinto:{
+                required:true
+            }
+
+        },
+        submitHandler:  function (form) {
+            swal({
+                    title: "The Happy people project",
+                    text: '<p class="alert alert-success">Thank you so much for choosing to partner with us!<br/>  We will be in touch shortly.</p><hr/> <h4>Do you wish to make an instant financial donation?</h4> <br/><p style="text-align: center;"><button class="btn btn-primary">Donate now</button></p>',
+                    type: "success",
+                    html: true,
+                    showCancelButton: true,
+                    cancelButtonText: "No, Thanks!",
+                    closeOnConfirm: false,
+                    showConfirmButton:false
+                },
+                function(){
+                    swal("Calm down!", "Coming soon.", "success");
+                });
+
+        }
+    });
+</script>
+
 @yield('script')
 </body>
 

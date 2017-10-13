@@ -19,7 +19,6 @@
                                     <li><a href="{{ url('/signup') }}">Registration</a></li>
                                     <li><a href="{{ url('/login') }}">Login</a></li>
                                     <li><a href="">Locations</a></li>
-                                    <li><a href="">FAQS</a></li>
                                     <li class="dropdown pull-right"><a data-toggle="dropdown"><img src="images/flag-icon-us.png" alt="us"> English US <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown"><a href="#"><img src="images/flag-icon-us.png" alt="us"> English US</a></li>
@@ -36,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset('/images/vision.png')}}" alt="Site Logo"> </a> </h1>
+                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset('/images/truvdashboard-01.png')}}" alt="Site Logo"> </a> </h1>
                         </div>
                         <div class="col-md-9">
                             <button class="mmenu-toggle"><i class="fa fa-bars fa-lg"></i></button>
@@ -45,23 +44,23 @@
                                     <li><a href="{{ url('/') }}">Home <i class=""></i></a>
 
                                     </li>
-                                    <li><a href="{{ url('/about') }}">About Us <i class=""></i></a>
+                                    <li>
+                                            <a href="#">About Us <i class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="{{ url('/about') }}">Who we are</a></li>
+                                                <li><a href="{{ url('/opportunity') }}">The Opportunity</a></li>
+                                                <li><a href="{{ url('/process') }}">How It Works</a></li>
+
+                                            </ul>
+                                        </a>
 
                                     </li>
-                                    <li><a href="{{ url('/opportunity') }}">The Opportunity <i class=""></i></a>
 
-                                    </li>
-                                    <li><a href="{{ url('/gallery') }}">Our People <i class=""></i></a>
-
-                                    </li>
-                                    <li><a href="{{ url('/process') }}">How It Works <i class=""></i></a>
-
-                                    </li>
                                     <li><a href="{{ url('/contact') }}">Contact Us <i class=""></i></a>
 
                                     </li>
-                                    <li class="visible-xs"><a href="{{ url('/signup') }}">Registration</a></li>
-                                    <li class="visible-xs"><a href="{{ url('/login') }}">Login</a></li>
+                                    <li><a href="{{ url('/signup') }}"><span class="btn-action">Registration</span></a></li>
+                                    <li><a href="{{ url('/login') }}"><span class="btn-action">Login</span></a></li>
 
                                 </ul>
                             </nav>
