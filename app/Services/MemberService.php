@@ -202,8 +202,8 @@ class MemberService {
      */
     public function sendMemberApprovalConfirmation(\App\User $user, $password) {
         if ($user != null) {
-            \Illuminate\Support\Facades\Mail::to($user->email)
-                    ->queue(new \App\Mail\MemberApprovalConfirmationMail($user->email, $password, $user->name));
+            \Mail::to($user->email)
+                    ->send(new \App\Mail\MemberApprovalConfirmationMail($user->email, $password, $user->name));
         }
     }
 
