@@ -19,6 +19,10 @@ Route::get('/landing', function() {
     return view('landing');
 });
 
+Route::get('/contact',function (){
+    return view('contact');
+});
+
 Route::get('/signup', function() {
     return redirect('/registration');
 });

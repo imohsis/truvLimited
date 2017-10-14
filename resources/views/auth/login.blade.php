@@ -44,7 +44,7 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content page-content full">
-                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
+                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-color: rgba(52,152,219,.7)">
                         <section>
                             <div class="container">
                                 <div class="row">
@@ -64,7 +64,7 @@
 
                                 @if ($errors)
                                 @foreach ($errors->all() as $error)
-                                <span class="help-block" style="color: red;"> {{ $error }}</span>
+                                <p class="alert alert-danger"> {{ $error }}</p>
                                 @endforeach
                                 @endif
                                 <form method="post" action="/login">

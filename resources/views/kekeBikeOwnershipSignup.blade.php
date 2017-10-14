@@ -65,9 +65,9 @@
                                 @endif
 
                                 @if(session('error'))
-                                <span style="color: red">{{ session('error') }}</span>
+                                <p class="alert alert-danger">{{ session('error') }}</p>
                                 @endif
-                                <form method="post" action="{{ url('/register') }}" enctype="multipart/form-data">
+                                <form method="post" action="{{ url('/register') }}" enctype="multipart/form-data" id="keke">
                                     {{ csrf_field() }}
                                     <input type="hidden" name ="schemeId" value ="2" />
                                     <input type="hidden" name ="password" value="default"/>
@@ -89,28 +89,28 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name">
+                                                <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name" value="{!! old('name') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="phone"  class="form-control input-lg" placeholder="Phone Number">
+                                                <input type="text" name="phone"  class="form-control input-lg" placeholder="Phone Number" value="{!! old('phone') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="email"  class="form-control input-lg" placeholder="Email Address">
+                                                <input type="text" name="email"  class="form-control input-lg" placeholder="Email Address" value="{!! old('email') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="referalId"  class="form-control input-lg" placeholder="Referal Id">
+                                                <input type="text" name="referalId"  class="form-control input-lg" placeholder="Referal Id" value="{!! old('referalId') !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
                                                 <select name="day" class="form-control input-lg">
-                                                    <option value="0" selected>Day</option>
+                                                    <option value="">Day</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -158,7 +158,7 @@
                                             </div>
                                             <div class="col-md-2 col-sm-3 col-xs-4">
                                                 <select name="month" class="form-control input-lg">
-                                                    <option value="0" selected>Month</option>
+                                                    <option value="">Month</option>
                                                     <option value="01">Jan</option>
                                                     <option value="02">Feb</option>
                                                     <option value="03">Mar</option>
@@ -175,7 +175,7 @@
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-4">
                                                 <select name="year" class="form-control input-lg">
-                                                    <option selected>Year</option>
+                                                    <option value="">Year</option>
                                                     <option value="1960">1960</option>
                                                     <option value="1961">1961</option>
                                                     <option value="1962">1962</option>
@@ -257,6 +257,7 @@
                                         </div>
                                         <div class="col-md-9">
                                             <select name="location" class="form-control input-lg">
+                                                <option value="">Select your location</option>
                                                 <option value="Abia State">Abia State</option>
                                                 <option value="Adamawa State">Adamawa State</option>
                                                 <option value="Akwa Ibom State">Akwa Ibom State</option>
@@ -304,7 +305,7 @@
                                                 <label><strong>For Bank Deposit(Enter Teller Id)</strong></label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" name="tellerId"  class="form-control input-lg" placeholder="Teller Number">
+                                                <input type="text" name="tellerId"  class="form-control input-lg" placeholder="Teller Number" value="{!! old('tellerId') !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -314,7 +315,7 @@
                                                 <label><strong>For Bank Transfer(Enter Transaction Id)</strong></label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" name="transactionId"  class="form-control input-lg" placeholder="Transaction Id">
+                                                <input type="text" name="transactionId"  class="form-control input-lg" placeholder="Transaction Id" value="{!! old('transactionId') !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -325,7 +326,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <select name="bankPaidInto" class="form-control input-lg">
-                                                    <option value="0" selected>Select Bank</option>
+                                                    <option value="" selected>Select Bank</option>
                                                     <option value="GT Bank PLC">GT Bank PLC</option>
                                                     <option value="Zenith Bank PLC">Zenith Bank PLC</option>
                                                     <option value="Fidelity Bank PLC">Fidelity Bank PLC</option>
@@ -421,12 +422,59 @@
         <script src="plugins/page-scroller/jquery.pagescroller.js"></script> 
         <script src="js/helper-plugins.js"></script> <!-- Plugins --> 
         <script src="js/bootstrap.js"></script> <!-- UI --> 
-        <script src="js/init.js"></script> <!-- All Scripts -->   
+        <script src="js/init.js"></script>
+        <script src="{{ url('/js/jquery.validate.js') }}"></script>
+        <script src="{{ url('/js/sweetalert.js') }}"></script>
+        <script type="text/javascript">
+            $("#keke").validate({
+                rules:{
+                    name:{
+                        required: true
+                    },
+                    day:{
+                        required:true
+                    },
+                    email:{
+                        required: true,
+                        email:true
+                    },
+                    phone:{
+                        required: true,
+                        digits:true
+                    },
+                    location:{
+                        required: true
+                    },
+                    month:{
+                        required: true
+                    },
+                    year:{
+                        required:true
+                    },
+                    bankPaidInto:{
+                        required:true
+                    }
+
+                }
+            });
+        </script>
+
+        <!-- All Scripts -->
         <!-- End Js --> 
         @if(session('success'))
         <script>
 $(document).ready(function () {
-    $('#myModal').modal('show');
+   /* $('#myModal').modal('show');*/
+    swal({
+        title: "Tru V Limited",
+        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an exiting member. Kindly Log in to view your portfolio</h4>',
+        type: "success",
+        html: true,
+        showCancelButton: true,
+        cancelButtonText: "Close!",
+        closeOnConfirm: false,
+        showConfirmButton:false
+    });
 });
 <?php session(['success' => false]); ?>
         </script>

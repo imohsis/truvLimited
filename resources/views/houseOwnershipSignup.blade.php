@@ -66,7 +66,8 @@
                                 @endif
 
                                 @if(session('error'))
-                                <span style="color: red">{{ session('error') }}</span>
+
+                                <p class="alert alert-danger">{{ session('error') }}</p>
                                 @endif
                                 <form id="house" method="post" action="{{url('/register')}}">
                                     {{ csrf_field() }}
@@ -90,28 +91,28 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name">
+                                                <input type="text" name="name"  class="form-control input-lg" placeholder="Full Name" value="{!! old('name') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="phone"  class="form-control input-lg" placeholder="Phone Number">
+                                                <input type="text" name="phone"  class="form-control input-lg" placeholder="Phone Number" value="{!! old('phone') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="email"  class="form-control input-lg" placeholder="Email Address">
+                                                <input type="text" name="email"  class="form-control input-lg" placeholder="Email Address" value="{!! old('email') !!}">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <input type="text" name="referalId"  class="form-control input-lg" placeholder="Referal Id">
+                                                <input type="text" name="referalId"  class="form-control input-lg" placeholder="Referal Id" value="{!! old('referalId') !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +306,7 @@
                                                 <label><strong>For Bank Deposit(Enter Teller Id)</strong></label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" name="tellerId"  class="form-control input-lg" placeholder="Teller Number">
+                                                <input type="text" name="tellerId"  class="form-control input-lg" placeholder="Teller Number" value="{!! old('tellerId') !!}">
                                             </div>
                                         </div>
                                     </div>
@@ -315,7 +316,7 @@
                                                 <label><strong>For Bank Transfer(Enter Transaction Id)</strong></label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input type="text" name="transactionId"  class="form-control input-lg" placeholder="Transaction Id">
+                                                <input type="text" name="transactionId"  class="form-control input-lg" placeholder="Transaction Id" value="{!! old('transactionId') !!}">
                                             </div>
                                         </div>
                                     </div>

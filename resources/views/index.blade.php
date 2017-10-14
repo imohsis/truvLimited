@@ -159,7 +159,7 @@
                         </div>
                     </div>
 
-                    <div class="pages hidden-xs" id="features" style="margin-top: 50px">
+                    <div class="pages" id="features" style="margin-top: 50px">
 
                         <div class="padding-tb75">
                             <div class="container">
@@ -180,7 +180,7 @@
                     
                     
 
-                    <div class="pages hidden-xs" id="features">
+                    <div class="pages" id="features">
 
                         <div class="padding-tb75">
                             <div class="container">

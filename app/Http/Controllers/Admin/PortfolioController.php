@@ -30,6 +30,7 @@ class PortfolioController extends Controller {
 
     public function showMemberPortfolios($memberId) {
         $member = $this->memberService->getMemberById($memberId);
+
         if ($member == null) {
             return redirect()->back()->with('error', 'specified member not found');
         }
@@ -39,7 +40,9 @@ class PortfolioController extends Controller {
             return redirect()->back()->with('error', 'could not retrieve portfolios');
         }
 
-        return view('admin.singlememberportfolio')->with('portfolios', $portfolios);
+        $data = array('portfolios' => $portfolios,'name' => $member->full_name);
+
+        return view('admin.singlememberportfolio')->with($data);
     }
     
     public function approvePortfolio(Request $request){

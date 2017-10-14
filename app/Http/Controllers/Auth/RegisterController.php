@@ -79,18 +79,18 @@ use RegistersUsers;
     public function register(\Illuminate\Http\Request $request) {
 
         if (!$this->confirmSchemeAndStartingClassValidity($request['schemeId'], $request['startingClassId'])) {
-            return redirect()->back()->with('error', 'invalid scheme id or starting class id');
+            return redirect()->back()->with('error', 'Invalid scheme id or starting class id');
         }
 
         if ($request['tellerId'] == null && $request['transactionId'] == null) {
-            return redirect()->back()->with('error', 'you must enter either teller id or transaction id');
+            return redirect()->back()->with('error', 'You must enter either teller number or transaction number');
         }
 
         $referalId = 0;
         if ($request['referalId'] != null) {
             $referalId = $this->determineReferal($request['referalId']);
             if ($referalId == null) {
-                return redirect()->back()->with('error', 'invalid referral code');
+                return redirect()->back()->with('error', 'Invalid referral code')->withInput();;
             }
         }
         $request['referalId'] = $referalId;

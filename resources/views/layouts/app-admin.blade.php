@@ -55,9 +55,9 @@
                 <!-- Logo -->
                 <a class="logo" href="{{ url('/admin') }}">
                     <!-- Logo icon image, you can use font-icon also -->
-                        <!--This is dark logo icon--><img src="/plugins/images/logo.png" alt="home"
+                        <!--This is dark logo icon--><img src="/images/truvdashboard-01.png" alt="home"
                                                           class="dark-logo"/><!--This is light logo icon--><img
-                                src="/plugins/images/logo.png" alt="home" class="light-logo"/>
+                                src="/images/truvdashboard-01.png" alt="home" class="light-logo"/>
                     </a>
             </div>
             <ul class="nav navbar-top-links navbar-left">
@@ -169,7 +169,7 @@
 
         </div>
         <!-- /.container-fluid -->
-        <footer class="footer text-center"> 2017 &copy; ITransferfx. Lovely Designed By <a href="#">Thinkshifts UK</a></footer>
+        <footer class="footer text-center"> 2017 &copy; Tru V Limited. Lovely Designed By <a href="http://www.thinkshifts.com">Thinkshifts UK</a></footer>
     </div>
     <!-- ============================================================== -->
     <!-- End Page Content -->
