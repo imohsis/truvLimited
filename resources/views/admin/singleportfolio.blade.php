@@ -18,7 +18,7 @@
 <div class="row">
     <div class="col-md-5 col-xs-12">
         <div class="white-box">
-            <div class="user-bg"> <img width="100%" alt="user" src="/plugins/images/logo.png">
+            <div class="user-bg">
                 <div class="overlay-box">
                     <div class="user-content">
                         <a href="javascript:void(0)"><img src="/plugins/images/prof.png" class="thumb-lg img-circle" alt="img"></a>
