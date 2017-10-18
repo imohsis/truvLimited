@@ -73,7 +73,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
-                                    <h2>We are Vision Integrated</h2>
+                                    <h2>Changing life, living and standard</h2>
                                     <hr class="thick">
                                     <div class="clearfix"></div>
                                     <p class="col-md-10 col-md-offset-1 big"> TRU V LIMITED is a multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants. </p>
