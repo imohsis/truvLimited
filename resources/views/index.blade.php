@@ -135,7 +135,7 @@
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
                                     <h1 class="no-strong"><span class="accent-color-text">Tru V Limited:</span> Changing your - Life, Living and Standard
-                                    <p> TRU V LIMITED is a multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants.</p>
+                                    <p style="font-size: 18px;line-height: 40px;"> A multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants.</p>
                                     <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
                             </div>
                         </div>
