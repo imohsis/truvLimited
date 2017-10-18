@@ -11,6 +11,28 @@
   |
  */
 
+
+Route::get('sendemail', function () {
+
+    $data = array(
+        'name' => "Learning Laravel",
+    );
+
+
+    Mail::send('emails.welcome', $data, function ($message) {
+
+        $message->from('yourEmail@domain.com', 'Learning Laravel');
+
+        $message->to('nelokwaz@gmail.com')->subject('Learning Laravel test email');
+
+    });
+
+    return "Your email has been sent successfully";
+
+});
+
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -106,6 +128,7 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::get('/portfolios/{id}', 'Admin\PortfolioController@show');
     Route::post('/approveportfolio', 'Admin\PortfolioController@approvePortfolio');
     Route::post('/disapproveportfolio', 'Admin\PortfolioController@disapprovePortfolio');
+    Route::get('/search','Admin\SearchController@index');
 });
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {
@@ -116,6 +139,7 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
 
 Route::group(['middleware' => ['member'], 'prefix' => 'member'], function() {
     Route::get('/', 'Member\IndexController@show');
+    Route::post('/update','Member\UpdateController@index');
     Route::get('/portfolio', 'Member\PortfolioController@show');
     Route::get('/network', 'Member\NetworkController@show');
 });

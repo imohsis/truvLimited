@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Portfolio;
-
+use App\Member;
 class MemberController extends Controller
 {
     //
@@ -18,9 +18,15 @@ class MemberController extends Controller
     }
     
     public function index(){
-         $portfolios = Portfolio::all();
+        $member_portfolios = Member::select('members.id','members.full_name','portfolios.portfolio_code','portfolios.scheme_id','members.email','members.phone','members.location')
+                                          ->join('portfolios','members.id','=','portfolios.member_id')
+                                          ->orderBy('members.created_at','desc')
+                                           ->paginate('15');
+         //$portfolios = Portfolio::all();
+        // dd($member_portfolios);
+         //dd($this->memberService->getAllApprovedAndReviewedMembers());
         return view('admin.allmembers')
-                ->with('members', $this->memberService->getAllApprovedAndReviewedMembers())->with('portfolios', $portfolios);
+                ->with('members', $member_portfolios);
     }
     
     public function show($id){

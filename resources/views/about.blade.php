@@ -41,6 +41,7 @@
             <!-- Start Content -->
             <div class="main" role="main">
                 <div id="content" class="content full">
+{{--
                     <header class="page-header high parallax margin-0" style="background-image:url({{ url('/images/img4.jpg') }})">
                         <div class="container">
                             <div class="row">
@@ -55,20 +56,35 @@
                             </div>
                         </div>
                     </header>
+--}}
+                    <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url({{ url('/images/img4.jpg')}}}}); margin-bottom: 0px;">
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1>About us</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </header>
+
                     <div class="padding-tb75 text-align-center lgray-color">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
-                                    <h4>We are Vision Integrated</h4>
+                                    <h2>We are Vision Integrated</h2>
                                     <hr class="thick">
                                     <div class="clearfix"></div>
-                                    <p class="col-md-10 col-md-offset-1 big">Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula.</p>
-                                    <button class="btn btn-primary btn-lg moveto-sec4 margin-60">View our gallery</button>
+                                    <p class="col-md-10 col-md-offset-1 big"> TRU V LIMITED is a multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants. </p>
+                                    <p class="col-md-10 col-md-offset-1 big">In order to achieve this, it is affiliated with various estate companies which will ease the provision of housing facilities to its participants.
+                                    Being the first of its kind to provide "JOB OPPORTUNITIES" to its participants at ''A STAGE" in the scheme.It provides easy access to business start up capital with ease.It provide employment opportunities through the Keke Napep/Bike Scheme. It focuses on solving food inadequacies by providing food items to ease recession and economic crisis at every stage(s) and level(s) in the Scheme.It provides employment opportunities and makes you self dependent - tailored at eradicating DEPENDENT SPIRIT.It is also aimed at providing "LOW COST HOUSING" and improve the standard of living nationwide for Nigerian residents.</p>
+                                    <a href="{{url('/signup')}}" class="btn btn-primary btn-lg moveto-sec4 margin-60">Register Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="padding-tb75">
+                 {{--   <div class="padding-tb75">
                         <div class="container">
                             <div class="row">
                                 <section class="col-md-4 col-md-offset-1">
@@ -123,7 +139,7 @@
                                 </section>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
 
 
 

@@ -15,6 +15,7 @@
         <!-- CSS
           ================================================== -->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css"> 
         <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
         <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
@@ -23,6 +24,13 @@
         <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
         <!-- Color Style -->
         <link href="colors/blue.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            @media screen and (min-width: 800px){
+                aside.right-sidebar{
+                    padding-top: 160px;
+                }
+            }
+        </style>
         <!-- SCRIPTS
           ================================================== -->
         <script src="js/modernizr.js"></script><!-- Modernizr -->
@@ -56,7 +64,7 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <h2><strong>Registration</strong></h2>
-                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">Financial Empowerment Package.</span> Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead"><span style="color: #3498db; font-weight: 300; ">Financial Empowerment Package.</span> From the drop down below: Select your starting level to see your reward/compensation pyramid</p>
                                 <hr>
                                 @if ($errors)
                                 @foreach ($errors->all() as $error)
@@ -79,6 +87,7 @@
                                         </div>
                                         <div class="col-md-9">
                                             <select id="level" name="startingClassId" class="form-control input-lg">
+                                                <option value="">Select a starting level</option>
                                                 <option value="1">CLASSIC | Fee = ₦3,000</option>
                                                 <option value="2">PREMIUM | Fee = ₦5,000</option>
                                                 <option value="3">PLATINUM | Fee = ₦10,000</option>
@@ -349,7 +358,7 @@
                             <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
 
-                                    <img id="banner" src="{{ asset('/images/pyramid.png') }}" alt=""/>
+                                    <img id="banner" src="{{ asset('/images/scheme-02.png') }}" alt=""/>
                                 </div>
 
                             </aside>
@@ -427,6 +436,9 @@
         <script type="text/javascript">
             $("#financial").validate({
                 rules:{
+                    startingClassId:{
+                      required: true
+                    },
                     name:{
                         required: true
                     },
@@ -482,13 +494,15 @@ $(document).ready(function () {
                 var selection = this.value;
 
                 if (selection == "1") {
-                    $('#banner').attr('src', '/images/keke.png');
+                    $('#banner').attr('src', '/images/PYRAMID-06.png');
                 }
                 if (selection == "2") {
-                    $('#banner').attr('src', '/images/bike.jpg');
+                    $('#banner').attr('src', '/images/PYRAMID-07.png');
                 }
                 if (selection == "3") {
-                    $('#banner').attr('src', '/images/housing.jpg');
+                    $('#banner').attr('src', '/images/PYRAMID-08.png');
+                }else{
+                    $('#banner').attr('src', '/images/scheme-02.png');
                 }
 
             });

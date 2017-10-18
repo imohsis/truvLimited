@@ -3,10 +3,28 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Member extends Model
 {
     //
+    use Notifiable;
+    use SearchableTrait;
+
+    /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchable = [
+        'columns' => [
+            'members.full_name' => 10,
+            'members.email' => 10,
+            'members.phone' => 10,
+        ]
+    ];
+
     protected $table = 'Members';
 
     protected $fillable = [

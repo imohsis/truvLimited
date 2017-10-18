@@ -52,10 +52,10 @@
                     </tbody>
                 </table>
             </div>
-            <ul class="pagination">
+            <div style="text-align: center;">
              
                 {{ $awaitingPortfolios->links() }}
-            </ul>
+            </div>
         </div>
     </div>
 </div>

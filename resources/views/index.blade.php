@@ -135,7 +135,7 @@
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
                                     <h1 class="no-strong"><span class="accent-color-text">Tru V Limited:</span> Changing your - Life, Living and Standard
-                                    <p>Aliquam enim enim, pharetra in sodales at, interdum sit amet dui. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum.</p>
+                                    <p> TRU V LIMITED is a multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants.</p>
                                     <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
                             </div>
                         </div>
@@ -150,9 +150,18 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-03.png"  alt="" width="500" height="500"> </div>
-                                    <div class="col-md-4 col-md-offset-1" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
+                                    <div class="col-md-5" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>House Ownership Scheme.</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                        <h6>The scheme changes your status from Tenant to Landlord with ONE TIME PAYMENT of N3k, N5k, N10k.</h6>
+                                        <p>Register for and be the owner of: at "STAGE 6 of the Scheme" and "Job Opportunity at Stage 4 upward"</p>
+                                        <p>
+                                            <ul style="list-style: disc; padding-left: 20px;">
+                                            <li>Classic = N3k = Reward of Self Contain Apartment / Partly Furnished</li>
+                                            <li>Premium = N5k = Reward of One Bedroom Apartment/Partly Furnished</li>
+                                            <li>Platinum = N10k= Reward of Two Bedroom/FULLY Furnished</li>
+                                        </ul>
+
+                                        </p>
                                         <a href="{{url('/houseownershipsignup' ) }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                                 </div>
                             </div>
@@ -164,12 +173,20 @@
                         <div class="padding-tb75">
                             <div class="container">
                                 <div class="row">
-                                   
-                                    <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
+                                    <div class="col-md-6 col-md-push-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="500" height="500"> </div>
+
+                                    <div class="col-md-4 col-md-pull-6 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Keke Napep & Motocycle Ownership Scheme.</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                        <h6>The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE(BIKE_OKADA) with ONE TIME PAYMENT of N3k or N5k</h6>
+                                        <p>Register for and be the owner of: at "STAGE 4 of the Scheme"</p>
+                                        <p>
+                                        <ul style="list-style: disc; padding-left: 20px;">
+                                            <li>Classic = N3k = Reward of Motorcyle</li>
+                                            <li>Premium = N5k = Reward of Keke Napep</li>
+                                        </ul>
+
+                                        </p>
                                         <a href="{{  url('/kekebikeownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
-                                        <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="500" height="500"> </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +206,15 @@
 
                                     <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
                                         <h2>Financial Empowerment Scheme.</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                        <h6>The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of N3k, N5k, N10k</h6>
+                                        <p>
+                                        <ul style="list-style: disc; padding-left: 20px;">
+                                            <li>Classic = N3k = Reward of N200,000</li>
+                                            <li>Premium = N5k = Reward of N480,000</li>
+                                            <li>Platinum=N10k= Reward of N1,000,000</li>
+                                        </ul>
+
+                                        </p>
                                         <a href="{{ url('/financialempowermentsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
                          
 

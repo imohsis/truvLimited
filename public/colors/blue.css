@@ -83,7 +83,8 @@ a.list-group-item.active:focus,
 	border-top-color:#00A25C;
 }
 .portfolio-item:hover .project-overlay, .blog-image:hover .blog-overlay, .team-item:hover .team-overlay, .parallax-overlay, .services-overlay{
-	background-color:rgba(52,152,219,.7)
+	/*background-color:rgba(52,152,219,.7)*/
+	background-image: url("../images/banner.jpg")!important;
 }
 .reading-block, blockquote{
 	border-left-color:#00A25C;

@@ -45,13 +45,8 @@
 
                                     </li>
                                     <li>
-                                            <a href="#">About Us <i class="fa fa-angle-down"></i></a>
-                                            <ul class="dropdown">
-                                                <li><a href="{{ url('/about') }}">Who we are</a></li>
-                                                <li><a href="{{ url('/opportunity') }}">The Opportunity</a></li>
-                                                <li><a href="{{ url('/process') }}">How It Works</a></li>
+                                            <a href="{{ url('/about') }}">About Us</a>
 
-                                            </ul>
                                         </a>
 
                                     </li>

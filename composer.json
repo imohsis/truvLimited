@@ -6,11 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "guzzleHttp/guzzle": "^6.3",
         "clarification/sendgrid-laravel-driver": "^1.0",
         "fideloper/proxy": "~3.3",
+        "guzzleHttp/guzzle": "^6.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "nicolaslopezj/searchable": "^1.9"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

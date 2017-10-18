@@ -56,17 +56,17 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2><strong>Registration</strong></h2>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead" style="text-transform: lowercase;">You are expected to pick a scheme of your choice below: click the item tab which will take you to the registration page. Not that you can register with different amount under the same scheme.</p>
                                 
                                 <hr>
                                 <div class="col-md-4 col-xs-12">
-                                    <a href="{{ url('/houseownershipsignup') }}" class="btn btn-warning font-2x bg-gradient-gold">House Ownership Scheme</a>
+                                    <a href="{{ url('/houseownershipsignup') }}" class="bt-register btn btn-warning font-2x bg-gradient-gold">House Ownership Scheme</a>
                                 </div>
                                 <div class="col-md-4 col-xs-12 ">
-                                    <a href="{{ url('/kekebikeownershipsignup') }}" class="btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke And Motocycle Empowerment Scheme</span><span class='visible-xs'>&nbsp;&nbsp;</span></a>
+                                    <a href="{{ url('/kekebikeownershipsignup') }}" class="bt-register btn btn-primary float-righter font-2x bg-gradient-blue"><span>Keke And Motocycle Empowerment Scheme</span><span class='visible-xs'>&nbsp;&nbsp;</span></a>
                                 </div><div class='visible-xs'><br/><br/><br/></div>
                                 <div class="col-md-4 col-xs-12">
-                                    <a href="{{ url('/financialempowermentsignup') }}" class="btn btn-warning font-2x centralize-e  bg-gradient-gray">Financial Empowerment Scheme </a>
+                                    <a href="{{ url('/financialempowermentsignup') }}" class="bt-register btn btn-warning font-2x centralize-e  bg-gradient-gray">Financial Empowerment Scheme </a>
                                 </div><div class='visible-xs'><br/><br/><br/></div>
                                 
                             </div>

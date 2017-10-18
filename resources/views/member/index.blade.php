@@ -40,14 +40,14 @@
 
     <div class="col-md-7 col-xs-12">
         <div class="white-box">
-            <form class="form-horizontal form-material" method="post" action="{{ url('/profile') }}">
+            <form class="form-horizontal form-material" method="post" action="{{ url('member/update') }}">
                  @if ($errors)
                     @foreach ($errors->all() as $error)
                     <span class="help-block" style="color: red;"> {{ $error }}</span>
                     @endforeach
                     @endif
                 @if(session('success'))
-                <span style="color: green">{{ session('success') }}</span>
+                <p class="alert alert-success">{{ session('success') }}</p>
                 @endif
                 @if(session('error'))
                 <span style="color: red">{{ session('error') }}</span>
@@ -63,11 +63,22 @@
                     <div class="col-md-12">
                         <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
+
+                     <div class="form-group">
+                         <label class="col-md-12">Gender</label>
+                         <div class="col-md-12">
+                             <input type="text" placeholder="" value="{{ $member->gender }}" name="gender" class="form-control form-control-line"> </div>
+                     </div>
+                     <div class="form-group">
+                         <label class="col-md-12">Date of birth</label>
+                         <div class="col-md-12">
+                             <input type="text" placeholder="" value="{{ $member->date_of_birth }}" name="birthDate" class="form-control form-control-line"> </div>
+                     </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Email Address</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
+                        <input type="text" readonly placeholder="" value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
                 </div>
                 
                 <div class="form-group">
@@ -76,15 +87,20 @@
                         <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-12">Teller Id</label>
+                    <label class="col-md-12">Account Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $member->account_name }}" name="accname" class="form-control form-control-line"> </div>
                 </div>
                  <div class="form-group">
-                    <label class="col-md-12">Transaction Id</label>
+                    <label class="col-md-12">Account number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $member->account_no }}" name="accno" class="form-control form-control-line"> </div>
                 </div>
+                <div>
+
+                    <button type="submit" class="btn btn-primary pull-right">Update</button>
+                </div>
+                <div class="clearfix"></div>
                
               
             </form>

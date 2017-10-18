@@ -68,6 +68,38 @@
             </header>
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <h3>Head Office</h3>
+                        <ul class="location">
+                            <li><strong><i class="fa fa-map-marker"></i> Address</strong> 57, Opebi Road, Ikeja, Lagos</li>
+                            <li><strong><i class="fa fa-phone"></i> Phone 1</strong> 07065384042, 08052268556
+                            </li>
+                            <li><strong><i class="fa fa-phone"></i> Phone 2 </strong>  09065569956, 08107209998</li>
+                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:visionintegrated@gmail.com">visionintegrated@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <h3>Lagos Office</h3>
+                        <ul class="location">
+                            <li><strong><i class="fa fa-map-marker"></i> Address</strong> 14, Oshinade Nasirudeen, Opposite Uncle Bayus School, Igbe Road, Elepe, Ikorodu, Lagos.</li>
+                            <li><strong><i class="fa fa-phone"></i> Phone</strong> 08177145092</li>
+                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:visionintegrated@gmail.com">visionintegrated@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+
+                        <h3>Port Harcourt Office</h3>
+                        <ul class="location">
+                            <li><strong><i class="fa fa-map-marker"></i> Address</strong> 13, By Stellian Road, (First Floor - Office one)Elelenwon, Port Harcourt, Rivers State.</li>
+                            <li><strong><i class="fa fa-phone"></i> Phone</strong> 08083076170, 08066342810</li>
+                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:visionintegrated@gmail.com">visionintegrated@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <br/>
+                <div class="row">
                     <div class="col-md-7">
                         <h2>Get in touch <strong>with us</strong></h2>
                         <form method="post" id="contactform" name="contactform" class="contact-form" action="mail/contact.php">
@@ -107,9 +139,7 @@
                         <div id="message"></div>
                     </div>
                     <div class="col-md-5 sidebar right-sidebar">
-                        {{--<div class="w-map push-top">
-                            <div class="w-map-h clearfix" style="height: 250px;"> </div>
-                        </div>--}}
+
                         <div class="map-responsive">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.454268042387!2d3.3587230143455318!3d6.590321295233952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b924045735fbf%3A0xdd43a17f025bbbc7!2s57+Opebi+Rd%2C+Opebi%2C+Ikeja!5e0!3m2!1sen!2sng!4v1507981534044" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
@@ -120,14 +150,11 @@
                             <li><a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
                             <li><a href="#"><i class="fa fa-google-plus-square fa-3x"></i></a></li>
                         </ul>
-                        <h3>Our Location</h3>
-                        <ul class="location">
-                            <li><strong><i class="fa fa-map-marker"></i> Address</strong> 57, Opebi Road, Ikeja, Lagos</li>
-                            <li><strong><i class="fa fa-phone"></i> Phone</strong> 324 098 8765</li>
-                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:visionintegrated@gmail.com">visionintegrated@gmail.com</a></li>
-                        </ul>
+
+
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

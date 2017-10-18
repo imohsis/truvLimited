@@ -41,6 +41,7 @@ class PortfolioController extends Controller {
         }
 
         $data = array('portfolios' => $portfolios,'name' => $member->full_name);
+        //dd($portfolios);
 
         return view('admin.singlememberportfolio')->with($data);
     }
