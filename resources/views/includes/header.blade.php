@@ -16,15 +16,7 @@
                         <div class="col-md-6">
                             <nav class="secondary-menu">
                                 <ul class="pull-right">
-                                    <li><a href="{{ url('/signup') }}">Registration</a></li>
-                                    <li><a href="{{ url('/login') }}">Login</a></li>
-                                    <li><a href="">Locations</a></li>
-                                    <li class="dropdown pull-right"><a data-toggle="dropdown"><img src="images/flag-icon-us.png" alt="us"> English US <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown"><a href="#"><img src="images/flag-icon-us.png" alt="us"> English US</a></li>
-                                            <li class="dropdown"><a href="#"><img src="images/flag-icon-uk.png" alt="us"> English UK</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#">Changing life, living and standard</a></li>
                                 </ul>
                             </nav>
                         </div>

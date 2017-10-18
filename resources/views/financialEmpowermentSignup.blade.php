@@ -496,10 +496,10 @@ $(document).ready(function () {
                 if (selection == "1") {
                     $('#banner').attr('src', '/images/PYRAMID-06.png');
                 }
-                if (selection == "2") {
+                else if (selection == "2") {
                     $('#banner').attr('src', '/images/PYRAMID-07.png');
                 }
-                if (selection == "3") {
+                else if (selection == "3") {
                     $('#banner').attr('src', '/images/PYRAMID-08.png');
                 }else{
                     $('#banner').attr('src', '/images/scheme-02.png');

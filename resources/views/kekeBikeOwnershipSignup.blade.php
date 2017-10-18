@@ -509,7 +509,7 @@ $(document).ready(function () {
                 if (selection == "1") {
                     $('#banner').attr('src', '/images/PYRAMID-04.png');
                 }
-                if (selection == "2") {
+                else if (selection == "2") {
                     $('#banner').attr('src', '/images/PYRAMID-05.png');
                 }else{
                     $('#banner').attr('src', '/images/keke.png');

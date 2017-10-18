@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <h2><strong>Enter Email</strong></h2>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+                                <p class="lead">Enter the email address you used to register on Tru V Limited</p>
                                 <hr>
 
                                 @if ($errors)
@@ -93,19 +93,7 @@
                             </div>
 
                             <!-- Start Sidebar -->
-                            <aside class="col-md-3 sidebar right-sidebar">
-                                <div class="widget sidebar-widget recent-posts">
-                                    <h4>Latest Flickr Images</h4>
-                                    <ul class="flickr-widget clearfix" data-flickr-userid="52617155@N08" data-images-count="6">
-                                    </ul>
-                                </div>
-                                <section class="widget sidebar-widget" id="text-widget1">
-                                    <h4>About Tentered</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod nisi.</p>
-                                    <p>Cras at ultrices erat, sed vulputate eros. Nunc at augue gravida est fermentum vulputate.</p>
-                                    </ul>
-                                </section>
-                            </aside>
+
                         </div>
                     </div>
                 </div>

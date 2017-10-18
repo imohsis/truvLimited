@@ -59,7 +59,7 @@
         <div class="row">
           <div class="col-md-9">
             <h2><strong>Login</strong></h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo.</p>
+            <p class="lead">Please enter your email address and password to Login into your dashboard</p>
             <hr>
             
             @if ($errors)
