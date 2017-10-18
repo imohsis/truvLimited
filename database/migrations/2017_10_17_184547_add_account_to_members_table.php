@@ -26,7 +26,7 @@ class AddAccountToMembersTable extends Migration
      */
     public function down()
     {
-        Schema::table('members', function (Blueprint $table) {
+        Schema::table('Members', function (Blueprint $table) {
             //
         });
     }
