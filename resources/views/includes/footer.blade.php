@@ -20,10 +20,9 @@
                             <section class="footer-widget" id="twitter">
                                 <h4>Quick Links</h4>
                                 <ul>
-                                    <li><a href="">Register</a></li>
-                                    <li><a href="">Login</a></li>
-                                    <li><a href="">How it works</a></li>
-                                    <li><a href="">The opportunity</a></li>
+                                    <li><a href="{{url('/signup')}}">Register</a></li>
+                                    <li><a href="{{url('/login')}}">Login</a></li>
+                                    <li><a href="{{url('/about')}}">About us</a></li>
                                     <li><a href="">Terms and conditions</a></li>
                                     <li><a href="">Privacy policy</a></li>
                                 </ul>
