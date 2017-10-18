@@ -2172,6 +2172,7 @@ body.boxed .header-style4 .main{
     color:#630f0f;
     text-transform:uppercase;
     font-weight:400;
+    font-family: inherit;
 }
 .page-header.high{
     height:250px;
