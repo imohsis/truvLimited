@@ -494,7 +494,7 @@ $(document).ready(function () {
                 var selection = this.value;
 
                 if (selection == "1") {
-                    $('#banner').attr('src', '/images/FINANCE3K.png');
+                    $('#banner').attr('src', '/images/money-06.png');
                 }
                 else if (selection == "2") {
                     $('#banner').attr('src', '/images/PYRAMID-07.png');

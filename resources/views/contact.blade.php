@@ -83,7 +83,7 @@
                         <ul class="location">
                             <li><strong><i class="fa fa-map-marker"></i> Address</strong> 14, Oshinade Nasirudeen, Opposite Uncle Bayus School, Igbe Road, Elepe, Ikorodu, Lagos.</li>
                             <li><strong><i class="fa fa-phone"></i> Phone</strong> 08177145092</li>
-                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:truvlimited@gmail.com<">truvlimited@gmail.com<</a></li>
+                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:truvlimited@gmail.com">truvlimited@gmail.com<</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -92,7 +92,7 @@
                         <ul class="location">
                             <li><strong><i class="fa fa-map-marker"></i> Address</strong> 13, By Stellian Road, (First Floor - Office one)Elelenwon, Port Harcourt, Rivers State.</li>
                             <li><strong><i class="fa fa-phone"></i> Phone</strong> 08083076170, 08066342810</li>
-                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:truvlimited@gmail.com<">truvlimited@gmail.com<</a></li>
+                            <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:truvlimited@gmail.com">truvlimited@gmail.com<</a></li>
                         </ul>
                     </div>
 
