@@ -13,7 +13,7 @@ class AddAccountToMembersTable extends Migration
      */
     public function up()
     {
-        Schema::table('members', function (Blueprint $table) {
+        Schema::table('Members', function (Blueprint $table) {
             $table->string('account_name')->nullable();
             $table->string('account_no')->nullable();
         });
