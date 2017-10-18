@@ -53,9 +53,9 @@
                 <!-- Logo -->
                 <a class="logo" href="{{ url('/member') }}">
                     <!-- Logo icon image, you can use font-icon also -->
-                        <!--This is dark logo icon--><img src="/plugins/images/logo.png" alt="home"
+                        <!--This is dark logo icon--><img src="/images/truvdashboard-01.png" alt="home"
                                                           class="dark-logo"/><!--This is light logo icon--><img
-                                src="/plugins/images/logo.png" alt="home" class="light-logo"/>
+                                src="/images/truvdashboard-01.png" alt="home" class="light-logo"/>
                      </a>
             </div>
             <ul class="nav navbar-top-links navbar-left">
@@ -65,11 +65,14 @@
             </ul>
             <!-- /Logo -->
             <ul class="nav navbar-top-links navbar-right pull-right">
-                <li>
-                    <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                        <input type="text" placeholder="Search..." class="form-control"> <a href=""><i
-                                    class="fa fa-search"></i></a></form>
-                </li>
+                @if(auth()->user()->role_id == 3)
+                    <li>
+                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10" method="get" action="{{url('/admin/search')}}">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                            <input type="text" placeholder="Search..." class="form-control" name="query">
+                            <a href=""><i class="fa fa-search"></i></a></form>
+                    </li>
+                @endif
                 <li>
                     <a class="profile-pic" href="#"> <b class="hidden-xs">{{ session('firstName') }}</b></a>
                 </li>
