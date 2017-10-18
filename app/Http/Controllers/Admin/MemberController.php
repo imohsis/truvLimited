@@ -18,9 +18,9 @@ class MemberController extends Controller
     }
     
     public function index(){
-        $member_portfolios = Member::select('members.id','members.full_name','portfolios.portfolio_code','portfolios.scheme_id','members.email','members.phone','members.location')
-                                          ->join('portfolios','members.id','=','portfolios.member_id')
-                                          ->orderBy('members.created_at','desc')
+        $member_portfolios = Member::select('Members.id','Members.full_name','Portfolios.portfolio_code','Portfolios.scheme_id','Members.email','Members.phone','Members.location')
+                                          ->join('Portfolios','Members.id','=','Portfolios.member_id')
+                                          ->orderBy('Members.created_at','desc')
                                            ->paginate('15');
          //$portfolios = Portfolio::all();
         // dd($member_portfolios);
