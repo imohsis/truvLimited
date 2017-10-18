@@ -16,8 +16,8 @@ class SearchController extends Controller
         //dd($request->get('query'));
 
         if ($request->has('query')){
-           $members_portfolio = Member::select('members.id','members.full_name','portfolios.portfolio_code','portfolios.scheme_id','members.email','members.phone','members.location')
-               ->join('portfolios','members.id','=','portfolios.member_id')
+           $members_portfolio = Member::select('members.id','members.full_name','Portfolios.portfolio_code','Portfolios.scheme_id','members.email','members.phone','members.location')
+               ->join('Portfolios','members.id','=','Portfolios.member_id')
                                     ->search($request->get('query'))
                                     ->paginate(15);
         }
