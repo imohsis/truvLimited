@@ -103,7 +103,7 @@
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
                                     <h1 class="no-strong"><span class="accent-color-text">Tru Vision Limited</span>
                                     <p style="font-size: 18px;line-height: 40px;"> A multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants.</p>
-                                    <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
+                                    <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">JOIN US!</a> </div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                                     <div class="col-md-12">
                                         <div class="pricing-table three-cols margin-0">
                                             <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="300">
-                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Financial Empowerment Scheme</h3>
+                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Keke / Bike Ownership Scheme</h3>
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-03.png')}}"></h4>
                                                     <p style="padding: 20px; color: #ffffff; background-color: #62BC37;">The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of <Stron>N3k</Stron>, <strong>N5k</strong>, <strong>N10k</strong></p>
@@ -127,7 +127,7 @@
                                                         <li style="background-color: #f8f8f8;">Premium = N5k = Reward of N480,000</li>
                                                         <li style="background-color: #FFFFFF">Platinum=N10k= Reward of N1,000,000</li>
                                                     </ul>
-                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 0px;border-bottom: 3px solid #4e962b;" href="{{url('/financialempowermentsignup')}}">Register now</a> </div>
+                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 0px;border-bottom: 3px solid #4e962b;" href="{{url('/kekebikeownershipsignup')}}">Register now</a> </div>
                                             </div>
 
                                             <div class="pricing-column " data-appear-animation="rotateIn" data-appear-animation-delay="100">
@@ -143,7 +143,7 @@
                                                     <a class="btn btn-primary btn-block btn-lg2" style="border-bottom: 3px solid #4e962b;" href="{{url('/houseownershipsignup')}}">Register now</a> </div>
                                             </div>
                                             <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="200">
-                                                <h3 style="font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Keke / Bike Ownership Scheme</h3>
+                                                <h3 style="font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Financial Empowerment Scheme</h3>
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-02.png')}}"></h4>
                                                     <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>
@@ -152,7 +152,7 @@
                                                         <li style="background-color: #f8f8f8">Premium = N5k = Reward of Keke Napep</li>
 
                                                     </ul>
-                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 5px; border-bottom: 3px solid #4e962b;" href="{{url('/kekebikeownershipsignup')}}">Register now</a> </div>
+                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 5px; border-bottom: 3px solid #4e962b;" href="{{url('/financialempowermentsignup')}}">Register now</a> </div>
                                             </div>
 
                                         </div>
