@@ -80,7 +80,7 @@
                         <h3>Head Office</h3>
                         <ul class="location">
                             <li><strong><i class="fa fa-map-marker"></i> Address</strong> 57, Opebi Road, Ikeja, Lagos</li>
-                            <li><strong><i class="fa fa-phone"></i> Phone 1</strong> 07065384042, 08052268556
+                            <li><strong><i class="fa fa-phone"></i> Phone 1</strong> 08149653352, 09082816181
                             </li>
                             <li><strong><i class="fa fa-phone"></i> Phone 2 </strong>  09065569956, 08107209998</li>
                             <li><strong><i class="fa fa-envelope"></i> Email</strong> <a href="mailto:truvlimited@gmail.com<">truvlimited@gmail.com<</a></li>
