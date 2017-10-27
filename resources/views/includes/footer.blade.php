@@ -62,7 +62,7 @@
                     <div class="row">
                        
                         <div class="col-md-8">
-                            <p style="color: #999999">Copyrights © 2017 Tru V Limited. All rights reserved. Lovely Designed by <a href="http://www.thinkshifts.com">Thinkshifts UK</a></p>
+                            <p style="color: #999999; font-size: 0.9em;">Copyrights © 2017 Tru V Limited. All rights reserved. Lovely Designed by <a href="http://www.thinkshifts.com">Thinkshifts UK</a></p>
                         </div>
                         <div class="col-md-4">
                             <ul class="social-icons-bar pull-right">
