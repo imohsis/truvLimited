@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
       ================================================== -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Contact | Tentered - Responsive HTML5 template</title>
+    <title>Contact | Tru V</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -61,11 +61,19 @@
     <!-- Start Content -->
     <div class="main" role="main">
         <div id="content" class="content page-content full">
-            <header class="page-header text-align-center short parallax" style="background-color: rgba(52,152,219,.7)">
+            <header class="page-header flexible parallax text-align-center parallax-overlay" style="background-image:url({{ url('/images/img4.jpg')}}}}); margin-bottom: 0px;">
                 <section>
-                    <h1>Contact Us</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Contact us</h1>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </header>
+            <br/>
+            <br/>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">

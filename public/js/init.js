@@ -236,11 +236,17 @@ var TENTERED = window.TENTERED || {};
 	TENTERED.pricingTable = function(){
 		$('.pricing-table').each(function(){
 			$tallestCol = 0;
-			$(this).find('> div .features').each(function(){
-				($(this).height() > $tallestCol) ? $tallestCol = $(this).height() : $tallestCol = $tallestCol;
-			});	
-			if($tallestCol == 0) $tallestCol = 'auto';
-			$(this).find('> div .features').css('height',$tallestCol);
+
+                $(this).find('> div .features').each(function(){
+
+                        ($(this).height() > $tallestCol) ? $tallestCol = $(this).height() : $tallestCol = $tallestCol;
+
+			});
+			if($tallestCol == 0 || $(window).width() < 380) $tallestCol = 'auto';
+		/*	console.log($tallestCol);*/
+
+                $(this).find('> div .features').css('height', $tallestCol);
+
 		});
 	}
 

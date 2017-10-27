@@ -147,7 +147,7 @@
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-02.png')}}"></h4>
                                                     <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>
-                                                    <ul class="features" style="height: 152px!important;">
+                                                    <ul class="features">
                                                         <li style="background-color: #FFFFFF">Classic = N3k = Reward of Motorcyle</li>
                                                         <li style="background-color: #f8f8f8">Premium = N5k = Reward of Keke Napep</li>
 

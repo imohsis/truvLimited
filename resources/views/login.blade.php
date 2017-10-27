@@ -4,7 +4,7 @@
 <!-- Basic Page Needs
   ================================================== -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Login | Tentered - Responsive HTML5 template</title>
+<title>Login | Tru V</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
