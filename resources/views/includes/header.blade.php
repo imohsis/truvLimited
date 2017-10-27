@@ -27,7 +27,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset('/images/truvdashboard-01.png')}}" alt="Site Logo"> </a> </h1>
+                            <h1 class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset('/images/tru-01.png')}}" alt="Site Logo"> </a> </h1>
                         </div>
                         <div class="col-md-9">
                             <button class="mmenu-toggle"><i class="fa fa-bars fa-lg"></i></button>

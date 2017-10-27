@@ -20,6 +20,7 @@ class MemberController extends Controller
     public function index(){
         $member_portfolios = Member::select('Members.id','Members.full_name','Portfolios.portfolio_code','Portfolios.scheme_id','Members.email','Members.phone','Members.location')
                                           ->join('Portfolios','Members.id','=','Portfolios.member_id')
+                                          ->where('Members.approved_status', true)
                                           ->orderBy('Members.created_at','desc')
                                            ->paginate('15');
          //$portfolios = Portfolio::all();

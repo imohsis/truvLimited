@@ -46,85 +46,52 @@
                             <div class="tp-banner" >
                                 <ul>
                                     <!-- SLIDE  -->
-                                    <li data-delay="4000" data-masterspeed="600" data-slotamount="7" data-transition="scaledownfromtop"> 
-                                        <!-- MAIN IMAGE --> 
-                                        <img src="{{ asset('/images/visionintegrated.jpg') }}" alt=""> 
 
+                                    <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="http://placehold.it/1280x859&amp;text=IMAGE+PLACEHOLDER" alt="">
                                         <!-- LAYER NR. 1 -->
-                                        
-                                    </li>
-                                    <!-- SLIDE  -->
-                                    <li data-delay="4000" data-masterspeed="600" data-slotamount="7" data-transition="fade"> 
-                                        <!-- MAIN IMAGE --> 
-                                        <img src="{{ asset('/images/slide2.jpg') }}" alt="">
-                                       <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
-                                             data-x="65"
-                                             data-y="61" 
-                                             data-speed="1000"
-                                             data-start="300"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 5"> </div>
-
                                         <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="63"
-                                             data-y="118" 
-                                             data-speed="1000"
-                                             data-start="600"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 6"> </div>
+                                        <div class="tp-caption sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="160" data-x="30" style="font-size: 45px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;"> Own a house today</div>
+
+                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="240" data-x="30"><a href="" class="btn btn-success btn-lg">Register now</a> </div>
+
 
                                         <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme"
-                                             data-x="63"
-                                             data-y="176" 
-                                             data-speed="1000"
-                                             data-start="900"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 7"><span class='font-xs-2x'>Unlimited &amp; Opportunities</span>  </div>
+
 
                                         <!-- LAYER NR. 4 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="64"
-                                             data-y="233" 
-                                             data-speed="1000"
-                                             data-start="1200"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 8"><span class='font-xs-2x '>Opportunity For Everyone</span> </div>
-                                             
-                                        <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption with_white_background skewfromleft tp-resizeme "
-                                             data-x="63"
-                                             data-y="290" 
-                                             data-speed="1000"
-                                             data-start="1500"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 9"><div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="64"
-                                             data-y="233" 
-                                             data-speed="1000"
-                                             data-start="1200"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 8"> </div>
-</div>
-
-                                        <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption with_colored_background skewfromleft tp-resizeme"
-                                             data-x="65"
-                                             data-y="348" 
-                                             data-speed="1000"
-                                             data-start="1800"
-                                             data-easing="Power3.easeInOut"
-                                             data-endspeed="300"
-                                             style="z-index: 10"> </div>
                                     </li>
+
+                                    <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
+                                        <!-- MAIN IMAGE -->
+                                        <img src="http://placehold.it/1280x859&amp;text=IMAGE+PLACEHOLDER" alt="">
+                                        <!-- LAYER NR. 1 -->
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="160" data-x="30" style="font-size: 45px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;line-height: 25px"> Become a keke <br/><br/>owner for free</div>
+
+                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="270" data-x="30"><a href="" class="btn btn-success btn-lg">Register now</a> </div>
+
+
+                                        <!-- LAYER NR. 3 -->
+
+
+                                        <!-- LAYER NR. 4 -->
+                                    </li>
+
+                                   {{-- <li data-delay="4000" data-masterspeed="600" data-slotamount="7" data-transition="fade">
+                                        <!-- MAIN IMAGE --> 
+                                        <img src="{{ asset('images/SLIDERTRUV-02.png') }}" alt="">
+
+                                    </li>--}}
                                     
                                 </ul>
                             </div>
@@ -134,7 +101,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" data-appear-animation="fadeIn" data-appear-animation-delay=".2">
-                                    <h1 class="no-strong"><span class="accent-color-text">Tru V Limited:</span> Changing your - Life, Living and Standard
+                                    <h1 class="no-strong"><span class="accent-color-text">Tru Vision Limited</span>
                                     <p style="font-size: 18px;line-height: 40px;"> A multi-level scheme company, proudly owned by Nigerians, aimed at solving problems associated with various economic crisis by providing basic necessities of life for its participants.</p>
                                     <a href="{{ url('/signup') }}" class="btn btn-lg btn-primary">REGISTER NOW!</a> </div>
                             </div>
@@ -144,84 +111,62 @@
 
                     <br/>
 
-                   <div class="pages" id="features">
-
-                        <div class="">
-                            <div class="container">
+                    <div class="pages" id="pricing">
+                        <div class="padding-tb75" style="padding-top: 0px;">
+                            <div class="container margin-30">
                                 <div class="row">
-                                    <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-03.png"  alt="" width="500" height="500"> </div>
-                                    <div class="col-md-5" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
-                                        <h2>House Ownership Scheme.</h2>
-                                        <h6>The scheme changes your status from Tenant to Landlord with ONE TIME PAYMENT of N3k, N5k, N10k.</h6>
-                                        <p>Register for and be the owner of: at "STAGE 6 of the Scheme" and "Job Opportunity at Stage 4 upward"</p>
-                                        <p>
-                                            <ul style="list-style: disc; padding-left: 20px;">
-                                            <li>Classic = N3k = Reward of Self Contain Apartment / Partly Furnished</li>
-                                            <li>Premium = N5k = Reward of One Bedroom Apartment/Partly Furnished</li>
-                                            <li>Platinum = N10k= Reward of Two Bedroom/FULLY Furnished</li>
-                                        </ul>
+                                    <div class="col-md-12">
+                                        <div class="pricing-table three-cols margin-0">
+                                            <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="300">
+                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Financial Empowerment Scheme</h3>
+                                                <div class="pricing-column-content">
+                                                    <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-03.png')}}"></h4>
+                                                    <p style="padding: 20px; color: #ffffff; background-color: #62BC37;">The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of <Stron>N3k</Stron>, <strong>N5k</strong>, <strong>N10k</strong></p>
+                                                    <ul class="features">
+                                                        <li style="background-color: #FFFFFF;">Classic = N3k = Reward of N200,000</li>
+                                                        <li style="background-color: #f8f8f8;">Premium = N5k = Reward of N480,000</li>
+                                                        <li style="background-color: #FFFFFF">Platinum=N10k= Reward of N1,000,000</li>
+                                                    </ul>
+                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 0px;border-bottom: 3px solid #4e962b;" href="{{url('/financialempowermentsignup')}}">Register now</a> </div>
+                                            </div>
 
-                                        </p>
-                                        <a href="{{url('/houseownershipsignup' ) }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
+                                            <div class="pricing-column " data-appear-animation="rotateIn" data-appear-animation-delay="100">
+                                                <h3 style="font-weight: bold;font-size: 20px;">House Ownership Scheme</h3>
+                                                <div class="pricing-column-content">
+                                                    <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-01.png')}}"></h4>
+                                                    <p style="padding: 20px;">The scheme changes your status from Tenant to Landlord with ONE TIME PAYMENT of <strong>N3k, N5k, N10k</strong>.</p>
+                                                    <ul class="features">
+                                                        <li>Classic = N3k = Reward of Self Contain Apartment / Partly Furnished</li>
+                                                        <li>Premium = N5k = Reward of One Bedroom Apartment/Partly Furnished</li>
+                                                        <li>Platinum = N10k= Reward of Two Bedroom/FULLY Furnished</li>
+                                                    </ul>
+                                                    <a class="btn btn-primary btn-block btn-lg2" style="border-bottom: 3px solid #4e962b;" href="{{url('/houseownershipsignup')}}">Register now</a> </div>
+                                            </div>
+                                            <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="200">
+                                                <h3 style="font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Keke / Bike Ownership Scheme</h3>
+                                                <div class="pricing-column-content">
+                                                    <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-02.png')}}"></h4>
+                                                    <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>
+                                                    <ul class="features" style="height: 152px!important;">
+                                                        <li style="background-color: #FFFFFF">Classic = N3k = Reward of Motorcyle</li>
+                                                        <li style="background-color: #f8f8f8">Premium = N5k = Reward of Keke Napep</li>
+
+                                                    </ul>
+                                                    <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 5px; border-bottom: 3px solid #4e962b;" href="{{url('/kekebikeownershipsignup')}}">Register now</a> </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pages" id="features" style="margin-top: 50px">
 
-                        <div class="padding-tb75">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6 col-md-push-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-01.png" alt="" width="500" height="500"> </div>
-
-                                    <div class="col-md-4 col-md-pull-6 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
-                                        <h2>Keke Napep & Motocycle Ownership Scheme.</h2>
-                                        <h6>The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE(BIKE_OKADA) with ONE TIME PAYMENT of N3k or N5k</h6>
-                                        <p>Register for and be the owner of: at "STAGE 4 of the Scheme"</p>
-                                        <p>
-                                        <ul style="list-style: disc; padding-left: 20px;">
-                                            <li>Classic = N3k = Reward of Motorcyle</li>
-                                            <li>Premium = N5k = Reward of Keke Napep</li>
-                                        </ul>
-
-                                        </p>
-                                        <a href="{{  url('/kekebikeownershipsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
 
-                    
-                    
 
-                    <div class="pages" id="features">
-
-                        <div class="padding-tb75">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6 text-align-center" data-appear-animation="fadeInLeftBig" data-appear-animation-delay=".2"> <img src="images/scheme-02.png" alt="" width="500" height="500"> </div>
-
-                                    <div class="col-md-4 col-md-offset-1 inverse-margin" data-appear-animation="fadeInRightBig" data-appear-animation-delay="200">
-                                        <h2>Financial Empowerment Scheme.</h2>
-                                        <h6>The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of N3k, N5k, N10k</h6>
-                                        <p>
-                                        <ul style="list-style: disc; padding-left: 20px;">
-                                            <li>Classic = N3k = Reward of N200,000</li>
-                                            <li>Premium = N5k = Reward of N480,000</li>
-                                            <li>Platinum=N10k= Reward of N1,000,000</li>
-                                        </ul>
-
-                                        </p>
-                                        <a href="{{ url('/financialempowermentsignup') }}" class="btn btn-primary btn-lg">Register For This Scheme</a> </div>
-                         
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     
                     
@@ -256,19 +201,6 @@
                                         <p>Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. ac laoreet Morlem lacinia et. Cras et ligula libero.</p>
                                         <cite>- Jackson</cite> </blockquote>
                                 </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-12">
-                            <ul class="client-logos owl-carousel" data-columns="6" data-autoplay="yes" data-pagination="no" data-arrows="no" data-items-desktop="5" data-items-desktop-small="4" data-items-tablet="3" data-items-mobile="2">
-                                <li class="item"><img src="" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
-                                <li class="item"><img src="http://placehold.it/126x30&amp;text=IMAGE+PLACEHOLDER" alt="Valentine"></li>
                             </ul>
                         </div>
                     </div>

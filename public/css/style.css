@@ -76,7 +76,7 @@ a:hover,
 a:active,
 a:focus{
     outline: 0;
-    color:#666666;
+    color:#000000;
 }
 a:focus{
     text-decoration:none;
@@ -189,6 +189,9 @@ span.btn-action{
     padding: 10px 8px;
     border: 1px solid;
 }
+    .rev-slider-container{
+        height: 400px;
+    }
 }
 
 
@@ -236,7 +239,7 @@ h5{
 
 h6{
     font-weight:400;
-    font-size:12px;
+    font-size:20px;
 }
 h1.short, h2.short, h3.short, h4.short, h5.short, h6.short, p.short{
     margin-bottom:5px;
@@ -274,7 +277,7 @@ blockquote cite{
     font-size:12px;
 }
 p{
-    font-size:14px;
+    font-size:17px;
     line-height:20px;
 }
 p.md{
@@ -355,7 +358,7 @@ ul.nav-list-primary > li a{
     display:block;
     padding:8px;
     border-bottom:1px solid #eaeaea;
-    color:#666666;
+    color:#000000;
 }
 ul.nav-list-primary > li a:hover{
     background-color:#f8f8f8;
@@ -527,7 +530,7 @@ address.ico span{
 }
 .btn.transparent:hover{
     background:#ffffff;
-    color:#666666;
+    color:#000000;
 }
 .ic-featured{
     width:110px;
@@ -588,7 +591,7 @@ address.ico span{
     border-top-style:solid;
     border-top-color:#f8f8f8;
     background:#f8f8f8;
-    color:#666;
+    color:#000;
 }
 .nav-tabs li a:hover{
     text-decoration:none;
@@ -631,7 +634,7 @@ address.ico span{
     display: block;
     padding: 15px;
     background:#f8f8f8;
-    color: #666;
+    color: #000;
     font-size: 13px;
     -webkit-transition: all 0.1s linear 0s;
     -moz-transition: all 0.1s linear 0s;
@@ -649,7 +652,7 @@ address.ico span{
 .accordion-heading:hover .accordion-toggle,
 .accordion-heading:hover .accordion-toggle.inactive {
     background:#f8f8f8;
-    color:#666;
+    color:#000;
 }
 
 .accordion-heading .accordion-toggle.active {
@@ -666,7 +669,7 @@ address.ico span{
     top: 50%;
     right: 20px;
     margin: -8px 0 0 0;
-    color: #666;
+    color: #000;
     font-size: 18px;
 
     -webkit-transition: all 0.1s linear 0s;
@@ -682,7 +685,7 @@ address.ico span{
 
 .accordion-heading .accordion-toggle.active i,
 .accordion-heading:hover .accordion-toggle.inactive i {
-    color: #666;	
+    color: #000;	
 }
 
 .accordion-heading.accordionize .accordion-toggle.active i,
@@ -757,7 +760,7 @@ address.ico span{
     background-color: #f8f8f8;
 }
 .alert-standard, .alert-standard .close {
-    color:#666;
+    color:#000;
 }
 .alert-success {
     border-color:#d6e9c6;
@@ -1165,7 +1168,7 @@ html {
 body{
     background-color:#ffffff;
     background-attachment:fixed;
-    color:#666;
+    color:#000;
     font-size:14px;
     font-weight:300;
     font-family: 'Roboto', sans-serif;
@@ -1262,7 +1265,7 @@ body.sticky-menu-active .site-header {
     font-weight:bold;
 }
 .main-menu > ul > li:hover > a, .main-menu > ul > li > a:hover, .main-menu > ul > li.active > a{
-    color:#666;
+    color:#000;
     text-decoration:none;
 }
 .main-menu > ul > li > ul, .main-menu > ul > li > ul > li > ul{
@@ -1296,7 +1299,7 @@ body.sticky-menu-active .site-header {
     display:block;
     padding:13px 20px;
     border-bottom:1px solid #eaeaea;
-    color:#666666;
+    color:#000000;
     white-space:nowrap;
 }
 .main-menu > ul > li > ul > li > a:hover, .main-menu > ul > li > ul > li > ul > li > a:hover{
@@ -1320,13 +1323,13 @@ body.sticky-menu-active .site-header {
 }
 .main-menu .megamenu-container ul{
     display:block!important;
-    color:#666666;
+    color:#000000;
 }
 .main-menu .megamenu-container .megamenu-sub-title{
     display:block;
     padding-bottom:11px;
     padding-left:15px;
-    color:#666666;
+    color:#000000;
     text-transform:uppercase;
     font-weight:bold;
     font-size:14px;
@@ -1334,7 +1337,7 @@ body.sticky-menu-active .site-header {
 .main-menu .megamenu-container ul li a{
     display:block;
     padding:7px 15px;
-    color:#666666;
+    color:#000000;
     border-bottom:1px solid #eaeaea;
 }
 .main-menu .megamenu-container ul li:first-child a > i{
@@ -1354,7 +1357,7 @@ body.sticky-menu-active .site-header {
     z-index:1100;
     border:0!important;
     background:none!important;
-    color:#666666;
+    color:#000000;
 }
 .mobile-menu{
     position:absolute;
@@ -1370,7 +1373,7 @@ body.sticky-menu-active .site-header {
 .mobile-menu li a, .mobile-menu .megamenu .megamenu-sub-title{
     display:block;
     padding:15px 0;
-    border-bottom:1px solid #666;
+    border-bottom:1px solid #000;
     color:#eeeeee;
 }
 .mobile-menu li a i{
@@ -1665,13 +1668,13 @@ body.boxed .body{
     color:#999999;
 }
 .header-style2 .is-sticky .transi-header a:hover, .header-style2 .is-sticky .transi-header li:hover > a{
-    color:#666666;
+    color:#000000;
 }
 .header-style2 .main-menu > ul > li:hover > a, .header-style2 .main-menu > ul > li > a:hover, .header-style2 .main-menu > ul > li.active > a{
     color:#f8f8f8;
 }
 .header-style2 .main-menu > ul > li > ul > li > a, .header-style2 .main-menu > ul > li > ul > li > ul > li > a{
-    color:#666666;
+    color:#000000;
 }
 .header-style2 .main-menu > ul > li > ul > li > a:hover, .header-style2 .main-menu > ul > li > ul > li > ul > li > a:hover{
     background:none;
@@ -1727,7 +1730,7 @@ body.boxed .body{
     color:#999999;
 }
 .header-style3 .site-header a:hover{
-    color:#666666;
+    color:#000000;
 }
 .header-style3 .social-icons a{
     float:left;
@@ -1916,7 +1919,7 @@ body.boxed .header-style4 .main{
 }
 .header-style5 .main-menu > ul > li > ul > li > a, .header-style5 .main-menu > ul > li > ul > li > ul > li > a{
     border-bottom:1px solid #eaeaea;
-    color:#666666;
+    color:#000000;
 }
 .header-style5 .main-menu > ul > li > ul > li > a:hover, .header-style5 .main-menu > ul > li > ul > li > ul > li > a:hover{
     background:#eaeaea;
@@ -1927,10 +1930,10 @@ body.boxed .header-style4 .main{
     margin-left:0;
 }
 .header-style5 .main-menu .megamenu-container ul{
-    color:#666666;
+    color:#000000;
 }
 .header-style5 .main-menu .megamenu-container ul li a{
-    color:#666666;
+    color:#000000;
 }
 .header-style5 .main-menu .megamenu-container ul li a:hover{
     background:#eaeaea;
@@ -1982,7 +1985,7 @@ body.boxed .header-style4 .main{
 }
 .header-style6 .main-menu > ul > li > a{
     letter-spacing:1px;
-    color:#666666;
+    color:#000000;
     padding:0 20px;
     height:80px;
     line-height:80px;
@@ -2001,10 +2004,22 @@ body.boxed .header-style4 .main{
     font-weight:300;
 }
 
+
+i.green{
+    color: #62BC37;
+}
+
+
+.btn-lg2{
+    display: block;
+    border-bottom: 3px solid #00A25C ;
+}
+
+
 /* Footer style default */
 .site-footer-top{
     padding:30px 0;
-    background:#666666;
+    background:#000000;
     color:#eeeeee;
     font-size:12px;
     line-height:18px;
@@ -2065,7 +2080,7 @@ body.boxed .header-style4 .main{
 }
 .social-icons-bar a{
     margin-left:15px;
-    color:#666666;
+    color:#000000;
     line-height:30px;
 }
 #back-to-top{
@@ -2109,7 +2124,7 @@ body.boxed .header-style4 .main{
 .footer-style3 .footer-widget h4{
     margin-bottom:15px;
     padding-bottom:5px;
-    border-bottom:1px solid #666666;
+    border-bottom:1px solid #000000;
 }
 .footer-style3 .site-footer-top a:hover{
     color:#ffffff;
@@ -2133,7 +2148,7 @@ body.boxed .header-style4 .main{
 }
 .footer-style3 .site-footer-top hr.fw{
     margin-bottom:10px;
-    background-color:#666666;
+    background-color:#000000;
 }
 .footer-style3 .social-icons-bar a:hover{
     color:#ffffff;
@@ -2204,7 +2219,7 @@ body.boxed .header-style4 .main{
     text-transform:none;
 }
 .page-header.lgray-color h1, .page-header.gray-color h1{
-    color:#666666;
+    color:#000000;
 }
 .page-header.wnav h1{
     margin:0 auto;
@@ -2239,7 +2254,7 @@ body.boxed .header-style4 .main{
 .heading-fs-bg.light-bg{
     -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
-    color:#666666;
+    color:#000000;
 }
 .heading-fs-bg h1, .heading-fs-bg h2, .heading-fs-bg h3, .heading-fs-bg h4, .heading-fs-bg h5, .heading-fs-bg h6{
     margin:0;
@@ -2315,7 +2330,7 @@ body.boxed .header-style4 .main{
     color:#ffffff;
 }
 .features a{
-    color:#666666;
+    color:#000000;
 }
 .features-ico-left i{
     float:left;
@@ -2858,7 +2873,7 @@ body.boxed .header-style4 .main{
     display:block;
     margin-top:20px;
     margin-bottom:5px;
-    color:#666666;
+    color:#000000;
     text-align:center;
     text-transform:uppercase;
     font-weight:700;
@@ -2943,6 +2958,7 @@ ul.technology li:hover:before {
     -moz-transition: box-shadow 0.2s linear;
     -o-transition: box-shadow 0.2s linear;
     transition: box-shadow 0.2s linear;
+    border: 1px solid #ccc;
 }
 .pricing-column .features{
     padding:0;
@@ -2950,7 +2966,7 @@ ul.technology li:hover:before {
     background:none;
 }
 .pricing-column .pricing-column-content {
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
 }
@@ -2996,7 +3012,7 @@ ul.technology li:hover:before {
 .pricing-column ul li {
     padding: 10px 25px;
     border-bottom: 1px solid #eeeeee;
-    color: #666666!important;
+    color: #000000!important;
     list-style: none;
     line-height: 18px;
 }
@@ -3033,7 +3049,7 @@ ul.technology li:hover:before {
 .pricing-column h4 {
     margin-bottom: 0px;
     margin-left: -22px;
-    padding: 20px 30px 6px 30px;	
+    padding: 20px 6px 6px 30px;
     color: #333333;
     font-size: 54px!important;
     line-height: 42px!important;
@@ -3063,7 +3079,7 @@ ul.technology li:hover:before {
     margin-top:25px;
 }
 .pricing-column.highlight .btn{
-    margin-bottom:20px;
+  /*  margin-bottom:20px;*/
 }
 .pricing-table.six-cols > div {
     width: 16.5%;
@@ -3072,7 +3088,8 @@ ul.technology li:hover:before {
     width: 20%;
 }
 .pricing-table.four-cols > div { width: 25%; }
-.pricing-table.three-cols > div { width: 33.2%; }
+.pricing-table.three-cols > div {     width: 31.2%;
+    margin-left: 20px; }
 .pricing-table.two-cols > div { width: 50%; }
 
 /* Carousel */
@@ -3362,7 +3379,7 @@ ul.post-list-small li:last-child {
     -moz-border-radius:3px;
     border-radius:3px;
     background:#f8f8f8;
-    color:#666666;
+    color:#000000;
     font-size:12px;
 }
 .tag-cloud a:hover{
@@ -3465,7 +3482,7 @@ ul.post-list-small li:last-child {
     font-size:16px;
 }
 .products-list li .product-details h3 a{
-    color:#666666;
+    color:#000000;
 }
 .products-list li .product-details h3 a:hover{
     text-decoration:none;
@@ -3529,7 +3546,7 @@ ul.post-list-small li:last-child {
 }
 .w-map{
     margin:-20px 0;
-    color:#666666!important;
+    color:#000000!important;
 }
 .social-icons-list{
     margin:10px 0 30px 0;
