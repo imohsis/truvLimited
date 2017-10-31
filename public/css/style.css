@@ -90,6 +90,21 @@ a > img {
     vertical-align: middle;	
 }
 
+#sliderText{
+    font-size: 50px;
+    color: rgb(148,24,40);
+    font-weight: 700;
+    margin: 0;
+    line-height: 50px;
+}
+
+@media screen and (max-width: 375px){
+    #sliderText{
+        font-size: 80px;
+        line-height: 90px;
+    }
+}
+
 .gray-color{
     background:#bababa;
 }

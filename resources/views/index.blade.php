@@ -49,16 +49,12 @@
 
                                     <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
                                         <!-- MAIN IMAGE -->
-                                        <img src="http://placehold.it/1280x859&amp;text=IMAGE+PLACEHOLDER" alt="">
+                                        <img src="{{asset('images/slider/sliders-01.png')}}" alt="">
                                         <!-- LAYER NR. 1 -->
                                         <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="160" data-x="30" style="font-size: 45px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;"> Own a house today</div>
+                                        <div class="tp-caption sft tp-resizeme start" id="sliderText" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="50" data-x="30"> Become a House <br/> owner with 3k</div>
 
-                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="240" data-x="30"><a href="" class="btn btn-success btn-lg">Register now</a> </div>
+                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="180" data-x="30"><a href="" class="btn btn-success btn-lg" style="background-color: #62BC37;">Register now</a> </div>
 
 
                                         <!-- LAYER NR. 3 -->
@@ -67,6 +63,7 @@
                                         <!-- LAYER NR. 4 -->
                                     </li>
 
+{{--
                                     <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
                                         <!-- MAIN IMAGE -->
                                         <img src="http://placehold.it/1280x859&amp;text=IMAGE+PLACEHOLDER" alt="">
@@ -86,6 +83,7 @@
 
                                         <!-- LAYER NR. 4 -->
                                     </li>
+--}}
 
                                    {{-- <li data-delay="4000" data-masterspeed="600" data-slotamount="7" data-transition="fade">
                                         <!-- MAIN IMAGE --> 

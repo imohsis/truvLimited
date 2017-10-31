@@ -26,7 +26,8 @@ class UpdateController extends Controller
         'date_of_birth' => $request->birthDate,
         'location' => $request->address,
          'account_name' =>  $request->accname,
-        'account_no' => $request->accno
+        'account_no' => $request->accno,
+         'bank_name' => $request->bankname
         ];
 
      $member = Member::where('user_id','=',auth()->user()->id )->update($data);

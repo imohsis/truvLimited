@@ -394,7 +394,7 @@
                     $startingClass = "Premium Starting Class";
                 }
                 if($startingClassId == \App\StartingClasses::$PLATINUM){
-                        $startingClass = "Platinum Staring Class";
+                        $startingClass = "Platinum Starting Class";
                 }
             ?>
             <!-- Modal -->
@@ -480,7 +480,7 @@ $(document).ready(function () {
    /* $('#myModal').modal('show');*/
     swal({
         title: "Tru V Limited",
-        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an exiting member. Kindly Log in to view your portfolio</h4>',
+        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an existing member. Kindly Log in to view your portfolio</h4>',
         type: "success",
         html: true,
         showCancelButton: true,
@@ -507,10 +507,10 @@ $(document).ready(function () {
                 var selection = this.value;
 
                 if (selection == "1") {
-                    $('#banner').attr('src', '/images/PYRAMID-04.png');
+                    $('#banner').attr('src', '/images/schemes/PYRAMID-04.png');
                 }
                 else if (selection == "2") {
-                    $('#banner').attr('src', '/images/PYRAMID-05.png');
+                    $('#banner').attr('src', '/images/schemes/PYRAMID-05.png');
                 }else{
                     $('#banner').attr('src', '/images/keke.png');
                 }

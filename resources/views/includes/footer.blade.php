@@ -23,8 +23,7 @@
                                     <li><a href="{{url('/signup')}}">Register</a></li>
                                     <li><a href="{{url('/login')}}">Login</a></li>
                                     <li><a href="{{url('/about')}}">About us</a></li>
-                                    <li><a href="">Terms and conditions</a></li>
-                                    <li><a href="">Privacy policy</a></li>
+                                    <li><a href="{{url('/terms')}}">Terms and conditions</a></li>
                                 </ul>
                             </section>
                         </div>

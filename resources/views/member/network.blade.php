@@ -29,7 +29,7 @@
                         <tr class="clickable">
 
                             <td class="txt-oflo">{{ $index + 1 }}</td>
-                            <td>{{ $member->portfolio_code}}</td>
+                            <td>{{ $portfolio->portfolio_code}}</td>
                             <td>
                               {{ $member->full_name }}
                             </td>

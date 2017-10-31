@@ -358,7 +358,7 @@
                             <aside class="col-md-5 sidebar right-sidebar ">
                                 <div class="widget sidebar-widget recent-posts">
 
-                                    <img id="banner" src="{{ asset('/images/scheme-02.png') }}" alt=""/>
+                                    <img id="banner" src="{{ asset('/images/financial.png') }}" alt=""/>
                                 </div>
 
                             </aside>
@@ -392,7 +392,7 @@
                     $startingClass = "Premium Starting Class";
                 }
                 if($startingClassId == \App\StartingClasses::$PLATINUM){
-                        $startingClass = "Platinum Staring Class";
+                        $startingClass = "Platinum Starting Class";
                 }
             ?>
             <!-- Modal -->
@@ -477,7 +477,7 @@ $(document).ready(function () {
    // $('#myModal').modal('show');
     swal({
         title: "Tru V Limited",
-        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an exiting member. Kindly Log in to view your portfolio</h4>',
+        text: '<p class="alert alert-success">You successfully registered for the <strong>{{ $scheme }}</strong> at <strong>{{ $startingClass }}</strong>.<br/> You will receive an email after your account has been approved.</p> <hr/> <h4>If you are an existing member. Kindly Log in to view your portfolio</h4>',
         type: "success",
         html: true,
         showCancelButton: true,
@@ -494,15 +494,16 @@ $(document).ready(function () {
                 var selection = this.value;
 
                 if (selection == "1") {
-                    $('#banner').attr('src', '/images/money-06.png');
+                    $('#banner').attr('src', '/images/schemes/PYRAMID-06.png');
                 }
                 else if (selection == "2") {
-                    $('#banner').attr('src', '/images/PYRAMID-07.png');
+                    $('#banner').attr('src', '/images/schemes/PYRAMID-07.png');
                 }
                 else if (selection == "3") {
-                    $('#banner').attr('src', '/images/PYRAMID-08.png');
+                    $('#banner').attr('src', '/images/schemes/PYRAMID-08.png');
                 }else{
-                    $('#banner').attr('src', '/images/scheme-02.png');
+
+                    $('#banner').attr('src', '/images/financial.png');
                 }
 
             });

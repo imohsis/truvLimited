@@ -96,6 +96,12 @@
                     <div class="col-md-12">
                         <input type="text" placeholder="" value="{{ $member->account_no }}" name="accno" class="form-control form-control-line"> </div>
                 </div>
+                     <div class="form-group">
+                         <label class="col-md-12">Bank name</label>
+                         <div class="col-md-12">
+                             <input type="text" placeholder="" value="{{ $member->bank_name }}" name="bankname" class="form-control form-control-line"> </div>
+                     </div>
+
                 <div>
 
                     <button type="submit" class="btn btn-primary pull-right">Update</button>

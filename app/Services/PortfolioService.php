@@ -100,7 +100,8 @@ class PortfolioService {
      */
     public function getAllPortfoliosReferredByAPortfolio(\App\Portfolio $portfolio){
         if($portfolio != null){
-            return \App\Portfolio::where('refered_by', '=', $portfolio->id)->get();
+            return \App\Portfolio::where('refered_by', '=', $portfolio->id)
+                                  ->where('approved_status', '=', 1)->get();
         }
         return null;
     }

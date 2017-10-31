@@ -27,6 +27,8 @@ class CoordinatorService {
      * 
      */
     public function createCoordinator($name, $email, $password){
+
+        
         return \App\User::create([
             'name' => $name,
             'email' => $email,
