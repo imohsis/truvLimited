@@ -8,7 +8,7 @@
                                 <address class="ico">
                                     <p><i class="fa fa-map-marker"></i> <span><strong>Address:</strong> 57, Opebi Road,<br>
                                             Ikeja, Lagos</span></p>
-                                    <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> 07065384042, 08052268556</span></p>
+                                    <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> 08149653352, 08052268556</span></p>
                                     <p><i class="fa fa-envelope"></i> <span><strong>Email:</strong> truvlimited@gmail.com</span></p>
                                 </address>
                             </section>
@@ -31,7 +31,7 @@
                         <div class="col-md-3 col-sm-6">
                             <section class="footer-widget" id="newsletter">
                                 <h4>Newsletter</h4>
-                                <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
+                                <p>Keep up on our always evolving bonuses and rewards. Enter your e-mail and subscribe to our newsletter.</p>
                                 <form>
                                     <div class="input-group input-group-lg">
                                         <input type="text" class="form-control input-lg">

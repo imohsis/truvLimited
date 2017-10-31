@@ -20,6 +20,7 @@
                         <tr>
                             <th>S/N</th>
                             <th>Name</th>
+                            <th>Position</th>
                             <th>Email</th>
                             <th>Activatated Status</th>
 
@@ -32,6 +33,7 @@
                             <td class="txt-oflo"> &nbsp;
                                 {{ $coordinator->name }}
                             </td>
+                            <td>{{ $coordinator->position }}</td>
                             <td class="">
                                 {{ $coordinator->email }}
                             </td>

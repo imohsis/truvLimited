@@ -116,14 +116,14 @@
                                     <div class="col-md-12">
                                         <div class="pricing-table three-cols margin-0">
                                             <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="300">
-                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Keke / Bike Ownership Scheme</h3>
+                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Bike / keke Ownership Scheme</h3>
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-03.png')}}"></h4>
-                                                    <p style="padding: 20px; color: #ffffff; background-color: #62BC37;">The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of <Stron>N3k</Stron>, <strong>N5k</strong>, <strong>N10k</strong></p>
+                                                    <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>
                                                     <ul class="features">
-                                                        <li style="background-color: #FFFFFF;">Classic = N3k = Reward of N200,000</li>
-                                                        <li style="background-color: #f8f8f8;">Premium = N5k = Reward of N480,000</li>
-                                                        <li style="background-color: #FFFFFF">Platinum=N10k= Reward of N1,000,000</li>
+                                                        <li style="background-color: #FFFFFF">Classic = N3k = Reward of Motorcyle</li>
+                                                        <li style="background-color: #f8f8f8">Premium = N5k = Reward of Keke Napep</li>
+
                                                     </ul>
                                                     <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 0px;border-bottom: 3px solid #4e962b;" href="{{url('/kekebikeownershipsignup')}}">Register now</a> </div>
                                             </div>
@@ -144,12 +144,14 @@
                                                 <h3 style="font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Financial Empowerment Scheme</h3>
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-02.png')}}"></h4>
-                                                    <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>
-                                                    <ul class="features">
-                                                        <li style="background-color: #FFFFFF">Classic = N3k = Reward of Motorcyle</li>
-                                                        <li style="background-color: #f8f8f8">Premium = N5k = Reward of Keke Napep</li>
 
+                                                    <p style="padding: 20px; color: #ffffff; background-color: #62BC37;">The scheme will empowered you with Capital to Start any business of your choice by ONE TIME PAYMENT of <Stron>N3k</Stron>, <strong>N5k</strong>, <strong>N10k</strong></p>
+                                                    <ul class="features">
+                                                        <li style="background-color: #FFFFFF;">Classic = N3k = Reward of N200,000</li>
+                                                        <li style="background-color: #f8f8f8;">Premium = N5k = Reward of N480,000</li>
+                                                        <li style="background-color: #FFFFFF">Platinum=N10k= Reward of N1,000,000</li>
                                                     </ul>
+
                                                     <a class="btn btn-primary btn-block btn-lg2" style="margin-top: 5px; border-bottom: 3px solid #4e962b;" href="{{url('/financialempowermentsignup')}}">Register now</a> </div>
                                             </div>
 
@@ -168,7 +170,7 @@
 
                     
                     
-                <div class="container margin-40 padding-tb75">
+                <div class="container margin-40 padding-tb20">
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="heading-hr margin-60"><span>Loved by over <span class="accent-color-text">30000</span> families</span></h4>
@@ -178,25 +180,25 @@
                                 <li class="testimonial item">
                                     <div class="img-block"><img src="http://placehold.it/76x76&amp;text=IMAGE+PLACEHOLDER" alt=""></div>
                                     <blockquote>
-                                        <p>Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. ac laoreet Morlem lacinia et. Cras et ligula libero.</p>
+                                        <p>What the Wealthy Buy on Payday and Brilliant Compensation and I love the confidence I have in talking to people. I have learned to LISTEN more and talk less. </p>
                                         <cite>- Jackson</cite> </blockquote>
                                 </li>
                                 <li class="testimonial item">
                                     <div class="img-block"><img src="http://placehold.it/76x76&amp;text=IMAGE+PLACEHOLDER" alt=""></div>
                                     <blockquote>
-                                        <p>Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. ac laoreet Morlem lacinia et. Cras et ligula libero.</p>
+                                        <p>What the Wealthy Buy on Payday and Brilliant Compensation and I love the confidence I have in talking to people. I have learned to LISTEN more and talk less. </p>
                                         <cite>- Jackson</cite> </blockquote>
                                 </li>
                                 <li class="testimonial item">
                                     <div class="img-block"><img src="http://placehold.it/76x76&amp;text=IMAGE+PLACEHOLDER" alt=""></div>
                                     <blockquote>
-                                        <p>Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. ac laoreet Morlem lacinia et. Cras et ligula libero.</p>
+                                        <p>What the Wealthy Buy on Payday and Brilliant Compensation and I love the confidence I have in talking to people. I have learned to LISTEN more and talk less. </p>
                                         <cite>- Jackson</cite> </blockquote>
                                 </li>
                                 <li class="testimonial item">
                                     <div class="img-block"><img src="http://placehold.it/76x76&amp;text=IMAGE+PLACEHOLDER" alt=""></div>
                                     <blockquote>
-                                        <p>Phasellus blandit mattis ipsum, ac laoreet Morlem lacinia et. Cras et ligula libero. ac laoreet Morlem lacinia et. Cras et ligula libero.</p>
+                                        <p>What the Wealthy Buy on Payday and Brilliant Compensation and I love the confidence I have in talking to people. I have learned to LISTEN more and talk less. </p>
                                         <cite>- Jackson</cite> </blockquote>
                                 </li>
                             </ul>

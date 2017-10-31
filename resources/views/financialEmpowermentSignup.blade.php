@@ -63,7 +63,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-7">
-                                <h2><strong>Registration</strong></h2>
+                                <h2><strong>Scheme / Package Selected</strong></h2>
                                 <p class="lead"><span style="color: #3498db; font-weight: 300; ">Financial Empowerment Package.</span> From the drop down below: Select your starting level to see your reward/compensation pyramid</p>
                                 <hr>
                                 @if ($errors)

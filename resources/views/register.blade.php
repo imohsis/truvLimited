@@ -46,7 +46,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Complete Registration</h1>
+                                        <h1>Schemes</h1>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2><strong>Registration</strong></h2>
+                                <h2><strong>Start Registration</strong></h2>
                                 <p class="lead">You are expected to pick a scheme of your choice below: click the item tab which will take you to the registration page. Not that you can register with different amount under the same scheme.</p>
                                 
                                 <hr>

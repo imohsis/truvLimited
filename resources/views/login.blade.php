@@ -49,7 +49,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1>Login</h1>
+                <h1>Access your account</h1>
               </div>
             </div>
           </div>

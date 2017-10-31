@@ -26,14 +26,21 @@ class CoordinatorService {
      * @return type
      * 
      */
-    public function createCoordinator($name, $email, $password){
+    public function createCoordinator($name, $email, $password, $title){
 
-        
-        return \App\User::create([
+        $checkIfExist = \App\User::select('name')->where('email','=',$email)->get();
+
+        if ($checkIfExist == null){
+           return null;
+        }
+
+       return \App\User::create([
+
             'name' => $name,
             'email' => $email,
             'password' => bcrypt($password),
-            'role_id' => \App\UserRole::$COORDINATOR
+            'role_id' => \App\UserRole::$COORDINATOR,
+           'position', $title
         ]);
     }
     
