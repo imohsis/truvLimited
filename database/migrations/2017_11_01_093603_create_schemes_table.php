@@ -13,7 +13,7 @@ class CreateSchemesTable extends Migration
      */
     public function up()
     {
-        Schema::create('schemes', function (Blueprint $table) {
+        Schema::create('Schemes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
             $table->timestamps();
