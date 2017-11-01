@@ -31,6 +31,7 @@
                 <div class="col-md-4 col-sm-12 text-center">
                     <a href="{{ url('/admin/members/'.$member->id.'/portfolios') }}" class="btn btn-default">Portfolios</a>
                 </div>
+                @if(auth()->user()->role_id != \App\UserRole::$GUEST)
                 @if($portfolio->approved_status != true && $portfolio->disapproved_status != true)
                  <div class="col-md-4 col-sm-12 text-center">
                     <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
@@ -39,6 +40,7 @@
                     <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
                 </div>
                 @endif
+                    @endif
             </div>
         </div>
 

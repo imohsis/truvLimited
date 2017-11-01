@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Portfolio;
 use App\Member;
+use DB;
+use PDF;
+use Excel;
 class MemberController extends Controller
 {
     //
@@ -16,6 +19,24 @@ class MemberController extends Controller
         $this->memberService = $memberService;
         
     }
+
+
+    public function export(){
+        $items = Portfolio::select('Members.full_name','Portfolios.portfolio_code','Schemes.description','Members.email','Members.phone','Members.location')
+            ->join('Members','Portfolios.member_id','=','Members.id')
+            ->join('schemes','Portfolios.scheme_id','=','Schemes.id')
+            ->where('Members.approved_status', true)
+            ->orderBy('Members.created_at','desc')
+            ->get();
+        Excel::create('items', function($excel) use($items) {
+            $excel->sheet('ExportFile', function($sheet) use($items) {
+                $sheet->fromArray($items);
+            });
+        })->export('xls');
+
+    }
+
+
     
     public function index(){
         $member_portfolios = Member::select('Members.id','Members.full_name','Portfolios.portfolio_code','Portfolios.scheme_id','Members.email','Members.phone','Members.location')
@@ -23,6 +44,8 @@ class MemberController extends Controller
                                           ->where('Members.approved_status', true)
                                           ->orderBy('Members.created_at','desc')
                                            ->paginate('15');
+
+
          //$portfolios = Portfolio::all();
         // dd($member_portfolios);
          //dd($this->memberService->getAllApprovedAndReviewedMembers());

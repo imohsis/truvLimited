@@ -7,8 +7,11 @@
             <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
 
             </div>
-            <h3 class="box-title"><span style="color: #9FC735">All Members</span></h3>
+            <h3 class="box-title"><span style="color: #9FC735">Old Members</span></h3>
             <div class="table-responsive">
+                <form action="{{url('/admin/items/export')}}" enctype="multipart/form-data">
+                    <button class="btn btn-success pull-right" type="submit">Export</button>
+                </form>
                 @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}

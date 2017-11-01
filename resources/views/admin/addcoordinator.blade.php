@@ -20,11 +20,7 @@
                 <span style="color: red">{{ session('error') }}</span>
                 @endif
                 {{ csrf_field() }}
-                    <div class="form-group">
-                        <label class="col-md-12">Position</label>
-                        <div class="col-md-12">
-                            <input type="text" placeholder="" value="" name="position" class="form-control form-control-line"> </div>
-                    </div>
+
                 <div class="form-group">
                     <label class="col-md-12">Name</label>
                     <div class="col-md-12">
@@ -45,6 +41,17 @@
                     <div class="col-md-12">
                         <input type="password" placeholder="" value="" name="password_confirmation" class="form-control form-control-line"> </div>
                 </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Role</label>
+                        <div class="col-md-12">
+                            <select class="form-control" name="role_id">
+                                <option value="">Select a role</option>
+                                <option value="2">Executive</option>
+                                <option value="4">Guest</option>
+
+                            </select>
+                        </div>
+                    </div>
 
 
                 <div class="form-group">

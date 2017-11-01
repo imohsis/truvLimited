@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Excel;
+use App\Portfolio;
 
 class IndexController extends Controller
 {
@@ -21,5 +23,20 @@ class IndexController extends Controller
         $awaitingPortfolios = $this->portfolioService->getAllUnReviewedPortfolios();
         return view('admin.index')
                 ->with('awaitingPortfolios', $awaitingPortfolios);
+    }
+
+    public function export(){
+        $items = Portfolio::select('Members.full_name','Portfolios.portfolio_code','Schemes.description','Members.email','Members.phone','Members.location')
+            ->join('Members','Portfolios.member_id','=','Members.id')
+            ->join('schemes','Portfolios.scheme_id','=','Schemes.id')
+            ->where('Members.approved_status', false)
+            ->orderBy('Members.created_at','desc')
+            ->get();
+        Excel::create('items', function($excel) use($items) {
+            $excel->sheet('ExportFile', function($sheet) use($items) {
+                $sheet->fromArray($items);
+            });
+        })->export('xls');
+
     }
 }

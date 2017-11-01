@@ -134,6 +134,9 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::post('/approveportfolio', 'Admin\PortfolioController@approvePortfolio');
     Route::post('/disapproveportfolio', 'Admin\PortfolioController@disapprovePortfolio');
     Route::get('/search','Admin\SearchController@index');
+    Route::get('items/export', 'Admin\MemberController@export');
+    Route::get('new/export', 'Admin\IndexController@export');
+
 });
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {

@@ -9,7 +9,9 @@
             </div>
             <h3 class="box-title"><span style="color: #9FC735">New Portolio Registration</span></h3>
             <div class="table-responsive">
-                @if(session('success'))
+                <form action="{{url('/admin/new/export')}}" enctype="multipart/form-data">
+                    <button class="btn btn-success pull-right" type="submit">Export</button>
+                </form>                @if(session('success'))
                 <span style="color: green">{{ session('success') }}</span>
                 @endif
                 @if(session('error'))

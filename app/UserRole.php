@@ -20,5 +20,7 @@ class UserRole {
     public static $COORDINATOR = 2;
     
     public static $ADMINISTRATOR = 3;
+
+    public static $GUEST = 4;
     
 }

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('Thinkshifts2020'),
             'role_id' => App\UserRole::$ADMINISTRATOR
         ]);
-        
+
+
     }
 }

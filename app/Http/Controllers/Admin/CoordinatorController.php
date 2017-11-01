@@ -26,19 +26,19 @@ class CoordinatorController extends Controller
     
     public function store(Request $request){
         $this->validate($request, [
-            'position' => 'required',
+            'role_id' => 'required',
            'name' => 'required',
            'email' => 'required',
            'password' => 'required|min:8|confirmed'
         ]);
 
-        $user = $this->coordinatorService->createCoordinator($request['name'], $request['email'], $request['password'], $request['position']);
+        $user = $this->coordinatorService->createCoordinator($request['name'], $request['email'], $request['password'], $request['role_id']);
 
 
         if($user ==  null){
             return redirect()->back()->with('error', 'User already exist');
         }
 
-       return redirect()->back()->with('success', $user->name.' was created succcessfully as a coordinator');
+       return redirect()->back()->with('success', $user->name.' has successfully been created');
     }
 }
