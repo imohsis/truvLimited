@@ -52,7 +52,7 @@
                                         <img src="{{asset('images/slider/slider2.png')}}" alt="" class="img-responsive">
                                         <!-- LAYER NR. 1 -->
                                         <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption sft tp-resizeme start" id="sliderText" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="50" data-x="30"> Become a House <br/> owner with 3k</div>
+                                        <div class="tp-caption sft tp-resizeme start" id="sliderText" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="50" data-x="30"> Become a House <br/> Owner with 3k</div>
 
                                         <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="180" data-x="30"><a href="" class="btn btn-success btn-lg" style="background-color: #62BC37;">Register now</a> </div>
 
@@ -110,13 +110,13 @@
                     <br/>
 
                     <div class="pages" id="pricing">
-                        <div class="padding-tb75" style="padding-top: 0px;">
+                        <div class="padding-tb75" style="padding-top: 0px;" id="gap">
                             <div class="container margin-30">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="pricing-table three-cols margin-0">
                                             <div class="pricing-column" data-appear-animation="rotateIn" data-appear-animation-delay="300">
-                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Bike / keke Ownership Scheme</h3>
+                                                <h3 style="padding-left: 2px; font-weight: bold;font-size: 20px; background-color: #62BC37; color: #FFFFFF;">Bike / Keke Ownership Scheme</h3>
                                                 <div class="pricing-column-content">
                                                     <h4 style="padding: 0px;"><img src="{{asset('/images/SCHEMES TRUV-03.png')}}"></h4>
                                                     <p style="padding: 20px; color: #FFFFFF;  background-color: #62BC37;">The Scheme will make you a bonfide owner of a KEKE NAPEP or MOTORCYCLE (BIKE_OKADA) with ONE TIME PAYMENT of <strong>N3k</strong>, <strong>N5k</strong></p>

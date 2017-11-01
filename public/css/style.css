@@ -114,9 +114,19 @@ a > img {
 
     #sliderText{
         font-size: 70px;
-        line-height: 70px;
+        line-height: 80px;
         margin-left: 80px;
-        margin-bottom: 50px;
+        margin-bottom: 90px;
+        margin-top: -40px;
+    }
+
+    #pricing{
+        margin-top: -84px;
+        margin-bottom: 0px!important;
+    }
+
+    #gap{
+        padding-bottom: 0px;
     }
 }
 
@@ -2233,7 +2243,7 @@ i.green{
 }
 .page-header h1{
     margin-bottom:5px;
-    color:#630f0f;
+    color:#333333;
     text-transform:uppercase;
     font-weight:400;
     font-family: inherit;
