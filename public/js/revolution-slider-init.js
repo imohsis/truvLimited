@@ -6,7 +6,7 @@ $(function(){var revapi;
 				{
 					delay:9000,
 					startwidth:1170,
-					startheight:500,
+					startheight:300,
 					hideThumbs:10,
 					fullWidth:"on",
 					forceFullWidth:"off"
@@ -20,7 +20,7 @@ $(function(){var revapi;
 				{
 					delay:9000,
 					startwidth:1170,
-					startheight:600,
+					startheight:300,
 					hideThumbs:10,
 					fullWidth:"on",
 					forceFullWidth:"off",

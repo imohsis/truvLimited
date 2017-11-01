@@ -98,10 +98,25 @@ a > img {
     line-height: 50px;
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 675px) and (min-width: 376px){
     #sliderText{
-        font-size: 80px;
-        line-height: 90px;
+        font-size: 60px;
+        line-height: 70px;
+        margin-left: 45px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 375px){
+
+
+    #sliderText{
+        font-size: 70px;
+        line-height: 70px;
+        margin-left: 80px;
+        margin-bottom: 50px;
     }
 }
 
