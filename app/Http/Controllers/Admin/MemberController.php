@@ -30,12 +30,12 @@ class MemberController extends Controller
             ->orderBy('Members.created_at','desc')
             ->get();
 
-        return $items;
-       /* Excel::create('items', function($excel) use($items) {
+       // return $items;
+       Excel::create('items', function($excel) use($items) {
             $excel->sheet('ExportFile', function($sheet) use($items) {
                 $sheet->fromArray($items);
             });
-        })->export('xls');*/
+        })->export('xls');
 
     }
 
