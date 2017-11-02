@@ -11,7 +11,7 @@ class SchemesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('schemes')->insert(array(
+        DB::table('Schemes')->insert(array(
             array('description' => 'House ownership scheme'),
             array('description' => 'Keke and motorcycle scheme'),
             array('description' => 'Financial empowerment scheme')
