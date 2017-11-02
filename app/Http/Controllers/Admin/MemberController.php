@@ -24,7 +24,7 @@ class MemberController extends Controller
     public function export(){
         $items = Portfolio::select('Members.full_name','Portfolios.portfolio_code','Schemes.description','Members.email','Members.phone','Members.location')
             ->join('Members','Portfolios.member_id','=','Members.id')
-            ->join('schemes','Portfolios.scheme_id','=','Schemes.id')
+            ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
             ->where('Members.approved_status', true)
             ->orderBy('Members.created_at','desc')
             ->get();
