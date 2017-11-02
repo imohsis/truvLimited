@@ -68,50 +68,50 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Email Address</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly  value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" readonly value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div>
                     <label class="col-md-12">Scheme</label>
                     <div class="col-md-12">
-                           <input type="text" placeholder="" value="{{ $schemeName }}" name="packageName" class="form-control form-control-line"/>
+                           <input type="text" placeholder="" readonly value="{{ $schemeName }}" name="packageName" class="form-control form-control-line"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  readonly value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  readonly value="{{ $portfolio->teller_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                  <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Paid Into</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $portfolio->bank_paid_into }}" name="bankPaidInto" class="form-control form-control-line">
+                        <input type="text" placeholder="" readonly value="{{ $portfolio->bank_paid_into }}" name="bankPaidInto" class="form-control form-control-line">
                     </div>
                 </div>
                 <?php $userThatApproved = \App\User::find($portfolio->approved_by); ?>

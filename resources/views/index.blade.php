@@ -54,7 +54,7 @@
                                         <!-- LAYER NR. 2 -->
                                         <div class="tp-caption sft tp-resizeme start" id="sliderText" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="50" data-x="30"> Become a House <br/> Owner with 3k</div>
 
-                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="180" data-x="30"><a href="" class="btn btn-success btn-lg" style="background-color: #62BC37;">Register now</a> </div>
+                                        <div class="tp-caption  sft tp-resizeme start" data-endspeed="300" data-easing="Power4.easeInOut" data-start="2000" data-speed="600" data-y="180" data-x="30"><a href="{{ url('/signup') }}" class="btn btn-success btn-lg" style="background-color: #62BC37;">Register now</a> </div>
 
 
                                         <!-- LAYER NR. 3 -->

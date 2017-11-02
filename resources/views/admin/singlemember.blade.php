@@ -27,29 +27,38 @@
                 </div>
             </div>
             <div class="user-btm-box">
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/members/'.$member->id.'/portfolios')}}" class="btn btn-default">View Portfolio</a>
-                </div><div class="visible-xs"><br/></div>
-                @if(auth()->user()->role_id != \App\UserRole::$GUEST)
-                @if($member->approved_status == true)
-                @if(!$member->user()->is_deactivate)
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/deactivateaccount/'.$member->user()->id)}}" class="btn btn-default">Deactivate account</a>
-                </div>
-                @else
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a href="{{ url('/admin/activateaccount/'.$member->user()->id)}}" class="btn btn-default">Activate account</a>
-                </div>
-                @endif
-                @else
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#disApproveMember" class="btn btn-default">DisApprove</a>
-                </div>
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#approveMember" class="btn btn-default">&nbsp;&nbsp;&nbsp;Approve&nbsp;&nbsp;</a>
-                </div>
-                @endif
-                    @endif
+               <div class="row">
+                   <div class="col-md-4 col-sm-12 text-center">
+                       <a href="{{ url('/admin/members/'.$member->id.'/portfolios')}}" class="btn btn-default">View Portfolio</a>
+                   </div>
+                   <div class="col-md-4 col-sm-12 text-center">
+                       <a href="{{ url('/admin/member/'.$member->id.'/network')}}" class="btn btn-default">View Network</a>
+                   </div>
+
+
+                <div class="visible-xs"><br/></div>
+
+                 @if(auth()->user()->role_id != \App\UserRole::$GUEST)
+                     @if($member->approved_status == true)
+                         @if(!$member->user()->is_deactivate)
+                             <div class="col-md-4 col-sm-12 text-center">
+                                 <a href="{{ url('/admin/deactivateaccount/'.$member->user()->id)}}" class="btn btn-default">Deactivate</a>
+                             </div>
+                         @else
+                             <div class="col-md-4 col-sm-12 text-center">
+                                 <a href="{{ url('/admin/activateaccount/'.$member->user()->id)}}" class="btn btn-default">Activate</a>
+                             </div>
+                         @endif
+                     @else
+                         <div class="col-md-4 col-sm-12 text-center">
+                             <a data-toggle="modal" data-target="#disApproveMember" class="btn btn-default">DisApprove</a>
+                         </div>
+                         <div class="col-md-4 col-sm-12 text-center">
+                             <a data-toggle="modal" data-target="#approveMember" class="btn btn-default">&nbsp;&nbsp;&nbsp;Approve&nbsp;&nbsp;</a>
+                         </div>
+                     @endif
+                 @endif
+             </div>
 
 
 
@@ -80,42 +89,42 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly="readonly" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Email Address</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" readonly value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                 <?php $userThatApproved = \App\User::find($member->approved_by); ?>
                 @if($userThatApproved != null)
                 <div class="form-group">
                     <label class="col-md-12">Approved By</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $userThatApproved->name }}" name="approvedBy" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $userThatApproved->name }}" name="approvedBy" class="form-control form-control-line"> </div>
                 </div>
                 @endif
 
