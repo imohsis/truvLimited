@@ -28,11 +28,13 @@ class MemberController extends Controller
             ->where('Members.approved_status', true)
             ->orderBy('Members.created_at','desc')
             ->get();
-        Excel::create('items', function($excel) use($items) {
+
+        return $items;
+       /* Excel::create('items', function($excel) use($items) {
             $excel->sheet('ExportFile', function($sheet) use($items) {
                 $sheet->fromArray($items);
             });
-        })->export('xls');
+        })->export('xls');*/
 
     }
 
