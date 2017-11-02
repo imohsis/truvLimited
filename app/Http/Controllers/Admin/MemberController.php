@@ -22,8 +22,8 @@ class MemberController extends Controller
 
 
     public function export(){
-        $items = DB::table('Portfolios')
-            ->select('Portfolios.portfolio_code','Members.full_name','Members.email','Members.phone','Members.location','Schemes.description')
+        $items = Portfolios::
+            select('Portfolios.portfolio_code','Members.full_name','Members.email','Members.phone','Members.location','Schemes.description')
             ->join('Members','Portfolios.member_id','=','Members.id')
             ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
             ->where('Members.approved_status', true)
