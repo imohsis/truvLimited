@@ -22,14 +22,12 @@ class MemberController extends Controller
 
 
     public function export(){
-        $items = Portfolio::select('Portfolios.portfolio_code')
-           ->get();
-        //select('Members.full_name','Portfolios.portfolio_code','Schemes.description','Members.email','Members.phone','Members.location')
-          /*  ->join('Members','Portfolios.member_id','=','Members.id')
+        $items = Portfolio::select('Portfolios.portfolio_code','Members.full_name','Members.email','Members.phone','Members.location','Schemes.description')
+            ->join('Members','Portfolios.member_id','=','Members.id')
             ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
             ->where('Members.approved_status', true)
             ->orderBy('Members.created_at','desc')
-            ->get();*/
+            ->get();
 
         return $items;
        /* Excel::create('items', function($excel) use($items) {
