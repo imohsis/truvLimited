@@ -22,7 +22,8 @@ class MemberController extends Controller
 
 
     public function export(){
-        $items = Portfolio::all();
+        $items = Portfolio::select('Portfolios.portfolio_code')
+           ->get();
         //select('Members.full_name','Portfolios.portfolio_code','Schemes.description','Members.email','Members.phone','Members.location')
           /*  ->join('Members','Portfolios.member_id','=','Members.id')
             ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
