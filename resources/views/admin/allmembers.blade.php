@@ -22,7 +22,7 @@
                     {{ session('error') }}
                 </div>
                 @endif
-                <table class="table table-bordered">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>S/N</th>
