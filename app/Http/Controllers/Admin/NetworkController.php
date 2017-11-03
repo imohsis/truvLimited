@@ -30,8 +30,8 @@ class NetworkController extends Controller
 
         //return $id;
 
-        $network = \App\Portfolio::select('Portfolios.id', 'Portfolios.member_id','Portfolios.portfolio_code', 'Levels.description', 'Levels.amount','Schemes.description as schemeName')
-            ->join('Levels','Portfolios.starting_class_id','=','Levels.id')
+        $network = \App\Portfolio::select('Portfolios.id', 'Portfolios.member_id','Portfolios.portfolio_code', 'levels.description', 'levels.amount','Schemes.description as schemeName')
+            ->join('levels','Portfolios.starting_class_id','=','levels.id')
             ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
             ->where('refered_by', '=', $id)
             ->where('approved_status', '=', 1)
