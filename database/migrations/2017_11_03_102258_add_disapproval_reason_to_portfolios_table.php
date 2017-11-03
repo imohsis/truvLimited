@@ -13,7 +13,7 @@ class AddDisapprovalReasonToPortfoliosTable extends Migration
      */
     public function up()
     {
-        Schema::table('portfolios', function (Blueprint $table) {
+        Schema::table('Portfolios', function (Blueprint $table) {
            $table->text('disapproval_reason')->nullable();
         });
     }
@@ -25,7 +25,7 @@ class AddDisapprovalReasonToPortfoliosTable extends Migration
      */
     public function down()
     {
-        Schema::table('portfolios', function (Blueprint $table) {
+        Schema::table('Portfolios', function (Blueprint $table) {
             $table->dropColumn('disapproval_reason');
         });
     }
