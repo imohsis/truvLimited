@@ -35,4 +35,28 @@ class Portfolio extends Model {
         }
     }
 
+
+
+
+    /**
+     *
+     * This method helps to retrieve the String counterpart of the scheme Id.
+     *
+     * @return string
+     *
+     */
+    public function getSchemeFullName($id) {
+        $schemeId = $id;
+        switch ($schemeId) {
+            case($schemeId == \App\Schemes::$HOUSEOWNERSHIPSCHEME):
+                return "House Ownership Scheme";
+            case ($schemeId == \App\Schemes::$KEKEANDMOTOCYCLEOWNERSHIPSCHEME):
+                return "Keke and Motocycle Ownership Scheme";
+            case ($schemeId == \App\Schemes::$FINANCIALEMPOWERMENTSCHEME):
+                return "Financial Empowerment Scheme";
+            default:
+                return null;
+        }
+    }
+
 }

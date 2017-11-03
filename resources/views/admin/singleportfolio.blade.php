@@ -31,17 +31,26 @@
                 <div class="col-md-4 col-sm-12 text-center">
                     <a href="{{ url('/admin/members/'.$member->id.'/portfolios') }}" class="btn btn-default">Portfolios</a>
                 </div>
-                @if(auth()->user()->role_id != \App\UserRole::$GUEST)
-                @if($portfolio->disapproved_status != true)
 
-                <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
-                </div>
-                    @else
+                @if(auth()->user()->role_id != \App\UserRole::$GUEST)
+                    <?php if ($portfolio->disapproved_status == false && $portfolio->approval_status == false):?>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
+                        </div>
                         <div class="col-md-4 col-sm-12 text-center">
                             <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
                         </div>
-                @endif
+                    <?php elseif ($portfolio->disapproved_status == false):?>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
+                        </div>
+
+                    <?php else:?>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
+                        </div>
+                       <?php endif;?>
+
                     @endif
             </div>
         </div>

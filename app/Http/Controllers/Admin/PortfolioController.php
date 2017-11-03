@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Schemes;
+use App\Levels;
+use App\Portfolio;
 
 class PortfolioController extends Controller {
 
@@ -62,7 +65,12 @@ class PortfolioController extends Controller {
         }
         $fullNameArray = explode(" ", $member->full_name);
         $lastName = count($fullNameArray >= 2) ? $fullNameArray[(count($fullNameArray) - 1)] : $member->full_name;
-        $approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111");
+        $scheme  = new \App\Portfolio();
+        $schemeName = $scheme->getSchemeFullName($portfolio->scheme_id);
+        $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get()->toArray();
+
+        $startingClass = $starting[0]['description'];
+        $approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111", $schemeName, $startingClass);
         if($approvedMember == null){
             return redirect()->back()->with('error', 'could not approve member');
         }
@@ -73,14 +81,18 @@ class PortfolioController extends Controller {
         }
         
         return redirect()->back()->with('success', 'scheme registration approval successful');
-        
+
     }
     
     public function disapprovePortfolio(Request $request){
         $this->validate($request, [
-            'portfolioId' => 'required'
+            'portfolioId' => 'required',
+            'reason' => 'required'
         ]);
-        
+
+        $reason = $request['reason'];
+
+
         $portfolio = $this->portfolioService->getPortfolioById($request['portfolioId']);
         if($portfolio == null){
             return redirect()->back()->with('error', 'portfolio not found');
@@ -91,11 +103,19 @@ class PortfolioController extends Controller {
             return redirect()->back()->with('error', 'member not found');
         }
         
-        $disapprovedPortfolio = $this->portfolioService->disapprovePortfolioRegistration($portfolio);
+        $disapprovedPortfolio = $this->portfolioService->disapprovePortfolioRegistration($portfolio, $reason);
         if($disapprovedPortfolio == null){
             return redirect()->back()->with('error', 'could not disapprove scheme registration');
         }
-        
+
+        $scheme  = new \App\Portfolio();
+        $schemeName = $scheme->getSchemeFullName($portfolio->scheme_id);
+        $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get()->toArray();
+        $startingClass = $starting[0]['description'];
+
+        $this->memberService->sendMemberDisapprovalMail($member->email, $member->full_name, $reason, $schemeName, $startingClass);
+
+
         return redirect()->back()->with('success', 'scheme registration disapproval successful');
     }
 }

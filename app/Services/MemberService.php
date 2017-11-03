@@ -134,7 +134,7 @@ class MemberService {
      * @return Member.
      * 
      */
-    public function approveMember(\App\Member $member, $userId, $newPassword) {
+    public function approveMember(\App\Member $member, $userId, $newPassword, $schemeName, $startingClass) {
         if ($member != null) {
             $member->approved_status = true;
             $member->disapproved_status = false;
@@ -144,7 +144,7 @@ class MemberService {
                 return null;
             }
             $user->password = bcrypt($newPassword);
-            $this->sendMemberApprovalConfirmation($user, $newPassword);
+            $this->sendMemberApprovalConfirmation($user, $newPassword, $schemeName, $startingClass);
             return ($member->save() && $user->save()) ? $member : null;
         }
         return null;
@@ -162,9 +162,9 @@ class MemberService {
      * @return Member.
      * 
      */
-    public function approveMemberIfNotYetApproved(\App\Member $member, $userId, $newPassword){
+    public function approveMemberIfNotYetApproved(\App\Member $member, $userId, $newPassword, $scheme, $startingClass){
         if($member != null && $member->approved_status == false){
-            return $this->approveMember($member, $userId, $newPassword);
+            return $this->approveMember($member, $userId, $newPassword, $scheme, $startingClass);
         }
         return $member;
     }
@@ -200,11 +200,24 @@ class MemberService {
      * @param $password | the un-hashed password of the user.
      * 
      */
-    public function sendMemberApprovalConfirmation(\App\User $user, $password) {
+    public function sendMemberApprovalConfirmation(\App\User $user, $password, $scheme, $startingClass) {
         if ($user != null) {
             \Mail::to($user->email)
-                    ->send(new \App\Mail\MemberApprovalConfirmationMail($user->email, $password, $user->name));
+                    ->send(new \App\Mail\MemberApprovalConfirmationMail($user->email, $password, $user->name, $scheme, $startingClass));
         }
     }
+
+
+
+    public function sendMemberDisapprovalMail($email, $name, $reason, $scheme, $startingClass){
+        \Mail::to($email)
+            ->send(new \App\Mail\MemberDisapprovalMail($email, $name, $reason, $scheme, $startingClass));
+
+
+    }
+
+
+
+
 
 }

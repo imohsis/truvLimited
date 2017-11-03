@@ -199,10 +199,11 @@ class PortfolioService {
      * @return \App\Portfolio.
      * 
      */
-    public function disapprovePortfolioRegistration($portfolio){
+    public function disapprovePortfolioRegistration($portfolio, $reason){
         if($portfolio != null){
             $portfolio->disapproved_status = true;
             $portfolio->approved_status = false;
+            $portfolio->disapproval_reason = $reason;
             return ($portfolio->save()) ? $portfolio : null;
         }
         return null;
