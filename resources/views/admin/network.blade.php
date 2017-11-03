@@ -17,6 +17,8 @@
                             <th>S/N</th>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Scheme</th>
+                            <th>Starting Level</th>
                             <th>Location</th>
                             <th>Date</th>
                         </tr>
@@ -32,6 +34,12 @@
                             <td>{{ $portfolio->portfolio_code}}</td>
                             <td>
                               {{ $member->full_name }}
+                            </td>
+                            <td>
+                                {{$portfolio->schemeName}}
+                            </td>
+                            <td>
+                                {{$portfolio->description}} from ₦{{$portfolio->amount}}
                             </td>
                             <td>{{ $member->location }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->created_at }}</td>

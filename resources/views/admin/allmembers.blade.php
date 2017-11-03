@@ -29,6 +29,7 @@
                             <th>Name</th>
                             <th>ID</th>
                             <th>Scheme</th>
+                            <th>Stage</th>
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Location</th>
@@ -75,6 +76,7 @@
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td>{{ $member->portfolio_code }}</td>
                             <td>{{ $scheme }}</td>
+                            <td>{!! \App\Stages::determineStage($member->stage_id) !!}</td>
                             <td class="">{{ $member->email }}</td>
                             <td class="">{{ $member->phone }}</td>
                             <td>{{ $member->location }}</td>

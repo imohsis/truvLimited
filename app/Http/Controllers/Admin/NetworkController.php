@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Portfolio;
 use App\Member;
+use App\Schemes;
+use App\Levels;
 
 
 class NetworkController extends Controller
@@ -26,8 +28,14 @@ class NetworkController extends Controller
 
     public function show($id){
 
-        $network = \App\Portfolio::where('refered_by', '=', $id)
-            ->where('approved_status', '=', 1)->paginate();
+        //return $id;
+
+        $network = \App\Portfolio::select('Portfolios.id', 'Portfolios.member_id','Portfolios.portfolio_code', 'Levels.description', 'Levels.amount','Schemes.description as schemeName')
+            ->join('Levels','Portfolios.starting_class_id','=','Levels.id')
+            ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
+            ->where('refered_by', '=', $id)
+            ->where('approved_status', '=', 1)
+            ->paginate();
 
         $name = Member::select('full_name')
                 ->where('id', '=', $id)
@@ -35,8 +43,9 @@ class NetworkController extends Controller
 
 
 
+        //return $network;
 
-      return view('admin.network')
+     return view('admin.network')
           ->with('portfolios', $network)
           ->with('name', $name);
 

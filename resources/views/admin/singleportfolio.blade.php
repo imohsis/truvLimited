@@ -32,13 +32,15 @@
                     <a href="{{ url('/admin/members/'.$member->id.'/portfolios') }}" class="btn btn-default">Portfolios</a>
                 </div>
                 @if(auth()->user()->role_id != \App\UserRole::$GUEST)
-                @if($portfolio->approved_status != true && $portfolio->disapproved_status != true)
-                 <div class="col-md-4 col-sm-12 text-center">
-                    <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
-                </div>
+                @if($portfolio->disapproved_status != true)
+
                 <div class="col-md-4 col-sm-12 text-center">
                     <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
                 </div>
+                    @else
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
+                        </div>
                 @endif
                     @endif
             </div>
@@ -168,13 +170,24 @@
             <div class="modal-body">
                 <form method="post" action="{{ url('/admin/disapproveportfolio') }}">
                     {{ csrf_field() }}
+                    <br/>
+                    <div class="form-group clearfix">
+                        <label class="col-md-12">Enter reason for disapproval</label>
+                        <div class="col-md-12">
+                            <textarea class="form-control" rows="5" name="reason"></textarea>
+                        </div>
+                    </div>
                     <input type="hidden" name="portfolioId" value="{{ $portfolio->id }}"/>
-                    <input type="submit" class="btn btn-warning" value="Yes, I am very sure"/>  
+                   <br/>
+
+                    <div class="clearfix">
+                        <button type="submit" class="btn btn-warning pull-right">Submit</button>
+                   </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
             </div>
         </div>
 
