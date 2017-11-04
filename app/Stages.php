@@ -16,15 +16,15 @@ namespace App;
 class Stages {
 
     public static $STAGEONE = 2;
-    public static $STAGEONELEVELONE = 4;
-    public static $STAGETWO = 8;
-    public static $STAGETWOLEVELONE = 16;
-    public static $STAGETHREE = 32;
-    public static $STAGETHREELEVELONE = 64;
-    public static $STAGEFOUR = 128;
-    public static $STAGEFOURLEVELONE = 256;
-    public static $STAGEFIVE = 512;
-    public static $STAGESIX = 1024;
+    public static $STAGEONELEVELONE = 6;
+    public static $STAGETWO = 14;
+    public static $STAGETWOLEVELONE = 30;
+    public static $STAGETHREE = 62;
+    public static $STAGETHREELEVELONE = 126;
+    public static $STAGEFOUR = 254;
+    public static $STAGEFOURLEVELONE = 510;
+    public static $STAGEFIVE = 1022;
+    public static $STAGESIX = 2046;
 
     /**
      * 
