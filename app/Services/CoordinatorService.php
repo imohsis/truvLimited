@@ -30,18 +30,19 @@ class CoordinatorService {
 
         $checkIfExist = \App\User::select('name')->where('email','=',$email)->get();
 
-        if ($checkIfExist != null){
+        return $checkIfExist;
+        /*if ($checkIfExist != null){
            return null;
-        }
+        }*/
 
-       return \App\User::create([
+     /*  return \App\User::create([
 
             'name' => $name,
             'email' => $email,
             'password' => bcrypt($password),
             'role_id' => $role,
 
-        ]);
+        ]);*/
     }
     
     /**
