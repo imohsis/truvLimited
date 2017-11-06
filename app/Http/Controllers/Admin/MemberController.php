@@ -74,7 +74,7 @@ class MemberController extends Controller
                    'transaction_id' => $detail->transaction_id);
          }
 
-         return $memberDetails;
+         return $memberDetails->id;
         //return view('admin.singlemember')->with('member', $member);
     }
 
