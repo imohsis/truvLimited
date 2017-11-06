@@ -59,8 +59,9 @@ class MemberController extends Controller
     
     public function show($id, $code){
         $member = $this->memberService->getMemberById($id, $code);
-        
-        return view('admin.singlemember')->with('member', $member);
+
+        return $member;
+        //return view('admin.singlemember')->with('member', $member);
     }
 
 
