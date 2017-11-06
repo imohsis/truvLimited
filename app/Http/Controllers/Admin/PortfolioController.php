@@ -69,11 +69,9 @@ class PortfolioController extends Controller {
         $schemeName = $scheme->getSchemeFullName($portfolio->scheme_id);
         $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get();
 
-          $levels = Levels::get();
-        return $starting." ". $portfolio->starting_class_id. "". $levels;
 
-        //$startingClass = $starting[0]['description'];
-        /*$approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111", $schemeName, $startingClass);
+        $startingClass = $starting[0]['description'];
+        $approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111", $schemeName, $startingClass);
         if($approvedMember == null){
             return redirect()->back()->with('error', 'could not approve member');
         }
@@ -83,7 +81,7 @@ class PortfolioController extends Controller {
             return redirect()->back()->with('error', 'could not approve scheme registration');
         }
         
-        return redirect()->back()->with('success', 'scheme registration approval successful');*/
+        return redirect()->back()->with('success', 'scheme registration approval successful');
 
     }
     
