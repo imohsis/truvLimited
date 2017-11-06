@@ -34,12 +34,11 @@ class CoordinatorController extends Controller
 
         $user = $this->coordinatorService->createCoordinator($request['name'], $request['email'], $request['password'], $request['role_id']);
 
-        echo $user;
 
-       // if($user !=  null){
-        //    return redirect()->back()->with('error', 'User already exist');
-        //}
+        if($user ==  null){
+            return redirect()->back()->with('error', 'User already exist');
+        }
 
-      // return redirect()->back()->with('success', $user->name.' has successfully been created');
+       return redirect()->back()->with('success', $user->name.' has successfully been created');
     }
 }
