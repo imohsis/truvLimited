@@ -57,11 +57,21 @@ class MemberController extends Controller
                 ->with('members', $member_portfolios);
     }
     
-    public function show($id){
-        $member = $this->memberService->getMemberById($id);
+    public function show($id, $code){
+        $member = $this->memberService->getMemberById($id, $code);
         
         return view('admin.singlemember')->with('member', $member);
     }
+
+
+    /*public function updateMember(Request $request){
+
+        $member = new Member();
+        $member-> = $request->tellerId;
+
+    }*/
+
+
     
     /**
      * 

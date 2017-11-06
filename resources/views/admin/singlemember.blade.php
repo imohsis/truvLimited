@@ -119,6 +119,7 @@
                     <div class="col-md-12">
                         <input type="text" placeholder="" readonly value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
+                    <input type="hidden" name="memberId" value="{{$member->id}}">
                 <?php $userThatApproved = \App\User::find($member->approved_by); ?>
                 @if($userThatApproved != null)
                 <div class="form-group">
@@ -128,7 +129,7 @@
                 </div>
                 @endif
 
-
+            <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
     </div>

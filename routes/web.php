@@ -123,7 +123,7 @@ Route::get('/dashboard', 'DashboardController@showDashboard');
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\IndexController@show');
-    Route::get('/members/{id}', 'Admin\MemberController@show');
+    Route::get('/members/{id}/{code}', 'Admin\MemberController@show');
     Route::post('/approvemember', 'Admin\MemberController@approveMember');
     Route::post('/disapprovemember', 'Admin\MemberController@disapproveMember');
     Route::get('/activateaccount/{userId}', 'Admin\AccountController@activateAccount');
@@ -135,6 +135,7 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::post('/approveportfolio', 'Admin\PortfolioController@approvePortfolio');
     Route::post('/disapproveportfolio', 'Admin\PortfolioController@disapprovePortfolio');
     Route::get('/search','Admin\SearchController@index');
+    Route::post('/profile','MemberController@update');
     Route::get('items/export', 'Admin\MemberController@export');
     Route::get('new/export', 'Admin\IndexController@export');
 

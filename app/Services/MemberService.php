@@ -119,8 +119,12 @@ class MemberService {
      * @return Member.
      * 
      */
-    public function getMemberById($id) {
-        return \App\Member::find($id);
+    public function getMemberById($id, $code) {
+        $member = \App\Member::select('Members.id', 'full_name', 'phone', 'email', 'location', 'approved_by', 'teller_id','transaction_id')
+                                   ->join('Portfolios','Members.id','=','Portfolios.member_id')
+                                    ->where('Portfolios.portfolio_code','=', $code)
+                                      ->get();
+        return $member;
     }
 
     /**
