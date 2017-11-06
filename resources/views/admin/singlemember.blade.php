@@ -40,7 +40,7 @@
 
                  @if(auth()->user()->role_id != \App\UserRole::$GUEST)
                      @if($member->approved_status == true)
-                         @if(!$member->user()->is_deactivate)
+                         @if(!$member->is_deactivate)
                              <div class="col-md-4 col-sm-12 text-center">
                                  <a href="{{ url('/admin/deactivateaccount/'.$member->id)}}" class="btn btn-default">Deactivate</a>
                              </div>
