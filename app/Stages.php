@@ -46,15 +46,15 @@ class Stages {
         if ($figure >= self::$STAGETWO && $figure < self::$STAGETWOLEVELONE)
             return "<span style='color: green'>Stage Two</span>";
         if ($figure >= self::$STAGETWOLEVELONE && $figure < self::$STAGETHREE)
-            return "<span style='color: green'>Stage Two</span> | <span style='color:#4C97DD'> Level One</span>";
+            return "<span style='color: green'>Stage Two</span> | <span style='color:#4C97DD'> Level Two</span>";
         if ($figure >= self::$STAGETHREE && $figure < self::$STAGETHREELEVELONE)
             return "<span style='color: green'>Stage Three</span>";
         if ($figure >= self::$STAGETHREELEVELONE && $figure < self::$STAGEFOUR)
-            return "<span style='color: green'>Stage Three</span> | <span style='color:#4C97DD'> Level One</span>";
+            return "<span style='color: green'>Stage Three</span> | <span style='color:#4C97DD'> Level Three</span>";
         if ($figure >= self::$STAGEFOUR && $figure < self::$STAGEFOURLEVELONE)
             return "<span style='color: green'>Stage Four</span>";
         if ($figure >= self::$STAGEFOURLEVELONE && $figure < self::$STAGEFIVE)
-            return "<span style='color: green'>Stage Four</span> | <span style='color:#4C97DD'> Level One</span>";
+            return "<span style='color: green'>Stage Four</span> | <span style='color:#4C97DD'> Level Four</span>";
         if ($figure >= self::$STAGEFIVE && $figure < self::$STAGESIX)
             return "<span style='color: green'>Stage Five</span>";
       

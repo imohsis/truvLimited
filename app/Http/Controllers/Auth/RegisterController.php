@@ -90,9 +90,23 @@ use RegistersUsers;
         if ($request['referalId'] != null) {
             $referalId = $this->determineReferal($request['referalId']);
             if ($referalId == null) {
-                return redirect()->back()->with('error', 'Invalid referral code')->withInput();;
+                return redirect()->back()->with('error', 'Invalid referral code')->withInput();
             }
+
+            $checkLimit = $this->checkIfPortfolioHasReachedLimit($request['referalId']);
+           $scheme = $checkLimit[0]['scheme_id'];
+            $referrals = $checkLimit[0]['stage_id'];
+
+            //return $scheme ." ". $referrals. " ". \App\Stages::$STAGEFOUR;
+
+            if (($scheme == 1 || $scheme == 2) && $referrals == \App\Stages::$STAGEFOUR){
+                return redirect()->back()->with('error', 'This referral code has exceeded its limit')->withInput();
+            }
+
         }
+
+
+        //$checkLimit[0]['stage_id'];
         $request['referalId'] = $referalId;
         $this->validator($request->all())->validate();
         event(new \Illuminate\Auth\Events\Registered($user = $this->create($request->all())));
@@ -181,6 +195,28 @@ use RegistersUsers;
             return ($portfolio == null) ? null : $portfolio->id;
         }
         return null;
+    }
+
+
+
+    /**
+     *
+     * This method checks if a referral ID has completed its stage.
+     *
+     * @param type $referalId | the referalId in question.
+     *
+     * @return int
+     *
+     */
+
+    private function checkIfPortfolioHasReachedLimit($referalId){
+
+        $check = \App\Portfolio::select('scheme_id','starting_class_id','stage_id')
+                                        ->where('portfolio_code','=', $referalId)
+                                        ->get();
+        return $check;
+
+
     }
 
     /**

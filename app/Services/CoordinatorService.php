@@ -30,7 +30,7 @@ class CoordinatorService {
 
         $checkIfExist = \App\User::select('name')->where('email','=',$email)->get();
 
-        if ($checkIfExist == null){
+        if ($checkIfExist != null){
            return null;
         }
 

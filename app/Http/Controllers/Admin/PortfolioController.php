@@ -67,7 +67,7 @@ class PortfolioController extends Controller {
         $lastName = count($fullNameArray >= 2) ? $fullNameArray[(count($fullNameArray) - 1)] : $member->full_name;
         $scheme  = new \App\Portfolio();
         $schemeName = $scheme->getSchemeFullName($portfolio->scheme_id);
-        $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get()->toArray();
+        $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get();
 
         $startingClass = $starting[0]['description'];
         $approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111", $schemeName, $startingClass);
