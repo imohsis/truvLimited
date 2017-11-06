@@ -120,7 +120,7 @@ class MemberService {
      * 
      */
     public function getMemberById($id, $code) {
-        $member = \App\Member::select('Members.id', 'full_name', 'phone', 'email', 'location', 'Members.approved_by', 'teller_id','transaction_id','member_id')
+        $member = \App\Member::select('Members.id', 'full_name', 'phone', 'email', 'location', 'Members.approved_by', 'teller_id','transaction_id','member_id','Members.approved_status')
                                    ->join('Portfolios','Members.id','=','Portfolios.member_id')
                                     ->where('Portfolios.portfolio_code','=', $code)
                                       ->get()->toArray();
