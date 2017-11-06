@@ -89,38 +89,38 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly="readonly" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly="readonly" value="{{ $member[0]['full_name'] }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member[0]['phone'] }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Email Address</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member[0]['email'] }}" name="email" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" readonly value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" readonly value="{{ $member[0]['location'] }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member[0]['teller_id'] }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $member[0]['transaction_id'] }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
-                    <input type="hidden" name="memberId" value="{{$member->id}}">
-                <?php $userThatApproved = \App\User::find($member->approved_by); ?>
+                    <input type="hidden" name="memberId" value="{{$member[0]['id']}}">
+                <?php $userThatApproved = \App\User::find($member[0]['approved_by']); ?>
                 @if($userThatApproved != null)
                 <div class="form-group">
                     <label class="col-md-12">Approved By</label>
