@@ -61,7 +61,7 @@ class MemberController extends Controller
         $member = $this->memberService->getMemberById($id, $code);
 
          $memberDetails =  array();
-         foreach ($memberDetails as $detail){
+         foreach ($member as $detail){
              $memberDetails[] = array(
                  'id' => $detail['id'],
                  'full_name' => $detail['full_name'],
