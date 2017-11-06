@@ -69,7 +69,7 @@
 
     <div class="col-md-7 col-xs-12">
         <div class="white-box">
-            <form class="form-horizontal form-material" method="post" action="{{ url('/profile') }}">
+            <form class="form-horizontal form-material" method="post" action="{{ url('admin/profile') }}">
                 @if ($errors)
                 @foreach ($errors->all() as $error)
                 <span class="help-block" style="color: red;"> {{ $error }}</span>
