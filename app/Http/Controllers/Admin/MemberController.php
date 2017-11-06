@@ -61,7 +61,7 @@ class MemberController extends Controller
         $member = $this->memberService->getMemberById($id, $code);
 
         //return json_decode(json_encode($member), true);
-        json_decode(json_encode((array) $member), true);
+        return json_decode(json_encode((array) $member), true);
 
         //return view('admin.singlemember')->with('member', $member);
     }
