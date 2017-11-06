@@ -65,12 +65,16 @@ class MemberController extends Controller
     }
 
 
-    /*public function updateMember(Request $request){
+    public function updateMember(Request $request){
 
-        $member = new Member();
-        $member-> = $request->tellerId;
+        $member = \App\Portfolio::find($request->portfolioId);
+        $member->teller_id = $request->tellerId;
+        $member->transaction_id = $request->transactionId;
+        $member->save();
 
-    }*/
+        return redirect()->back()->with('success', 'Account successfully updated');
+
+    }
 
 
     
