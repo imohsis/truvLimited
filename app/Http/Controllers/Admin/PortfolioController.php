@@ -70,7 +70,8 @@ class PortfolioController extends Controller {
         $starting= \App\Levels::select('description')->where('id','=', $portfolio->starting_class_id)->get();
 
 
-        return $starting;
+        return $starting." ". $portfolio->starting_class_id;
+
         //$startingClass = $starting[0]['description'];
         /*$approvedMember = $this->memberService->approveMemberIfNotYetApproved($member, auth()->user()->id, $lastName."111", $schemeName, $startingClass);
         if($approvedMember == null){
