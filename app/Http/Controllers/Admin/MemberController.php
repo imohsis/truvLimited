@@ -60,9 +60,21 @@ class MemberController extends Controller
     public function show($id, $code){
         $member = $this->memberService->getMemberById($id, $code);
 
-        //return json_decode(json_encode($member), true);
-        return json_decode(json_encode((array) $member), true);
+         $memberDetails =  array();
+         foreach ($memberDetails as $detail){
+             $memberDetails[] = array(
+                 'id' => $detail['id'],
+                 'full_name' => $detail['full_name'],
+                 'member_id' => $detail['member_id'],
+                 'approved_status' => $detail['approved_status'],
+                 'phone' => $detail['phone'],
+                 'email' => $detail['email'],
+                  'location' => $detail['location'],
+                  'teller_id' => $detail['teller_id'],
+                   'transaction_id' => $detail['transaction_id']);
+         }
 
+         return $memberDetails;
         //return view('admin.singlemember')->with('member', $member);
     }
 
