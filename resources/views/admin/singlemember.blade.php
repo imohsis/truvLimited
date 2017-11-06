@@ -111,13 +111,13 @@
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $member->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                     <input type="hidden" name="portfolioId" value="{{$member->id}}">
                     <input type="hidden" name="code" value="{{$member->portfolio_code}}">
