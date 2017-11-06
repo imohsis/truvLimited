@@ -63,15 +63,15 @@ class MemberController extends Controller
          $memberDetails =  array();
          foreach ($member as $detail){
              $memberDetails[] = array(
-                 'id' => $detail['id'],
-                 'full_name' => $detail['full_name'],
-                 'member_id' => $detail['member_id'],
-                 'approved_status' => $detail['approved_status'],
-                 'phone' => $detail['phone'],
-                 'email' => $detail['email'],
-                  'location' => $detail['location'],
-                  'teller_id' => $detail['teller_id'],
-                   'transaction_id' => $detail['transaction_id']);
+                 'id' => $detail->id,
+                 'full_name' => $detail->full_name,
+                 'member_id' => $detail->member_id,
+                 'approved_status' => $detail->approved_status,
+                 'phone' => $detail->phone,
+                 'email' => $detail->email,
+                  'location' => $detail->location,
+                  'teller_id' => $detail->teller_id,
+                   'transaction_id' => $detail->transaction_id);
          }
 
          return $memberDetails;
