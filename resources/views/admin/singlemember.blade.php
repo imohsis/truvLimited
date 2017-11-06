@@ -42,11 +42,11 @@
                      @if($member->approved_status == true)
                          @if(!$member->user()->is_deactivate)
                              <div class="col-md-4 col-sm-12 text-center">
-                                 <a href="{{ url('/admin/deactivateaccount/'.$member->user()->id)}}" class="btn btn-default">Deactivate</a>
+                                 <a href="{{ url('/admin/deactivateaccount/'.$member->id)}}" class="btn btn-default">Deactivate</a>
                              </div>
                          @else
                              <div class="col-md-4 col-sm-12 text-center">
-                                 <a href="{{ url('/admin/activateaccount/'.$member->user()->id)}}" class="btn btn-default">Activate</a>
+                                 <a href="{{ url('/admin/activateaccount/'.$member->id)}}" class="btn btn-default">Activate</a>
                              </div>
                          @endif
                      @else
