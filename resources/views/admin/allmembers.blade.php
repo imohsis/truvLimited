@@ -81,7 +81,7 @@
                             <td class="">{{ $member->phone }}</td>
                             <td>{{ $member->location }}</td>
                             
-                            <td><a href="{{ url('/admin/singlemembers?memberId='.$member->id.'&portfolioCode'.$member->portfolio_code)}}" class="btn btn-default"><span class="">View</span></a></td>
+                            <td><a href="{{ url('/admin/singlemembers?memberId='.$member->id.'&portfolioCode='.$member->portfolio_code)}}" class="btn btn-default"><span class="">View</span></a></td>
                         </tr>
                        {{-- @endif--}}
 

@@ -54,6 +54,8 @@ class CoordinatorService {
      * 
      */
     public function getAllCoordinators($limit = 15){
-        return \App\User::where('role_id', '=', \App\UserRole::$COORDINATOR)->paginate($limit);
+        return \App\User::where('role_id', '=', \App\UserRole::$COORDINATOR)
+            ->orWhere('role_id','=', \App\UserRole::$GUEST)
+            ->paginate($limit);
     }
 }

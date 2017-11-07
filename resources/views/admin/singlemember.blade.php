@@ -89,12 +89,12 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly="readonly" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
@@ -106,7 +106,7 @@
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" readonly value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder=""  value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>

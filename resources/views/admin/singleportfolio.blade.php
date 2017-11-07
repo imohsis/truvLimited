@@ -59,7 +59,7 @@
 
     <div class="col-md-7 col-xs-12">
         <div class="white-box">
-            <form class="form-horizontal form-material" method="post" action="{{ url('/profile') }}">
+            <form class="form-horizontal form-material" method="post" action="{{ url('/admin/profile') }}">
                 @if ($errors)
                 @foreach ($errors->all() as $error)
                 <span class="help-block" style="color: red;"> {{ $error }}</span>
@@ -79,12 +79,12 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
@@ -96,7 +96,7 @@
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" readonly value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div>
                     <label class="col-md-12">Scheme</label>
@@ -107,22 +107,47 @@
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder=""  readonly value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
-                <div class="form-group">
+                {{--<div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
                         <input type="text" placeholder=""  readonly value="{{ $portfolio->teller_id }}" name="transactionId" class="form-control form-control-line"> </div>
-                </div>
+                </div>--}}
                  <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder=""  value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Paid Into</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" readonly value="{{ $portfolio->bank_paid_into }}" name="bankPaidInto" class="form-control form-control-line">
+                        <select name="bankPaidInto" class="form-control input-lg">
+                            <option value="" selected="">Select Bank</option>
+                            <option <?php if($portfolio->bank_paid_into == "GT Bank PLC"):?>
+                                    selected
+                                    <?php endif;?>
+                                    value="GT Bank PLC">GT Bank PLC</option>
+                            <option
+                                <?php if($portfolio->bank_paid_into == "Zenith Bank PLC"):?>
+                                selected
+                                <?php endif;?>
+                                value="Zenith Bank PLC">Zenith Bank PLC</option>
+
+                            <option
+                                <?php if($portfolio->bank_paid_into == "Fidelity Bank PLC"):?>
+                                selected
+                                <?php endif;?>
+                                    value="Fidelity Bank PLC">Fidelity Bank PLC</option>
+                            <option
+
+                                <?php if($portfolio->bank_paid_into == "Diamond Bank PLC"):?>
+                                selected
+                                <?php endif;?>
+
+                                    value="Diamond Bank PLC">Diamond Bank PLC</option>
+
+                        </select>
                     </div>
                 </div>
                 <?php $userThatApproved = \App\User::find($portfolio->approved_by); ?>
@@ -133,6 +158,9 @@
                         <input type="text" placeholder="" value="{{ $userThatApproved->name }}" name="approvedBy" class="form-control form-control-line"> </div>
                 </div>
                 @endif
+                    <input type="hidden" name="portfolioId" value="{{$member->id}}">
+                    <input type="hidden" name="code" value="{{$member->portfolio_code}}">
+                    <button type="submit" class="btn btn-primary">Update</button>
 
 
             </form>

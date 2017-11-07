@@ -20,7 +20,7 @@
                         <tr>
                             <th>S/N</th>
                             <th>Name</th>
-                            <th>Position</th>
+                            <th>Role</th>
                             <th>Email</th>
                             <th>Activatated Status</th>
 
@@ -33,7 +33,14 @@
                             <td class="txt-oflo"> &nbsp;
                                 {{ $coordinator->name }}
                             </td>
-                            <td>{{ $coordinator->position }}</td>
+                            <td>
+                                <?php if( $coordinator->role_id == \App\UserRole::$GUEST):?>
+                                Guest
+                                    <?php elseif ($coordinator->role_id == \App\UserRole::$COORDINATOR):?>
+                                   Executive
+                                <?php endif;?>
+
+                               </td>
                             <td class="">
                                 {{ $coordinator->email }}
                             </td>

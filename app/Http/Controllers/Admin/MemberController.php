@@ -58,21 +58,38 @@ class MemberController extends Controller
     }
     
     public function show(Request $request){
+
+
         $id = $request->memberId;
         $code = $request->portfolioCode;
         $member = $this->memberService->getMemberById1($id, $code);
 
         //return $member->full_name;
         return view('admin.singlemember')->with('member', $member);
-    }
+   }
 
 
     public function updateMember(Request $request){
 
-        $member = \App\Portfolio::find($request->portfolioId);
-        $member->teller_id = $request->tellerId;
-        $member->transaction_id = $request->transactionId;
+        $portfolio = \App\Portfolio::find($request->portfolioId);
+        $portfolio->teller_id = $request->tellerId;
+        $portfolio->transaction_id = $request->transactionId;
+        if (isset($request->bank_paid_into)){
+            $portfolio->bank_paid_into  = $request->bank_paid_into;
+        }
+        $portfolio->save();
+
+        $member = \App\Member::find($portfolio->member_id);
+        $member->full_name = $request->fullName;
+        $member->phone = $request->phone;
+        $member->location = $request->address;
         $member->save();
+
+        $user = \App\User::find($member->user_id);
+        $user->name = $request->fullName;
+        $user->save();
+
+
 
         return redirect()->back()->with('success', 'Account successfully updated');
 
