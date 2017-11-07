@@ -123,12 +123,12 @@ Route::get('/dashboard', 'DashboardController@showDashboard');
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\IndexController@show');
-   // Route::get('/members/{id}/{code}', 'Admin\MemberController@show');
+    Route::get('/members/{id}/{code}', 'Admin\MemberController@show');
     Route::post('/approvemember', 'Admin\MemberController@approveMember');
     Route::post('/disapprovemember', 'Admin\MemberController@disapproveMember');
     Route::get('/activateaccount/{userId}', 'Admin\AccountController@activateAccount');
     Route::get('/deactivateaccount/{userId}', 'Admin\AccountController@deactivateAccount');
-    Route::get('/members/{id}/portfolios', 'Admin\PortfolioController@showMemberPortfolios');
+    //Route::get('/members/{id}/portfolios', 'Admin\PortfolioController@showMemberPortfolios');
     Route::get('/member/{id}/network', 'Admin\NetworkController@show');
     Route::get('/members', 'Admin\MemberController@index');
     Route::get('/portfolios/{id}', 'Admin\PortfolioController@show');
