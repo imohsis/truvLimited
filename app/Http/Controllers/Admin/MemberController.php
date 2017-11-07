@@ -57,7 +57,9 @@ class MemberController extends Controller
                 ->with('members', $member_portfolios);
     }
     
-    public function show($id, $code){
+    public function show(Request $request){
+        $id = $request->memberId;
+        $code = $request->portfolioCode;
         $member = $this->memberService->getMemberById1($id, $code);
 
         //return $member->full_name;
