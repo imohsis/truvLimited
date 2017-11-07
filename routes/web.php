@@ -123,7 +123,7 @@ Route::get('/dashboard', 'DashboardController@showDashboard');
 
 Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() {
     Route::get('/', 'Admin\IndexController@show');
-    Route::get('/members/{id}/{code}', 'Admin\MemberController@show');
+   // Route::get('/members/{id}/{code}', 'Admin\MemberController@show');
     Route::post('/approvemember', 'Admin\MemberController@approveMember');
     Route::post('/disapprovemember', 'Admin\MemberController@disapproveMember');
     Route::get('/activateaccount/{userId}', 'Admin\AccountController@activateAccount');
