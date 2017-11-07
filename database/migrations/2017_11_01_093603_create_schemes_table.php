@@ -27,6 +27,6 @@ class CreateSchemesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schemes');
+        Schema::dropIfExists('Schemes');
     }
 }
