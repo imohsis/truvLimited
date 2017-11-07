@@ -33,23 +33,15 @@
                 </div>
 
                 @if(auth()->user()->role_id != \App\UserRole::$GUEST)
-                    <?php if ($portfolio->disapproved_status == false && $portfolio->approval_status == false):?>
+                    @if($portfolio->approved_status == 0)
                         <div class="col-md-4 col-sm-12 text-center">
                             <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
                         </div>
                         <div class="col-md-4 col-sm-12 text-center">
                             <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
-                        </div>
-                    <?php elseif ($portfolio->disapproved_status == false):?>
-                        <div class="col-md-4 col-sm-12 text-center">
-                            <a data-toggle="modal" data-target="#disApproveRegistration" class="btn btn-default">DisApprove It</a>
                         </div>
 
-                    <?php else:?>
-                        <div class="col-md-4 col-sm-12 text-center">
-                            <a data-toggle="modal" data-target="#approveRegistration" class="btn btn-default">Approve It</a>
-                        </div>
-                       <?php endif;?>
+                      @endif
 
                     @endif
             </div>
@@ -79,12 +71,12 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder=""  value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                 <div class="form-group">
@@ -96,7 +88,7 @@
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div>
                     <label class="col-md-12">Scheme</label>
@@ -107,7 +99,7 @@
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
                 </div>
                 {{--<div class="form-group">
                     <label class="col-md-12">Teller Id</label>
@@ -117,7 +109,7 @@
                  <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder=""  value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?>  value="{{ $portfolio->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Paid Into</label>
@@ -148,6 +140,7 @@
                                     value="Diamond Bank PLC">Diamond Bank PLC</option>
 
                         </select>
+
                     </div>
                 </div>
                 <?php $userThatApproved = \App\User::find($portfolio->approved_by); ?>
@@ -155,7 +148,7 @@
                 <div class="form-group">
                     <label class="col-md-12">Approved By</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $userThatApproved->name }}" name="approvedBy" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" readonly value="{{ $userThatApproved->name }}" name="approvedBy" class="form-control form-control-line"> </div>
                 </div>
                 @endif
                     <input type="hidden" name="portfolioId" value="{{$member->id}}">

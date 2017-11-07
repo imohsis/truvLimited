@@ -119,6 +119,58 @@
                     <div class="col-md-12">
                         <input type="text" placeholder=""  value="{{ $member->transaction_id }}" name="transactionId" class="form-control form-control-line"> </div>
                 </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Bank Paid Into</label>
+                        <div class="col-md-12">
+                            <select name="bankPaidInto" class="form-control input-lg">
+                                <option value="" selected="">Select Bank</option>
+                                <option <?php if($member->bank_paid_into == "GT Bank PLC"):?>
+                                        selected
+                                        <?php endif;?>
+                                        value="GT Bank PLC">GT Bank PLC</option>
+                                <option
+                                    <?php if($member->bank_paid_into == "Zenith Bank PLC"):?>
+                                    selected
+                                    <?php endif;?>
+                                    value="Zenith Bank PLC">Zenith Bank PLC</option>
+
+                                <option
+                                    <?php if($member->bank_paid_into == "Fidelity Bank PLC"):?>
+                                    selected
+                                    <?php endif;?>
+                                    value="Fidelity Bank PLC">Fidelity Bank PLC</option>
+                                <option
+
+                                    <?php if($member->bank_paid_into == "Diamond Bank PLC"):?>
+                                    selected
+                                    <?php endif;?>
+
+                                    value="Diamond Bank PLC">Diamond Bank PLC</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-12">Account Number</label>
+                        <div class="col-md-12">
+                            <input type="text" placeholder=""  value="{{ $member->account_no }}" name="transactionId" class="form-control form-control-line"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-12">Bank Name</label>
+                        <div class="col-md-12">
+                            <input type="text" placeholder=""  value="{{ $member->bank_name }}" name="transactionId" class="form-control form-control-line"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-12">Bank Account Name</label>
+                        <div class="col-md-12">
+                            <input type="text" placeholder=""  value="{{ $member->account_name }}" name="transactionId" class="form-control form-control-line"> </div>
+                    </div>
+
+
                     <input type="hidden" name="portfolioId" value="{{$member->id}}">
                     <input type="hidden" name="code" value="{{$member->portfolio_code}}">
                 <?php $userThatApproved = \App\User::find($member->approved_by); ?>
