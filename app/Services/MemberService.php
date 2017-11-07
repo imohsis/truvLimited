@@ -119,17 +119,25 @@ class MemberService {
      * @return Member.
      * 
      */
-    public function getMemberById($id, $code) {
-        $member = \DB::table('Members')
-            ->select('Members.id', 'full_name', 'phone', 'Members.email', 'location', 'Members.approved_by', 'teller_id','transaction_id','member_id','Members.approved_status','users.is_deactivate','Portfolios.id','Portfolios.portfolio_code')
-                                   ->join('Portfolios','Members.id','=','Portfolios.member_id')
-                                    ->join('users','Members.id','=','users.id')
-                                    ->where('Portfolios.portfolio_code','=', $code)
-                                      ->first();
-        return $member;
+    public function getMemberById($id){
+        return \App\Member::find($id);
     }
 
-    /**
+
+
+
+    public function getMemberById1($id, $code)
+    {
+        $member = \DB::table('Members')
+            ->select('Members.id', 'full_name', 'phone', 'Members.email', 'location', 'Members.approved_by', 'teller_id', 'transaction_id', 'member_id', 'Members.approved_status', 'users.is_deactivate', 'Portfolios.id', 'Portfolios.portfolio_code')
+            ->join('Portfolios', 'Members.id', '=', 'Portfolios.member_id')
+            ->join('users', 'Members.id', '=', 'users.id')
+            ->where('Portfolios.portfolio_code', '=', $code)
+            ->first();
+        return $member;
+
+    }
+        /**
      * 
      * This method is responsible for approving a member
      * 
