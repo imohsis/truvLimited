@@ -99,13 +99,13 @@
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $portfolio->teller_id }}" class="form-control form-control-line"> </div>
                 </div>
-                {{--<div class="form-group">
+                <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder=""  readonly value="{{ $portfolio->teller_id }}" name="transactionId" class="form-control form-control-line"> </div>
-                </div>--}}
+                        <input type="text" placeholder=""  <?php if (auth()->user()->role_id == \App\UserRole::$GUEST):?> readonly <?php endif;?> value="{{ $portfolio->teller_id }}" name="tellerId" class="form-control form-control-line"> </div>
+                </div>
                  <div class="form-group">
                     <label class="col-md-12">Transaction Id</label>
                     <div class="col-md-12">
