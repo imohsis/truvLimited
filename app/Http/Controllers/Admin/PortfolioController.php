@@ -31,7 +31,7 @@ class PortfolioController extends Controller {
                         ->with('member', $member);
     }
 
-    public function showMemberPortfolios($memberId) {
+ /*   public function showMemberPortfolios($memberId) {
 
         $member = $this->memberService->getMemberById($memberId);
 
@@ -50,7 +50,7 @@ class PortfolioController extends Controller {
 
         return view('admin.singlememberportfolio')->with($data);
     */}
-    
+    */
     public function approvePortfolio(Request $request){
         $this->validate($request, [
             'portfolioId' => 'required'
