@@ -14,15 +14,15 @@
         <meta name="format-detection" content="telephone=no">
         <!-- CSS
           ================================================== -->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css"> 
-        <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
-        <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
-        <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen" /> 
-        <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
+        <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('plugins/owl-carousel/css/owl.carousel.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('plugins/owl-carousel/css/owl.theme.css')}}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{asset('plugins/rs-plugin/css/settings.css')}}" media="screen" />
+        <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{asset('css/ie8.css')}}" media="screen" /><![endif]-->
         <!-- Color Style -->
-        <link href="colors/blue.css" rel="stylesheet" type="text/css">
+        <link href="{{asset('colors/blue.css')}}" rel="stylesheet" type="text/css">
         <!-- SCRIPTS
           ================================================== -->
         <script src="js/modernizr.js"></script><!-- Modernizr -->
@@ -66,6 +66,10 @@
                                 @foreach ($errors->all() as $error)
                                 <p class="alert alert-danger"> {{ $error }}</p>
                                 @endforeach
+                                @endif
+
+                                @if (Session::has('error'))
+                                    <div class="alert alert-error">{{ Session::get("error") }}</div>
                                 @endif
                                 <form method="post" action="/login">
                                     {{ csrf_field() }}
@@ -124,13 +128,13 @@
         <script>if (typeof jQuery == 'undefined') {
     document.write(unescape("%3Cscript src='js/jquery-2.0.0.min.js' type='text/javascript'%3E%3C/script%3E"));
 }</script> 
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>  
-        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script> 
-        <script src="plugins/page-scroller/jquery.pagescroller.js"></script> 
-        <script src="js/helper-plugins.js"></script> <!-- Plugins --> 
-        <script src="js/bootstrap.js"></script> <!-- UI --> 
-        <script src="js/init.js"></script> <!-- All Scripts -->   
+        <script src="{{asset('plugins/prettyphoto/js/prettyphoto.js')}}"></script>
+        <script src="{{asset('plugins/prettyphoto/js/prettyphoto.js')}}"></script>
+        <script src="{{asset('plugins/owl-carousel/js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('plugins/page-scroller/jquery.pagescroller.js')}}"></script>
+        <script src="{{asset('js/helper-plugins.js')}}"></script> <!-- Plugins -->
+        <script src="{{asset('js/bootstrap.js')}}"></script> <!-- UI -->
+        <script src="{{asset('js/init.js')}}"></script> <!-- All Scripts -->
         <!-- End Js --> 
     </body>
 </html>

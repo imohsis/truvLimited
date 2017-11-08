@@ -67,6 +67,12 @@
             <span class="help-block" style="color: red;"> {{ $error }}</span>
             @endforeach
             @endif
+
+            @if (session('error'))
+              <div class="alert alert-danger">
+                {{ session('error') }}
+              </div>
+            @endif
             <form method="post" action="/login">
                 {{ csrf_field() }}
               <div class="row">

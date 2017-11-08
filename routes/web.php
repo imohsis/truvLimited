@@ -110,7 +110,12 @@ Route::get('/admin/allmembers', function() {
 Route::get('/home', 'HomeController@showMember');
 
 Route::get('/login', function() {
-    return view('login');
+    return view('auth.login');
+});
+
+
+Route::get('auth/login', function() {
+    return view('auth.login');
 });
 
 
@@ -127,7 +132,7 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::post('/approvemember', 'Admin\MemberController@approveMember');
     Route::post('/disapprovemember', 'Admin\MemberController@disapproveMember');
     Route::get('/activateaccount/{userId}', 'Admin\AccountController@activateAccount');
-    Route::get('/deactivateaccount/{userId}', 'Admin\AccountController@deactivateAccount');
+    Route::post('/deactivateaccount', 'Admin\AccountController@deactivateAccount');
     Route::get('/members/{id}/portfolios', 'Admin\PortfolioController@showMemberPortfolios');
     Route::get('/member/{id}/network', 'Admin\NetworkController@show');
     Route::get('/members', 'Admin\MemberController@index');

@@ -40,22 +40,21 @@
 
                  @if(auth()->user()->role_id != \App\UserRole::$GUEST)
                      @if($member->approved_status == true)
-                         @if(!$member->is_deactivate)
-                             <div class="col-md-4 col-sm-12 text-center">
-                                 <a href="{{ url('/admin/deactivateaccount/'.$member->id)}}" class="btn btn-default">Deactivate</a>
-                             </div>
+
+                         @if($member->is_deactivate == 0)
+                               <div class="col-md-4 col-sm-12 text-center">
+                                   <a data-toggle="modal" data-target="#deactivate" class="btn btn-default">Deactivate</a>
+                               </div>
                          @else
                              <div class="col-md-4 col-sm-12 text-center">
-                                 <a href="{{ url('/admin/activateaccount/'.$member->id)}}" class="btn btn-default">Activate</a>
+                                 <a href="{{ url('/admin/activateaccount/'.$member->user_id)}}" class="btn btn-default">Activate</a>
+                             </div>
+                             <div style="padding-left: 30px;margin-top: 50px;">
+                                 <h4 style="text-decoration: underline;">Reason for deactivating</h4>
+                                 <p>{{$member->deactivate_reason}}</p>
                              </div>
                          @endif
-                     @else
-                         <div class="col-md-4 col-sm-12 text-center">
-                             <a data-toggle="modal" data-target="#disApproveMember" class="btn btn-default">DisApprove</a>
-                         </div>
-                         <div class="col-md-4 col-sm-12 text-center">
-                             <a data-toggle="modal" data-target="#approveMember" class="btn btn-default">&nbsp;&nbsp;&nbsp;Approve&nbsp;&nbsp;</a>
-                         </div>
+
                      @endif
                  @endif
              </div>
@@ -188,7 +187,44 @@
     </div>
 </div>
 
-<div id="approveMember" class="modal fade" role="dialog">
+
+<div id="deactivate" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Are you sure you want to deactivate {{ $member->full_name }}'s Account</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{{ url('/admin/deactivateaccount/') }}">
+                    {{ csrf_field() }}
+                    <br/>
+                    <div class="form-group clearfix">
+                        <label class="col-md-12">Enter reason for deactivating</label>
+                        <div class="col-md-12">
+                            <textarea class="form-control" rows="5" name="reason"></textarea>
+                        </div>
+                    </div>
+                    <input type="hidden" name="memberId" value="{{ $member->user_id }}"/>
+                    <br/>
+
+                    <div class="clearfix">
+                        <button type="submit" class="btn btn-warning pull-right">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{{--<div id="approveMember" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -212,10 +248,11 @@
         </div>
 
     </div>
-</div>
+</div>--}}
 
 
-<div id="disApproveMember" class="modal fade" role="dialog">
+
+{{--<div id="disApproveMember" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -238,7 +275,7 @@
         </div>
 
     </div>
-</div>
+</div>--}}
 
 @endif
 @endsection

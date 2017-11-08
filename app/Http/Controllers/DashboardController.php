@@ -12,6 +12,14 @@ class DashboardController extends Controller
                 || auth()->user()->role_id == \App\UserRole::$COORDINATOR || auth()->user()->role_id == \App\UserRole::$GUEST){
            return redirect('/admin');
         }
+
+
+        if (auth()->user()->is_deactivate){
+
+            \Session::flash('error','Your account has been deactivated');
+            return redirect('auth/login');
+        }
+
        
         return redirect('/member');
     }

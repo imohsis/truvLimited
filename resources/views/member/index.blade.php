@@ -56,55 +56,57 @@
                 <div class="form-group">
                     <label class="col-md-12">Full Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->full_name }}" name="fullName" class="form-control form-control-line"> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Phone Number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->phone }}" name="phone" class="form-control form-control-line"> </div>
                 </div>
 
                      <div class="form-group">
                          <label class="col-md-12">Gender</label>
                          <div class="col-md-12">
-                             <input type="text" placeholder="" value="{{ $member->gender }}" name="gender" class="form-control form-control-line"> </div>
+                             <input type="text" placeholder="" <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->gender }}" name="gender" class="form-control form-control-line"> </div>
                      </div>
                      <div class="form-group">
                          <label class="col-md-12">Date of birth</label>
                          <div class="col-md-12">
-                             <input type="text" placeholder="" value="{{ $member->date_of_birth }}" name="birthDate" class="form-control form-control-line"> </div>
+                             <input type="text" placeholder="" <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->date_of_birth }}" name="birthDate" class="form-control form-control-line"> </div>
                      </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Email Address</label>
                     <div class="col-md-12">
-                        <input type="text" readonly placeholder="" value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
+                        <input type="text" readonly placeholder=""  value="{{ $member->user()->email }}" name="email" class="form-control form-control-line"> </div>
                 </div>
                 
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder="" value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <textarea type="text" placeholder="" <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Account Name</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->account_name }}" name="accname" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" required <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->account_name }}" name="accname" class="form-control form-control-line"> </div>
                 </div>
                  <div class="form-group">
                     <label class="col-md-12">Account number</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="" value="{{ $member->account_no }}" name="accno" class="form-control form-control-line"> </div>
+                        <input type="text" placeholder="" required <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->account_no }}" name="accno" class="form-control form-control-line"> </div>
                 </div>
                      <div class="form-group">
                          <label class="col-md-12">Bank name</label>
                          <div class="col-md-12">
-                             <input type="text" placeholder="" value="{{ $member->bank_name }}" name="bankname" class="form-control form-control-line"> </div>
+                             <input type="text" placeholder="" required <?php if($member->account_no != ""):?> readonly<?php endif;?> value="{{ $member->bank_name }}" name="bankname" class="form-control form-control-line"> </div>
                      </div>
 
                 <div>
 
-                    <button type="submit" class="btn btn-primary pull-right">Update</button>
+                   <?php if($member->account_no == ""):?>
+                       <button type="submit" class="btn btn-primary pull-right">Update</button>
+                    <?php endif;?>
                 </div>
                 <div class="clearfix"></div>
                

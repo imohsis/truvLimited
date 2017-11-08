@@ -33,6 +33,7 @@ class MemberMiddleware
         if(!$member->approved_status){
             return redirect('/login')->with('error', 'your account is still being reviewed');
         }
+
         
         return $next($request);
     }

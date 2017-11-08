@@ -129,9 +129,9 @@ class MemberService {
     public function getMemberById1($id, $code)
     {
         $member = \DB::table('Members')
-            ->select('Members.id', 'full_name', 'phone', 'Members.email', 'location', 'Members.approved_by', 'teller_id', 'transaction_id', 'member_id', 'Members.approved_status', 'users.is_deactivate', 'Portfolios.id', 'Portfolios.portfolio_code','Portfolios.approved_status','bank_paid_into','account_name','account_no','bank_name')
+            ->select('Members.id', 'full_name', 'phone', 'Members.email','Members.user_id', 'location', 'Members.approved_by', 'teller_id', 'transaction_id', 'member_id', 'Members.approved_status', 'users.is_deactivate','users.deactivate_reason', 'Portfolios.id', 'Portfolios.portfolio_code','Portfolios.approved_status','bank_paid_into','account_name','account_no','bank_name')
             ->join('Portfolios', 'Members.id', '=', 'Portfolios.member_id')
-            ->join('users', 'Members.id', '=', 'users.id')
+            ->join('users', 'Members.user_id', '=', 'users.id')
             ->where('Portfolios.portfolio_code', '=', $code)
             ->first();
         return $member;
