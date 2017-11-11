@@ -21,6 +21,7 @@ class SearchController extends Controller
                                     ->where ( 'full_name', 'LIKE', '%' . $request->check . '%' )
                                         ->orWhere ( 'email', 'LIKE', '%' . $request->check . '%' )
                                         ->orWhere ( 'phone', 'LIKE', '%' . $request->check . '%' )
+                                        ->orWhere ( 'Portfolios.portfolio_code', 'LIKE', '%' . $request->check . '%' )
                                     ->paginate(15);
         }
 
