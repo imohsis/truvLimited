@@ -71,7 +71,7 @@
                     <li>
                         <form role="search" class="app-search hidden-sm hidden-xs m-r-10" method="get" action="{{url('/admin/search')}}">
                             <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-                            <input type="text" placeholder="Search..." class="form-control" name="query">
+                            <input type="text" placeholder="Search..." class="form-control" name="check">
                             <a href=""><i class="fa fa-search"></i></a></form>
                     </li>
                 <li>
