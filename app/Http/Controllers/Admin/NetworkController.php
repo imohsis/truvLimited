@@ -35,6 +35,7 @@ class NetworkController extends Controller
             ->join('Schemes','Portfolios.scheme_id','=','Schemes.id')
             ->where('refered_by', '=', $id)
             ->where('approved_status', '=', 1)
+            ->orderBy('Portfolios.created_at','desc')
             ->paginate();
 
         $name = Member::select('full_name')
