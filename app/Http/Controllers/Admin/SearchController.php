@@ -18,9 +18,9 @@ class SearchController extends Controller
         if ($request->has('check')){
            $members_portfolio = Member::select('Members.id','Members.full_name','Portfolios.portfolio_code','Portfolios.scheme_id','Members.email','Members.phone','Members.location')
                ->join('Portfolios','Members.id','=','Portfolios.member_id')
-                                    ->where ( 'full_name', 'LIKE', '%' . $request->check . '%' )
-                                        ->orWhere ( 'email', 'LIKE', '%' . $request->check . '%' )
-                                        ->orWhere ( 'phone', 'LIKE', '%' . $request->check . '%' )
+                                    ->where ( 'full_name', 'ILIKE', '%' . $request->check . '%' )
+                                        ->orWhere ( 'email', 'ILIKE', '%' . $request->check . '%' )
+                                        ->orWhere ( 'phone', 'ILIKE', '%' . $request->check . '%' )
                                         ->orWhere ( 'Portfolios.portfolio_code', 'LIKE', '%' . $request->check . '%' )
                                     ->paginate(15);
         }
