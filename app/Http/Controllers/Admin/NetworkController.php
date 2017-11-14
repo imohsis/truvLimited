@@ -36,7 +36,7 @@ class NetworkController extends Controller
             ->where('refered_by', '=', $id)
             ->where('approved_status', '=', 1)
             ->orderBy('Portfolios.created_at','desc')
-            ->paginate('15');
+            ->get();
 
         $name = Member::select('full_name')
                 ->where('id', '=', $id)
