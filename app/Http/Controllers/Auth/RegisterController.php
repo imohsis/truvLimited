@@ -102,7 +102,7 @@ use RegistersUsers;
 
 
             if ($request['startingClassId'] < $startingClass){
-                return redirect()->back()->with('error', "Please you starting level must be equal to or higher than your referrals starting level ")->withInput();
+                return redirect()->back()->with('error', "Please you are not allowed to select a starting level lower than that of your referral's")->withInput();
             }
 
             if (($scheme == 1 || $scheme == 2) && $referrals == \App\Stages::$STAGEFOUR){
