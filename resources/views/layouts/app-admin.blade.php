@@ -201,6 +201,11 @@
 <script src="{{ url('/js/dataTables.bootstrap.js') }}"></script>
 <script src="{{ url('/js/jszip.min.js') }}"></script>
 <script src="{{ url('/js/pdfmake.min.js') }}"></script>
+<script src="{{ url('/js/vfs_fonts.js') }}"></script>
+<script src="{{ url('/js/buttons.bootstrap.min.js') }}"></script>
+<script src="{{ url('/js/buttons.html5.min.js') }}"></script>
+<script src="{{ url('/js/buttons.print.min.js') }}"></script>
+<script src="{{ url('/js/buttons.flash.min.js') }}"></script>
 <script>
     $(document).ready(function(){
         $('#networkTable').DataTable({
