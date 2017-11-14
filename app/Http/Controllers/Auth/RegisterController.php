@@ -96,12 +96,23 @@ use RegistersUsers;
             $checkLimit = $this->checkIfPortfolioHasReachedLimit($request['referalId']);
            $scheme = $checkLimit[0]['scheme_id'];
             $referrals = $checkLimit[0]['stage_id'];
+            $startingClass = $checkLimit[0]['starting_class_id'];
 
             //return $scheme ." ". $referrals. " ". \App\Stages::$STAGEFOUR;
+
+
+            if ($request['startingClassId'] < $startingClass){
+                return redirect()->back()->with('error', "Please you starting level must be equal to or higher than your referrals starting level ")->withInput();
+            }
 
             if (($scheme == 1 || $scheme == 2) && $referrals == \App\Stages::$STAGEFOUR){
                 return redirect()->back()->with('error', 'This referral code has exceeded its limit')->withInput();
             }
+
+
+
+
+
 
         }
 
