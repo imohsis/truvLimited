@@ -203,7 +203,12 @@
 <script src="{{ url('/js/pdfmake.min.js') }}"></script>
 <script>
     $(document).ready(function(){
-        $('#networkTable').DataTable();
+        $('#networkTable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
     });
 </script>
 
