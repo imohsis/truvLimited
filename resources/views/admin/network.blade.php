@@ -10,7 +10,7 @@
             <h3 class="box-title"><span style="color: #9FC735">{{$name[0]['full_name']}}'s Network</span></h3>
             <div class="table-responsive">
               
-                <table class="table">
+                <table class="table" id="networkTable">
                     <thead>
                         <tr>
 

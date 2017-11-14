@@ -29,6 +29,10 @@
     <link href="{{ asset('/css/colors/default.css')}}" id="theme" rel="stylesheet">
 
     <link href="{{ asset('/css/custom.css')}}" rel="stylesheet"/>
+
+    <link href="{{ asset('/css/datatables.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/dataTables.bootstrap.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/buttons.bootstrap.css')}}" rel="stylesheet"/>
     
     @yield('style')
 </head>
@@ -191,7 +195,18 @@
 <!--slimscroll JavaScript -->
 <script src="{{ url('/js/jquery.slimscroll.js') }}"></script>
 <!--Wave Effects -->
-<script src="{{ url('/js/waves.js') }}"></script>
+
+<!-- DATATABLES -->
+<script src="{{ url('/js/datatables.min.js') }}"></script>
+<script src="{{ url('/js/dataTables.bootstrap.js') }}"></script>
+<script src="{{ url('/js/jszip.min.js') }}"></script>
+<script src="{{ url('/js/pdfmake.min.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        $('#networkTable').DataTable();
+    });
+</script>
+
 <!--Counter js -->
 <script src="{{ url('/plugins/bower_components/waypoints/lib/jquery.waypoints.js') }}"></script>
 <script src="{{ url('/plugins/bower_components/counterup/jquery.counterup.min.js') }}"></script>
