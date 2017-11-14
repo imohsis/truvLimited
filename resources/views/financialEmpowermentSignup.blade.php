@@ -129,7 +129,7 @@
                                             <div class="col-md-12">
                                                 <label>Date of birth</label>
                                             </div>
-                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                            <div class="col-md-3 col-sm-3 col-xs-4">
                                                 <select name="day" class="form-control input-lg">
                                                     <option value="" >Day</option>
                                                     <option value="1">1</option>
@@ -165,7 +165,7 @@
                                                     <option value="31">31</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-2 col-sm-3 col-xs-4">
+                                            <div class="col-md-3 col-sm-3 col-xs-4">
                                                 <select name="month" class="form-control input-lg">
                                                     <option value="">Month</option>
                                                     <option value="01">Jan</option>
