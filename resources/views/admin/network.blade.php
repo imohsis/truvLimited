@@ -50,11 +50,11 @@
                     </tbody>
                 </table>
             </div>
-             <ul class="pagination">
+           {{--  <ul class="pagination">
                  @if(null !== $portfolios)
                  {{ $portfolios->links() }}
                  @endif
-            </ul>
+            </ul>--}}
         </div>
     </div>
 </div>
