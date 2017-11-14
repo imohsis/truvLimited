@@ -83,6 +83,9 @@ class MemberController extends Controller
         $member->full_name = $request->fullName;
         $member->phone = $request->phone;
         $member->location = $request->address;
+        $member->account_name = $request->accName;
+        $member->account_no = $request->accNo;
+        $member->bank_name =  $request->bankName;
         $member->save();
 
         $user = \App\User::find($member->user_id);

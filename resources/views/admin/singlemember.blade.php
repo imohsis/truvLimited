@@ -154,19 +154,19 @@
                     <div class="form-group">
                         <label class="col-md-12">Account Number</label>
                         <div class="col-md-12">
-                            <input type="text" placeholder=""  value="{{ $member->account_no }}" name="transactionId" class="form-control form-control-line"> </div>
+                            <input type="text" placeholder=""  value="{{ $member->account_no }}" name="accNo" class="form-control form-control-line"> </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-12">Bank Name</label>
                         <div class="col-md-12">
-                            <input type="text" placeholder=""  value="{{ $member->bank_name }}" name="transactionId" class="form-control form-control-line"> </div>
+                            <input type="text" placeholder=""  value="{{ $member->bank_name }}" name="bankName" class="form-control form-control-line"> </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-md-12">Bank Account Name</label>
                         <div class="col-md-12">
-                            <input type="text" placeholder=""  value="{{ $member->account_name }}" name="transactionId" class="form-control form-control-line"> </div>
+                            <input type="text" placeholder=""  value="{{ $member->account_name }}" name="accName" class="form-control form-control-line"> </div>
                     </div>
 
 
