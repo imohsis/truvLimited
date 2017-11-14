@@ -29,6 +29,9 @@
     <link href="{{ asset('/css/colors/default.css')}}" id="theme" rel="stylesheet">
 
     <link href="{{ asset('/css/custom.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/datatables.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/dataTables.bootstrap.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/buttons.bootstrap.css')}}" rel="stylesheet"/>
 </head>
 
 <body class="fix-header">
@@ -189,6 +192,27 @@
 <script src="{{ url('/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>
 <!-- Sparkline chart JavaScript -->
 <script src="{{ url('/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+
+<!-- DATATABLES -->
+<script src="{{ url('/js/datatables.min.js') }}"></script>
+<script src="{{ url('/js/dataTables.bootstrap.js') }}"></script>
+<script src="{{ url('/js/jszip.min.js') }}"></script>
+<script src="{{ url('/js/pdfmake.min.js') }}"></script>
+<script src="{{ url('/js/vfs_fonts.js') }}"></script>
+<script src="{{ url('/js/buttons.bootstrap.min.js') }}"></script>
+<script src="{{ url('/js/buttons.html5.min.js') }}"></script>
+<script src="{{ url('/js/buttons.print.min.js') }}"></script>
+<script src="{{ url('/js/buttons.flash.min.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        $('#networkTable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'pdf', 'print'
+            ]
+        } );
+    });
+</script>
 <!-- Custom Theme JavaScript -->
 <script src="{{ url('/js/custom.min.js') }}"></script>
 <script src="{{ url('/js/dashboard1.js') }}"></script>

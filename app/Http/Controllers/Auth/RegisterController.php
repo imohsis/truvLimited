@@ -101,9 +101,9 @@ use RegistersUsers;
             //return $scheme ." ". $referrals. " ". \App\Stages::$STAGEFOUR;
 
 
-          /*  if ($request['startingClassId'] < $startingClass){
+           if ($request['startingClassId'] < $startingClass){
                 return redirect()->back()->with('error', "Please you are not allowed to select a starting level lower than that of your referral's")->withInput();
-            }*/
+            }
 
             if (($scheme == 1 || $scheme == 2) && $referrals == \App\Stages::$STAGEFOUR){
                 return redirect()->back()->with('error', 'This referral code has exceeded its limit')->withInput();

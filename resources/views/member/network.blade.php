@@ -10,7 +10,7 @@
             <h3 class="box-title"><span style="color: #9FC735">My Network</span></h3>
             <div class="table-responsive">
               
-                <table class="table">
+                <table class="table" id="networkTable">
                     <thead>
                         <tr>
 
@@ -28,7 +28,7 @@
                         @if($member != null)
                         <tr class="clickable">
 
-                            <td class="txt-oflo">{{ $index + 1 }}</td>
+                            <td class="txt-oflo">{{ ($portfolio->current_page-1) * $portfolio->per_page + $index + 1 }}</td>
                             <td>{{ $portfolio->portfolio_code}}</td>
                             <td>
                               {{ $member->full_name }}
@@ -42,11 +42,6 @@
                     </tbody>
                 </table>
             </div>
-             <ul class="pagination">
-                 @if(null !== $portfolios)
-                 {{ $portfolios->links() }}
-                 @endif
-            </ul>
         </div>
     </div>
 </div>
