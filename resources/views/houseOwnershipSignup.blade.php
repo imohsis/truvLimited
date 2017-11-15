@@ -54,7 +54,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1>Complete Registration {{ session('success') }}</h1>
+                                        <h1>Complete Registration </h1>
                                     </div>
                                 </div>
                             </div>
