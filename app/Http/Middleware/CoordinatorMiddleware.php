@@ -28,7 +28,7 @@ class CoordinatorMiddleware
         if(auth()->user()->is_deactivate){
            // Session::flash('error','Comment Successfully deleted');
 
-            return redirect('/login')->with('error', 'Your account has been deactivated');
+            return redirect('/auth/login')->with('error', 'Your account has been deactivated');
         }
         return $next($request);
     }
