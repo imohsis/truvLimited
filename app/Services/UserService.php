@@ -50,6 +50,26 @@ class UserService {
         }
         return false;
     }
+
+
+    /**
+     *
+     * This method is responsible for deactivating an Admin account
+     *
+     * @param \App\User $user | the user to be deactivated
+     *
+     * @return boolean.
+     *
+     */
+    public function deactivateAdmin($user){
+        if($user != null){
+
+            $user->is_deactivate = 1;
+
+            return $user->save();
+        }
+        return false;
+    }
     
     /**
      * 

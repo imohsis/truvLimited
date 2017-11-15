@@ -53,7 +53,7 @@
                             </td>
                             <td>
                                 @if(!$coordinator->is_deactivate)
-                                <a href="{{ url('/admin/deactivateaccount/'.$coordinator->id) }}" class="btn btn-default">
+                                <a href="{{ url('/admin/deactivateadmin/'.$coordinator->id) }}" class="btn btn-default">
                                     Deactivate Account
                                 </a>
                                 @else

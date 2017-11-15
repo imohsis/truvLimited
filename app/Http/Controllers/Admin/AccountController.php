@@ -60,6 +60,28 @@ class AccountController extends Controller
         return ($this->userService->deactivateUser($user, $reason)) ? redirect()->back()->with('success', $user->name.'\'s account deactivated')
                 : redirect()->back()->with('error',  $user->name.'\'s account could not be deactivated');
     }
+
+
+    /**
+     *
+     * This method handles api requests to deactivate an Admin account.
+     *
+     * @param type $userId | the id of the user to be deactivated.
+     *
+     * @return type
+     *
+     */
+    public function deactivateAdmin($id){
+
+        $user = \App\User::find($id);
+        //return $userId . " ". $reason. " ". $user;
+        if($user == null){
+            return redirect()->back()->with('error', 'user not found');
+        }
+
+        return ($this->userService->deactivateAdmin($user)) ? redirect()->back()->with('success', $user->name.'\'s account deactivated')
+            : redirect()->back()->with('error',  $user->name.'\'s account could not be deactivated');
+    }
     
     
     

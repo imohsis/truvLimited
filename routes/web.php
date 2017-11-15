@@ -133,6 +133,7 @@ Route::group(['middleware' => ['coordinator'], 'prefix' => 'admin'], function() 
     Route::post('/disapprovemember', 'Admin\MemberController@disapproveMember');
     Route::get('/activateaccount/{userId}', 'Admin\AccountController@activateAccount');
     Route::post('/deactivateaccount', 'Admin\AccountController@deactivateAccount');
+    Route::get('/deactivateadmin/{id}', 'Admin\AccountController@deactivateAdmin');
     Route::get('/members/{id}/portfolios', 'Admin\PortfolioController@showMemberPortfolios');
     Route::get('/member/{id}/network', 'Admin\NetworkController@show');
     Route::get('/members', 'Admin\MemberController@index');
