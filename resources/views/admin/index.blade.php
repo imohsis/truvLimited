@@ -40,7 +40,7 @@
                             <?php $backgroundColor = "#EDF1F5"; ?>
                             @endif
                         <tr style="background-color: {{ $backgroundColor}}};">
-                            <td>{{($member->currentpage()-1) * $member->perpage() + $member->count()}}</td>
+                            <td>{{($member->current_page()-1) * $member->per_page() + $member->count()}}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
