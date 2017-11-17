@@ -219,6 +219,7 @@
                                      <?php endif;?> value="Abuja FCT">Abuja FCT</option>
                         </select>
                 </div>
+                </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>
                     <div class="col-md-12">
