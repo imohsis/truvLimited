@@ -40,7 +40,7 @@
                             <?php $backgroundColor = "#EDF1F5"; ?>
                             @endif
                         <tr style="background-color: {{ $backgroundColor}}};">
-                            <td>{{ $member->id }}</td>
+                            <td>{{ $index + 1 }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
