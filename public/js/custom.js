@@ -8,7 +8,7 @@
      var body = $("body");
 
      $(function () {
-         $(".preloader").fadeOut();
+         //$(".preloader").fadeOut();
          $('#side-menu').metisMenu();
      });
 
