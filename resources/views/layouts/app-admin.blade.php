@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-     <title>{{ session('firstName') }} {{ session('lastName') }} | Tru V Limited</title>
+     <title>{{ session('firstName') }} {{ session('lastName') }}  Tru V Limited</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Menu CSS -->
