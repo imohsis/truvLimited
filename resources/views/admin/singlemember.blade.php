@@ -68,7 +68,7 @@
 
     <div class="col-md-7 col-xs-12">
         <div class="white-box">
-            <form class="form-horizontal form-material" method="post" action="{{ url('admin/profile') }}">
+            <form class="form-horizontal form-material" method="post" action="{{ url('admin/profile') }}" id="update">
                 @if ($errors)
                 @foreach ($errors->all() as $error)
                 <span class="help-block" style="color: red;"> {{ $error }}</span>
@@ -105,7 +105,119 @@
                 <div class="form-group">
                     <label class="col-md-12">Location</label>
                     <div class="col-md-12">
-                        <textarea type="text" placeholder=""  value="{{ $member->location }}" name="address" class="form-control form-control-line">{{ $member->location }}</textarea> </div>
+                        <select name="address" class="form-control input-lg">
+                            <option   <?php if($member->location  == "Abia State"):?>
+                                      selected
+                                      <?php endif;?> value="Abia State">Abia State</option>
+                            <option  <?php if($member->location  == "Adamawa State"):?>
+                                     selected
+                                     <?php endif;?> value="Adamawa State">Adamawa State</option>
+                            <option <?php if($member->location  == "Akwa Ibom State"):?>
+                                    selected
+                                    <?php endif;?>  value="Akwa Ibom State">Akwa Ibom State</option>
+                            <option <?php if($member->location  == "Anambra State"):?>
+                                    selected
+                                    <?php endif;?>  value="Anambra State">Anambra State</option>
+                            <option <?php if($member->location  == "Bauchi State"):?>
+                                    selected
+                                    <?php endif;?> value="Bauchi State">Bauchi State</option>
+                            <option <?php if($member->location  == "Bayelsa State"):?>
+                                    selected
+                                    <?php endif;?> value="Bayelsa State">Bayelsa State</option>
+                            <option  <?php if($member->location  == "Benue State"):?>
+                                     selected
+                                     <?php endif;?> value="Benue State">Benue State</option>
+                            <option  <?php if($member->location  == "Borno State"):?>
+                                     selected
+                                     <?php endif;?> value="Borno State">Borno State</option>
+                            <option <?php if($member->location  == "Cross River State"):?>
+                                    selected
+                                    <?php endif;?> value="Cross River State">Cross River State</option>
+                            <option <?php if($member->location  == "Delta State"):?>
+                                    selected
+                                    <?php endif;?> value="Delta State">Delta State</option>
+                            <option <?php if($member->location  == "Ebonyi State"):?>
+                                    selected
+                                    <?php endif;?> value="Ebonyi State">Ebonyi State</option>
+                            <option <?php if($member->location  == "Edo State"):?>
+                                    selected
+                                    <?php endif;?>  value="Edo State">Edo State</option>
+                            <option <?php if($member->location  == "Ekiti State"):?>
+                                    selected
+                                    <?php endif;?> value="Ekiti State">Ekiti State</option>
+                            <option <?php if($member->location  == "Enugu State"):?>
+                                    selected
+                                    <?php endif;?> value="Enugu State">Enugu State</option>
+                            <option <?php if($member->location  == "Gombe State"):?>
+                                    selected
+                                    <?php endif;?> value="Gombe State">Gombe State</option>
+                            <option <?php if($member->location  == "Imo State"):?>
+                                    selected
+                                    <?php endif;?> value="Imo State">Imo State</option>
+                            <option <?php if($member->location  == "Jigawa State"):?>
+                                    selected
+                                    <?php endif;?> value="Jigawa State">Jigawa State</option>
+                            <option <?php if($member->location  == "Kaduna State"):?>
+                                    selected
+                                    <?php endif;?> value="Kaduna State">Kaduna State</option>
+                            <option <?php if($member->location  == "Kano State"):?>
+                                    selected
+                                    <?php endif;?> value="Kano State">Kano State</option>
+                            <option <?php if($member->location  == "Katsina State"):?>
+                                    selected
+                                    <?php endif;?> value="Katsina State">Katsina State</option>
+                            <option <?php if($member->location  == "Kebbi State"):?>
+                                    selected
+                                    <?php endif;?> value="Kebbi State">Kebbi State</option>
+                            <option <?php if($member->location  == "Kogi State"):?>
+                                    selected
+                                    <?php endif;?> value="Kogi State">Kogi State</option>
+                            <option <?php if($member->location  == "Kwara State"):?>
+                                    selected
+                                    <?php endif;?> value="Kwara State">Kwara State</option>
+                            <option <?php if($member->location  == "Lagos State"):?>
+                                    selected
+                                    <?php endif;?> value="Lagos State">Lagos State</option>
+                            <option <?php if($member->location  == "Nasarawa State"):?>
+                                    selected
+                                    <?php endif;?> value="Nasarawa State">Nasarawa State</option>
+                            <option <?php if($member->location  == "Niger State"):?>
+                                    selected
+                                    <?php endif;?> value="Niger State">Niger State</option>
+                            <option <?php if($member->location  == "Ogun State"):?>
+                                    selected
+                                    <?php endif;?> value="Ogun State">Ogun State</option>
+                            <option  <?php if($member->location  == "Ondo State"):?>
+                                     selected
+                                     <?php endif;?> value="Ondo State">Ondo State</option>
+                            <option <?php if($member->location  == "Osun State"):?>
+                                    selected
+                                    <?php endif;?> value="Osun State">Osun State</option>
+                            <option  <?php if($member->location  == "Oyo State"):?>
+                                     selected
+                                     <?php endif;?> value="Oyo State">Oyo State</option>
+                            <option <?php if($member->location  == "Plateau State"):?>
+                                    selected
+                                    <?php endif;?> value="Plateau State">Plateau State</option>
+                            <option <?php if($member->location  == "Rivers State"):?>
+                                    selected
+                                    <?php endif;?> value="Rivers State">Rivers State</option>
+                            <option  <?php if($member->location  == "Sokoto State"):?>
+                                     selected
+                                     <?php endif;?> value="Sokoto State">Sokoto State</option>
+                            <option <?php if($member->location  == "Taraba State"):?>
+                                    selected
+                                    <?php endif;?> value="Taraba State">Taraba State</option>
+                            <option <?php if($member->location  == "Yobe State"):?>
+                                    selected
+                                    <?php endif;?> value="Yobe State">Yobe State</option>
+                            <option <?php if($member->location  == "Zamfara State"):?>
+                                    selected
+                                    <?php endif;?> value="Zamfara State">Zamfara State</option>
+                            <option  <?php if($member->location  == "Abuja FCT"):?>
+                                     selected
+                                     <?php endif;?> value="Abuja FCT">Abuja FCT</option>
+                        </select>
                 </div>
                 <div class="form-group">
                     <label class="col-md-12">Teller Id</label>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
-     <title>{{ session('firstName') }} {{ session('lastName') }} | Vision Integrated</title>
+     <title>{{ session('firstName') }} {{ session('lastName') }} | Tru V Limited</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -206,6 +206,30 @@
 <script src="{{ url('/js/buttons.html5.min.js') }}"></script>
 <script src="{{ url('/js/buttons.print.min.js') }}"></script>
 <script src="{{ url('/js/buttons.flash.min.js') }}"></script>
+<script src="{{ url('/js/jquery.validate.js') }}"></script>
+<script type="text/javascript">
+    $("#update").validate({
+        rules:{
+            phone:{
+                required: true,
+                digits:true
+            },
+            fullName:{
+                required: true
+            },
+            tellerId:{
+                digits:true
+            },
+            transactionId:{
+                digits:true
+            },
+            accNo:{
+                digits: true
+            }
+
+        }
+    });
+</script>
 <script>
     $(document).ready(function(){
         $('#networkTable').DataTable({

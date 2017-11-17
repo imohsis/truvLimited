@@ -8,7 +8,7 @@
                                 <address class="ico">
                                     <p><i class="fa fa-map-marker"></i> <span><strong>Address:</strong> 57, Opebi Road,<br>
                                             Ikeja, Lagos</span></p>
-                                    <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> 08149653352, 08052268556</span></p>
+                                    <p><i class="fa fa-phone"></i> <span><strong>Phone:</strong> 08149653352, 09082816181</span></p>
                                     <p><i class="fa fa-envelope"></i> <span><strong>Email:</strong> truvlimited@gmail.com</span></p>
                                 </address>
                             </section>
