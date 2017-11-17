@@ -55,8 +55,12 @@
                 </table>
             </div>
             <div style="text-align: center;">
-             
-                {{ $awaitingPortfolios->links() }}
+                <div class="row">
+                    <div class="col-md-6">Records {{ $awaitingPortfolios->firstItem() }} - {{ $awaitingPortfolios->lastItem() }} of {{ $awaitingPortfolios->total() }} (for page {{ $awaitingPortfolios->currentPage() }} )</div>
+                    <div class="col-md-6"> {{ $awaitingPortfolios->links() }}</div>
+                </div>
+
+
             </div>
         </div>
     </div>
