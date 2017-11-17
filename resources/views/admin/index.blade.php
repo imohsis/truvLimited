@@ -40,7 +40,7 @@
                             <?php $backgroundColor = "#EDF1F5"; ?>
                             @endif
                         <tr style="background-color: {{ $backgroundColor}}};">
-                            <td>{{ $index + 1}}</td>
+                            <td>{{ $member->id }}</td>
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
@@ -54,10 +54,10 @@
                     </tbody>
                 </table>
             </div>
-           {{-- <div style="text-align: center;">
+            <div style="text-align: center;">
              
                 {{ $awaitingPortfolios->links() }}
-            </div>--}}
+            </div>
         </div>
     </div>
 </div>
