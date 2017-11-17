@@ -17,7 +17,7 @@
                 @if(session('error'))
                 <span style="color: red">{{ session('error') }}</span>
                 @endif
-                <table class="table" id="networkTable">
+                <table class="table">
                     <thead>
                         <tr>
 
