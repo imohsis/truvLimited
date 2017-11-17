@@ -742,6 +742,14 @@ label {
     font-weight: 500
 }
 
+label.error{
+    color: red;
+}
+
+.error{
+    color: red;
+}
+
 .btn {
     border-radius: 3px
 }
