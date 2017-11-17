@@ -151,6 +151,7 @@ class PortfolioService {
      */
     public function getAllUnReviewedPortfolios($limit = 15){
         return \App\Portfolio::where('approved_status', '=', false)
+            ->orderBy('Portfolios.created_at','desc')
             ->paginate($limit);
     }
     
