@@ -25,7 +25,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>S/N</th>
                             <th>Name</th>
                             <th>ID</th>
                             <th>Scheme</th>
@@ -72,7 +71,7 @@
                             ?>
                        {{-- @if($member->user() != null)--}}
                         <tr style="background-color: #EDF1F5;">
-                            <td>{{ $member->id }}</td>
+
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td>{{ $member->portfolio_code }}</td>
                             <td>{{ $scheme }}</td>
