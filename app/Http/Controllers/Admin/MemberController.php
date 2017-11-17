@@ -47,7 +47,8 @@ class MemberController extends Controller
                                           ->join('levels','Portfolios.scheme_id','=','levels.id')
                                           ->where('Members.approved_status', true)
                                           ->orderBy('Members.created_at','desc')
-                                           ->paginate('15');
+                                         /*  ->paginate('15');*/
+                                         ->get();
 
 
          //$portfolios = Portfolio::all();

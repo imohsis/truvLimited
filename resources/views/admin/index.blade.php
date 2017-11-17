@@ -17,7 +17,7 @@
                 @if(session('error'))
                 <span style="color: red">{{ session('error') }}</span>
                 @endif
-                <table class="table">
+                <table class="table" id="networkTable">
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -54,10 +54,10 @@
                     </tbody>
                 </table>
             </div>
-            <div style="text-align: center;">
+           {{-- <div style="text-align: center;">
              
                 {{ $awaitingPortfolios->links() }}
-            </div>
+            </div>--}}
         </div>
     </div>
 </div>
