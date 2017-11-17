@@ -16,6 +16,10 @@
     left: calc(50% - 3.5px)
 }
 
+label.error{
+    color: red;
+}
+
 * {
     outline: 0 !important
 }
