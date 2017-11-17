@@ -49,7 +49,7 @@
 
                                     <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
                                         <!-- MAIN IMAGE -->
-                                        <img src="{{asset('images/slider/slider2.png')}}" alt="" class="img-responsive">
+                                        <img src="{{asset('images/slider/slider2.png')}}" alt="">
                                         <!-- LAYER NR. 1 -->
                                         <!-- LAYER NR. 2 -->
                                         <div class="tp-caption sft tp-resizeme start" id="sliderText" data-endspeed="300" data-easing="Power4.easeInOut" data-start="1800" data-speed="600" data-y="50" data-x="30"> Become a House <br/> Owner with 3k</div>
