@@ -89,8 +89,12 @@
                     </tbody>
                 </table>
             </div>
-            <div style="text-align: center;">
-                {{ $members->links() }}
+            <div>
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 25px;">Records {{ $members->firstItem() }} - {{ $members->lastItem() }} of {{ $members->total() }} (for page {{ $members->currentPage() }} )</div>
+                    <div class="col-md-6" style="text-align: right;"> {{ $members->links() }}</div>
+                </div>
+
             </div>
         </div>
     </div>

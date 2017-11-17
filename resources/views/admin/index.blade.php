@@ -20,7 +20,7 @@
                 <table class="table" id="networkTable">
                     <thead>
                         <tr>
-                           
+
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
