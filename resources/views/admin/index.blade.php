@@ -20,7 +20,7 @@
                 <table class="table" id="networkTable">
                     <thead>
                         <tr>
-                            <th>S/N</th>
+                           
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
@@ -40,7 +40,7 @@
                             <?php $backgroundColor = "#EDF1F5"; ?>
                             @endif
                         <tr style="background-color: {{ $backgroundColor}}};">
-                            <td>{{$awaitingPortfolios->count()}}</td>
+
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td class="">{{ $member->user()->email }}</td>
                             <td class="">{{ $member->phone }}</td>
@@ -54,10 +54,10 @@
                     </tbody>
                 </table>
             </div>
-            <div style="text-align: center;">
+            <div>
                 <div class="row">
-                    <div class="col-md-6">Records {{ $awaitingPortfolios->firstItem() }} - {{ $awaitingPortfolios->lastItem() }} of {{ $awaitingPortfolios->total() }} (for page {{ $awaitingPortfolios->currentPage() }} )</div>
-                    <div class="col-md-6"> {{ $awaitingPortfolios->links() }}</div>
+                    <div class="col-md-6" style="margin-top: 25px;">Records {{ $awaitingPortfolios->firstItem() }} - {{ $awaitingPortfolios->lastItem() }} of {{ $awaitingPortfolios->total() }} (for page {{ $awaitingPortfolios->currentPage() }} )</div>
+                    <div class="col-md-6" style="text-align: right;"> {{ $awaitingPortfolios->links() }}</div>
                 </div>
 
 
