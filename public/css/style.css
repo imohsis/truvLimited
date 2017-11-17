@@ -98,6 +98,10 @@ a > img {
     line-height: 50px;
 }
 
+label.error{
+    color: red;
+}
+
 @media screen and (max-width: 675px) and (min-width: 376px){
     #sliderText{
         font-size: 60px;
