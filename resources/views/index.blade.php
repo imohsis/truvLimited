@@ -63,7 +63,7 @@
                                         <!-- LAYER NR. 4 -->
                                     </li>
 
-                             {{--       <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
+                             <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
                                         <!-- MAIN IMAGE -->
                                         <img src="{{asset('images/slider/truvslide-02.png')}}" alt="" class="img-responsive">
                                         <!-- LAYER NR. 1 -->
@@ -93,7 +93,7 @@
 
 
                                         <!-- LAYER NR. 4 -->
-                                    </li>--}}
+                                    </li>
 
 {{--
                                     <li data-masterspeed="600" data-slotamount="7" data-transition="parallaxtotop">
