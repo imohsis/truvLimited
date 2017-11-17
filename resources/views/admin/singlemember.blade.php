@@ -29,10 +29,10 @@
             <div class="user-btm-box">
                <div class="row">
                    <div class="col-md-4 col-sm-12 text-center">
-                       <a href="{{ url('/admin/members/'.$member->id.'/portfolios')}}" class="btn btn-default">View Portfolio</a>
+                       <a href="{{ url('/admin/members/'.$member->member_id.'/portfolios')}}" class="btn btn-default">View Portfolio</a>
                    </div>
                    <div class="col-md-4 col-sm-12 text-center">
-                       <a href="{{ url('/admin/member/'.$member->id.'/network')}}" class="btn btn-default">View Network</a>
+                       <a href="{{ url('/admin/member/'.$member->member_id.'/network')}}" class="btn btn-default">View Network</a>
                    </div>
 
 

@@ -74,9 +74,9 @@ class MemberController extends Controller
         $portfolio = \App\Portfolio::find($request->portfolioId);
         $portfolio->teller_id = $request->tellerId;
         $portfolio->transaction_id = $request->transactionId;
-        if (isset($request->bank_paid_into)){
-            $portfolio->bank_paid_into  = $request->bank_paid_into;
-        }
+
+        $portfolio->bank_paid_into  = $request->bankPaidInto;
+
         $portfolio->save();
 
         $member = \App\Member::find($portfolio->member_id);
