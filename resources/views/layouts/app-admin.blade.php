@@ -33,7 +33,11 @@
     <link href="{{ asset('/css/datatables.css')}}" rel="stylesheet"/>
     <link href="{{ asset('/css/dataTables.bootstrap.css')}}" rel="stylesheet"/>
     <link href="{{ asset('/css/buttons.bootstrap.css')}}" rel="stylesheet"/>
-    
+    <style type="text/css">
+        .error{
+            color: red;
+        }
+    </style>
     @yield('style')
 </head>
 
