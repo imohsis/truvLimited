@@ -12,26 +12,6 @@
  */
 
 
-Route::get('sendemail', function () {
-
-    $data = array(
-        'name' => "Learning Laravel",
-    );
-
-
-    Mail::send('emails.welcome', $data, function ($message) {
-
-        $message->from('yourEmail@domain.com', 'Learning Laravel');
-
-        $message->to('nelokwaz@gmail.com')->subject('Learning Laravel test email');
-
-    });
-
-    return "Your email has been sent successfully";
-
-});
-
-
 
 Route::get('/', function () {
     return view('index');

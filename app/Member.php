@@ -36,4 +36,13 @@ class Member extends Model
     public function user(){
         return User::find($this->user_id);
     }
+
+
+    public function countReferrals($id){
+
+        return Portfolio::where('refered_by','=', $id)
+                         ->where('approved_status','=', 1)
+                              ->count();
+    }
+
 }
