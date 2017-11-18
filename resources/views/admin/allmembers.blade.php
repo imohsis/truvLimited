@@ -75,7 +75,7 @@
                             <td class="txt-oflo"> &nbsp;{{ $member->full_name }}</td>
                             <td>{{ $member->portfolio_code }}</td>
                             <td>{{ $scheme }}</td>
-                            <td>{!! \App\Stages::determineStage(\App\Member::countReferrals($member->id)) !!}</td>
+                            <td>{!! \App\Stages::determineStage($member->id) !!}</td>
                             <td class="">{{ $member->email }}</td>
                             <td class="">{{ $member->phone }}</td>
                             <td>{{ $member->location }}</td>
