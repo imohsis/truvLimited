@@ -7,13 +7,13 @@
     "require": {
         "php": ">=7.0.0",
         "barryvdh/laravel-dompdf": "^0.8.1",
-        "clarification/sendgrid-laravel-driver": "^1.0",
+        "clarification/sendgrid-laravel-driver": "^1.0",//  Sending email to client
         "fideloper/proxy": "~3.3",
         "guzzleHttp/guzzle": "^6.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "maatwebsite/excel": "^2.1",
-        "nicolaslopezj/searchable": "^1.9"
+        "maatwebsite/excel": "^2.1",// sending excel
+        "nicolaslopezj/searchable": "^1.9"  //search databade
     },
     "require-dev": {
         "filp/whoops": "~2.0",
